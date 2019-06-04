@@ -3,3 +3,6 @@
 	url = https://github.com/openembedded/bitbake.git
 	branch = master
 	shallow = true
+[submodule "meta-openembedded"]
+	path = meta-openembedded
+	url = https://github.com/openembedded/meta-openembedded.git
