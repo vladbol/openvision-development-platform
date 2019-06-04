@@ -16,102 +16,136 @@
 [submodule "meta-ax"]
 	path = meta-ax
 	url = https://github.com/OpenVisionE2/meta-ax.git
+	shallow = true
 [submodule "meta-azbox"]
 	path = meta-azbox
 	url = https://github.com/OpenVisionE2/meta-azbox.git
+	shallow = true
 [submodule "meta-beyonwiz"]
 	path = meta-beyonwiz
 	url = https://github.com/OpenVisionE2/meta-beyonwiz.git
+	shallow = true
 [submodule "meta-blackbox"]
 	path = meta-blackbox
 	url = https://github.com/OpenVisionE2/meta-blackbox.git
+	shallow = true
 [submodule "meta-broadmedia"]
 	path = meta-broadmedia
 	url = https://github.com/OpenVisionE2/meta-broadmedia.git
+	shallow = true
 [submodule "meta-ceryon"]
 	path = meta-ceryon
 	url = https://github.com/OpenVisionE2/meta-ceryon.git
+	shallow = true
 [submodule "meta-clap"]
 	path = meta-clap
 	url = https://github.com/OpenVisionE2/meta-clap.git
+	shallow = true
 [submodule "meta-cube"]
 	path = meta-cube
 	url = https://github.com/OpenVisionE2/meta-cube.git
+	shallow = true
 [submodule "meta-dags"]
 	path = meta-dags
 	url = https://github.com/OpenVisionE2/meta-dags.git
+	shallow = true
 [submodule "meta-dinobot"]
 	path = meta-dinobot
 	url = https://github.com/OpenVisionE2/meta-dinobot.git
+	shallow = true
 [submodule "meta-dream"]
 	path = meta-dream
 	url = https://github.com/OpenVisionE2/meta-dream.git
+	shallow = true
 [submodule "meta-ebox"]
 	path = meta-ebox
 	url = https://github.com/OpenVisionE2/meta-ebox.git
+	shallow = true
 [submodule "meta-edision"]
 	path = meta-edision
 	url = https://github.com/OpenVisionE2/meta-edision.git
+	shallow = true
 [submodule "meta-entwopia"]
 	path = meta-entwopia
 	url = https://github.com/OpenVisionE2/meta-entwopia.git
+	shallow = true
 [submodule "meta-gb"]
 	path = meta-gb
 	url = https://github.com/OpenVisionE2/meta-gb.git
+	shallow = true
 [submodule "meta-hypercube"]
 	path = meta-hypercube
 	url = https://github.com/OpenVisionE2/meta-hypercube.git
+	shallow = true
 [submodule "meta-ini"]
 	path = meta-ini
 	url = https://github.com/OpenVisionE2/meta-ini.git
+	shallow = true
 [submodule "meta-ixuss"]
 	path = meta-ixuss
 	url = https://github.com/OpenVisionE2/meta-ixuss.git
+	shallow = true
 [submodule "meta-linkdroid"]
 	path = meta-linkdroid
 	url = https://github.com/OpenVisionE2/meta-linkdroid.git
+	shallow = true
 [submodule "meta-minix"]
 	path = meta-minix
 	url = https://github.com/OpenVisionE2/meta-minix.git
+	shallow = true
 [submodule "meta-octagon"]
 	path = meta-octagon
 	url = https://github.com/OpenVisionE2/meta-octagon.git
+	shallow = true
 [submodule "meta-odin"]
 	path = meta-odin
 	url = https://github.com/OpenVisionE2/meta-odin.git
+	shallow = true
 [submodule "meta-odroid"]
 	path = meta-odroid
 	url = https://github.com/OpenVisionE2/meta-odroid.git
+	shallow = true
 [submodule "meta-protek"]
 	path = meta-protek
 	url = https://github.com/OpenVisionE2/meta-protek.git
+	shallow = true
 [submodule "meta-raspberrypi"]
 	path = meta-raspberrypi
 	url = https://github.com/OpenVisionE2/meta-raspberrypi.git
+	shallow = true
 [submodule "meta-sh4"]
 	path = meta-sh4
 	url = https://github.com/OpenVisionE2/meta-sh4.git
+	shallow = true
 [submodule "meta-tiviar"]
 	path = meta-tiviar
 	url = https://github.com/OpenVisionE2/meta-tiviar.git
+	shallow = true
 [submodule "meta-tripledot"]
 	path = meta-tripledot
 	url = https://github.com/OpenVisionE2/meta-tripledot.git
+	shallow = true
 [submodule "meta-uclan"]
 	path = meta-uclan
 	url = https://github.com/OpenVisionE2/meta-uclan.git
+	shallow = true
 [submodule "meta-v8plus"]
 	path = meta-v8plus
 	url = https://github.com/OpenVisionE2/meta-v8plus.git
+	shallow = true
 [submodule "meta-viper"]
 	path = meta-viper
 	url = https://github.com/OpenVisionE2/meta-viper.git
+	shallow = true
 [submodule "meta-wetek"]
 	path = meta-wetek
 	url = https://github.com/OpenVisionE2/meta-wetek.git
+	shallow = true
 [submodule "meta-xcore"]
 	path = meta-xcore
 	url = https://github.com/OpenVisionE2/meta-xcore.git
+	shallow = true
 [submodule "meta-xt"]
 	path = meta-xt
 	url = https://github.com/OpenVisionE2/meta-xt.git
+	shallow = true
