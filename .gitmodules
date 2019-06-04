@@ -13,3 +13,105 @@
 	url = https://github.com/openembedded/openembedded-core.git
 	branch = master
 	shallow = true
+[submodule "meta-ax"]
+	path = meta-ax
+	url = https://github.com/OpenVisionE2/meta-ax.git
+[submodule "meta-azbox"]
+	path = meta-azbox
+	url = https://github.com/OpenVisionE2/meta-azbox.git
+[submodule "meta-beyonwiz"]
+	path = meta-beyonwiz
+	url = https://github.com/OpenVisionE2/meta-beyonwiz.git
+[submodule "meta-blackbox"]
+	path = meta-blackbox
+	url = https://github.com/OpenVisionE2/meta-blackbox.git
+[submodule "meta-broadmedia"]
+	path = meta-broadmedia
+	url = https://github.com/OpenVisionE2/meta-broadmedia.git
+[submodule "meta-ceryon"]
+	path = meta-ceryon
+	url = https://github.com/OpenVisionE2/meta-ceryon.git
+[submodule "meta-clap"]
+	path = meta-clap
+	url = https://github.com/OpenVisionE2/meta-clap.git
+[submodule "meta-cube"]
+	path = meta-cube
+	url = https://github.com/OpenVisionE2/meta-cube.git
+[submodule "meta-dags"]
+	path = meta-dags
+	url = https://github.com/OpenVisionE2/meta-dags.git
+[submodule "meta-dinobot"]
+	path = meta-dinobot
+	url = https://github.com/OpenVisionE2/meta-dinobot.git
+[submodule "meta-dream"]
+	path = meta-dream
+	url = https://github.com/OpenVisionE2/meta-dream.git
+[submodule "meta-ebox"]
+	path = meta-ebox
+	url = https://github.com/OpenVisionE2/meta-ebox.git
+[submodule "meta-edision"]
+	path = meta-edision
+	url = https://github.com/OpenVisionE2/meta-edision.git
+[submodule "meta-entwopia"]
+	path = meta-entwopia
+	url = https://github.com/OpenVisionE2/meta-entwopia.git
+[submodule "meta-gb"]
+	path = meta-gb
+	url = https://github.com/OpenVisionE2/meta-gb.git
+[submodule "meta-hypercube"]
+	path = meta-hypercube
+	url = https://github.com/OpenVisionE2/meta-hypercube.git
+[submodule "meta-ini"]
+	path = meta-ini
+	url = https://github.com/OpenVisionE2/meta-ini.git
+[submodule "meta-ixuss"]
+	path = meta-ixuss
+	url = https://github.com/OpenVisionE2/meta-ixuss.git
+[submodule "meta-linkdroid"]
+	path = meta-linkdroid
+	url = https://github.com/OpenVisionE2/meta-linkdroid.git
+[submodule "meta-minix"]
+	path = meta-minix
+	url = https://github.com/OpenVisionE2/meta-minix.git
+[submodule "meta-octagon"]
+	path = meta-octagon
+	url = https://github.com/OpenVisionE2/meta-octagon.git
+[submodule "meta-odin"]
+	path = meta-odin
+	url = https://github.com/OpenVisionE2/meta-odin.git
+[submodule "meta-odroid"]
+	path = meta-odroid
+	url = https://github.com/OpenVisionE2/meta-odroid.git
+[submodule "meta-protek"]
+	path = meta-protek
+	url = https://github.com/OpenVisionE2/meta-protek.git
+[submodule "meta-raspberrypi"]
+	path = meta-raspberrypi
+	url = https://github.com/OpenVisionE2/meta-raspberrypi.git
+[submodule "meta-sh4"]
+	path = meta-sh4
+	url = https://github.com/OpenVisionE2/meta-sh4.git
+[submodule "meta-tiviar"]
+	path = meta-tiviar
+	url = https://github.com/OpenVisionE2/meta-tiviar.git
+[submodule "meta-tripledot"]
+	path = meta-tripledot
+	url = https://github.com/OpenVisionE2/meta-tripledot.git
+[submodule "meta-uclan"]
+	path = meta-uclan
+	url = https://github.com/OpenVisionE2/meta-uclan.git
+[submodule "meta-v8plus"]
+	path = meta-v8plus
+	url = https://github.com/OpenVisionE2/meta-v8plus.git
+[submodule "meta-viper"]
+	path = meta-viper
+	url = https://github.com/OpenVisionE2/meta-viper.git
+[submodule "meta-wetek"]
+	path = meta-wetek
+	url = https://github.com/OpenVisionE2/meta-wetek.git
+[submodule "meta-xcore"]
+	path = meta-xcore
+	url = https://github.com/OpenVisionE2/meta-xcore.git
+[submodule "meta-xt"]
+	path = meta-xt
+	url = https://github.com/OpenVisionE2/meta-xt.git
