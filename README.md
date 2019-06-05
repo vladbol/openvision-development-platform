@@ -32,8 +32,8 @@ If you see your model in https://github.com/OpenVisionE2/openvision-oe/blob/deve
 
 # Compile
 You could compile Open Vision for so many brands/models:
-* PLi-metas: https://github.com/OpenVisionE2/openvision-oe/blob/develop/PLi-metas.md
-* Vision-metas: https://github.com/OpenVisionE2/openvision-oe/blob/develop/Vision-metas.md
+* PLi-metas: https://github.com/OpenVisionE2/openvision-development-platform/blob/develop/PLi-metas.md
+* Vision-metas: https://github.com/OpenVisionE2/openvision-development-platform/blob/develop/Vision-metas.md
 
 # Ubuntu 18.04.x LTS setup
 * Run our ltsubuntu.sh
@@ -59,21 +59,13 @@ sudo reboot
 sudo apt-get install xfce4
 ```
 # How to build an Open Vision image
-1. Clone openpli-oe-core somewhere:
+1. Clone openvision-development-platform:
 ```
-git clone -b develop --depth 1 https://github.com/OpenPLi/openpli-oe-core.git
+git clone --depth 1 https://github.com/OpenVisionE2/openvision-development-platform.git
 ```
-2. Enter the openpli-oe-core directory:
+2. Run our image.sh script:
 ```
-cd openpli-oe-core
-```
-3. Clone openvision-oe:
-```
-git clone --depth 1 https://github.com/OpenVisionE2/openvision-oe.git
-```
-4. Run our image.sh script:
-```
-cd openvision-oe
+cd openvision-development-platform
 ./image.sh
 ```
 # Hints for multiple architectures
