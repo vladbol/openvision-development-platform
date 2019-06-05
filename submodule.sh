@@ -51,6 +51,12 @@ then
 fi
 if [ $SUBMODULETYPE = "All" ]
 then
+	cd meta-amiko
+	echo "Checking out meta-amiko master branch:"
+	git checkout master
+	git pull
+	echo -e "\n"
+	cd ..
 	cd meta-ax
 	echo "Checking out meta-ax develop branch:"
 	git checkout develop
@@ -135,9 +141,39 @@ then
 	git pull
 	echo -e "\n"
 	cd ..
+	cd meta-formuler
+	echo "Checking out meta-formuler master branch:"
+	git checkout master
+	git pull
+	echo -e "\n"
+	cd ..
 	cd meta-gb
 	echo "Checking out meta-gb develop branch:"
 	git checkout develop
+	git pull
+	echo -e "\n"
+	cd ..
+	cd meta-gfutures
+	echo "Checking out meta-gfutures master branch:"
+	git checkout master
+	git pull
+	echo -e "\n"
+	cd ..
+	cd meta-gi
+	echo "Checking out meta-gi master branch:"
+	git checkout master
+	git pull
+	echo -e "\n"
+	cd ..
+	cd meta-gigablue
+	echo "Checking out meta-gigablue master branch:"
+	git checkout master
+	git pull
+	echo -e "\n"
+	cd ..
+	cd meta-hd
+	echo "Checking out meta-hd master branch:"
+	git checkout master
 	git pull
 	echo -e "\n"
 	cd ..
@@ -165,9 +201,21 @@ then
 	git pull
 	echo -e "\n"
 	cd ..
+	cd meta-maxytec
+	echo "Checking out meta-maxytec master branch:"
+	git checkout master
+	git pull
+	echo -e "\n"
+	cd ..
 	cd meta-minix
 	echo "Checking out meta-minix develop branch:"
 	git checkout develop
+	git pull
+	echo -e "\n"
+	cd ..
+	cd meta-miraclebox
+	echo "Checking out meta-miraclebox master branch:"
+	git checkout master
 	git pull
 	echo -e "\n"
 	cd ..
@@ -195,15 +243,33 @@ then
 	git pull
 	echo -e "\n"
 	cd ..
+	cd meta-qviart-5
+	echo "Checking out meta-qviart-5 master branch:"
+	git checkout master
+	git pull
+	echo -e "\n"
+	cd ..
 	cd meta-raspberrypi
 	echo "Checking out meta-raspberrypi develop branch:"
 	git checkout develop
 	git pull
 	echo -e "\n"
 	cd ..
+	cd meta-sab
+	echo "Checking out meta-sab master branch:"
+	git checkout master
+	git pull
+	echo -e "\n"
+	cd ..
 	cd meta-sh4
 	echo "Checking out meta-sh4 develop branch:"
 	git checkout develop
+	git pull
+	echo -e "\n"
+	cd ..
+	cd meta-spycat
+	echo "Checking out meta-spycat master branch:"
+	git checkout master
 	git pull
 	echo -e "\n"
 	cd ..
@@ -237,6 +303,12 @@ then
 	git pull
 	echo -e "\n"
 	cd ..
+	cd meta-vuplus
+	echo "Checking out meta-vuplus master branch:"
+	git checkout master
+	git pull
+	echo -e "\n"
+	cd ..
 	cd meta-wetek
 	echo "Checking out meta-wetek develop branch:"
 	git checkout develop
@@ -249,9 +321,39 @@ then
 	git pull
 	echo -e "\n"
 	cd ..
+	cd meta-xp
+	echo "Checking out meta-xp master branch:"
+	git checkout master
+	git pull
+	echo -e "\n"
+	cd ..
+	cd meta-xpeedc
+	echo "Checking out meta-xpeedc master branch:"
+	git checkout master
+	git pull
+	echo -e "\n"
+	cd ..
+	cd meta-xsarius.pli5
+	echo "Checking out meta-xsarius.pli5 master branch:"
+	git checkout master
+	git pull
+	echo -e "\n"
+	cd ..
 	cd meta-xt
 	echo "Checking out meta-xt develop branch:"
 	git checkout develop
+	git pull
+	echo -e "\n"
+	cd ..
+	cd meta-xtrend
+	echo "Checking out meta-xtrend master branch:"
+	git checkout master
+	git pull
+	echo -e "\n"
+	cd ..
+	cd meta-zgemma
+	echo "Checking out meta-zgemma master branch:"
+	git checkout master
 	git pull
 	echo -e "\n"
 	cd ..
