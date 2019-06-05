@@ -24,7 +24,6 @@ echo -e "${GREEN}"
 read MACHINE
 echo -e "${NC}"
 echo -e "Removing ${GREEN}$MACHINE${NC} build folders, please wait ..."
-cd ..
 echo ""
 rm -rf build/tmp/buildstats/*
 echo ""
