@@ -33,8 +33,12 @@ inherit gitpkgv pythonnative pkgconfig gettext
 PV = "y-git${SRCPV}"
 PKGV = "y-git${GITPKGV}"
 
-GITHUB_URI ?= "git://github.com"
-SRC_URI = "${GITHUB_URI}/OpenPLi/${BPN}.git"
+FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
+
+SRC_URI = "\
+	git://github.com/OpenPLi/enigma2-plugins.git \
+	file://openvision.patch \
+	"
 
 EXTRA_OECONF = " \
 	BUILD_SYS=${BUILD_SYS} \

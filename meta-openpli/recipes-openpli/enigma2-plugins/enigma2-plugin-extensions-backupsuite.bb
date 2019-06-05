@@ -9,11 +9,12 @@ SRC_URI = "git://github.com/OpenVisionE2/BackupSuite.git;protocol=git"
 # don't inherit allarch, it can't work with arch-dependent RDEPENDS
 inherit gitpkgv distutils-openplugins gettext
 
-RDEPENDS_${PN} = " \
+RDEPENDS_${PN} = "\
 	mtd-utils \
 	mtd-utils-ubifs \
-	ofgwrite \
 	${@bb.utils.contains("IMAGE_FSTYPES", "tar.bz2", "bzip2" , "", d)} \
+	${@bb.utils.contains_any("IMAGE_FSTYPES", "jffs2nfi ubinfi", "dreambox-buildimage mtd-utils-jffs2" , "", d)} \
+	enigma2-plugin-systemplugins-mphelp \
 	"
 
 S = "${WORKDIR}/git"

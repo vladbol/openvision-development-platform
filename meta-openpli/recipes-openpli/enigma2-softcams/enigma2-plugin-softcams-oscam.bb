@@ -1,7 +1,6 @@
 require conf/license/openpli-gplv2.inc
 require softcam.inc
-inherit cmake
-inherit gitpkgv
+inherit cmake gitpkgv upx_compress
 
 DESCRIPTION = "OScam ${PV} Open Source Softcam"
 LICENSE = "GPLv3"

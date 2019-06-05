@@ -1,0 +1,68 @@
+diff -Naur enigma2-plugins-PLi/configure.ac enigma2-plugins-PersianPrince/configure.ac
+--- enigma2-plugins-PLi/configure.ac	2019-01-21 02:02:42.000000000 +0330
++++ enigma2-plugins-PersianPrince/configure.ac	2019-02-06 13:48:48.243722005 +0330
+@@ -96,12 +96,6 @@
+ babelzapper/meta/Makefile
+ babelzapper/src/Makefile
+ 
+-blindscan/src/Makefile
+-blindscan/po/Makefile
+-blindscan/Makefile
+-blindscan/meta/Makefile
+-blindscan/src/images/Makefile
+-
+ bonjour/Makefile
+ bonjour/meta/Makefile
+ bonjour/src/Makefile
+@@ -363,11 +357,6 @@
+ recordinfobar/po/Makefile
+ recordinfobar/src/Makefile
+ 
+-satipclient/Makefile
+-satipclient/meta/Makefile
+-satipclient/po/Makefile
+-satipclient/src/Makefile
+-
+ seekbar/Makefile
+ seekbar/meta/Makefile
+ seekbar/po/Makefile
+@@ -422,12 +411,6 @@
+ transmission/po/Makefile
+ transmission/meta/Makefile
+ 
+-terrestrialscan/Makefile
+-terrestrialscan/src/Makefile
+-terrestrialscan/po/Makefile
+-terrestrialscan/meta/Makefile
+-terrestrialscan/images/Makefile
+-
+ tvcharts/Makefile
+ tvcharts/meta/Makefile
+ tvcharts/src/Makefile
+diff -Naur enigma2-plugins-PLi/Makefile.am enigma2-plugins-PersianPrince/Makefile.am
+--- enigma2-plugins-PLi/Makefile.am	2019-01-21 02:02:42.000000000 +0330
++++ enigma2-plugins-PersianPrince/Makefile.am	2019-02-06 13:49:04.787285207 +0330
+@@ -9,7 +9,6 @@
+ 	autoresolution \
+ 	autotimer \
+ 	babelzapper \
+-	blindscan \
+ 	bonjour \
+ 	cdinfo \
+ 	dreamexplorer \
+@@ -59,7 +58,6 @@
+ 	reconstructapsc \
+ 	remotetimer \
+ 	recordinfobar \
+-	satipclient \
+ 	seekbar \
+ 	setpasswd \
+ 	shoutcast \
+@@ -71,7 +69,6 @@
+ 	trafficinfo \
+ 	transcodingsetup \
+ 	transmission \
+-	terrestrialscan \
+ 	tvcharts \
+ 	unwetterinfo \
+ 	valixdcontrol \
