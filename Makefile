@@ -46,7 +46,6 @@ BBLAYERS ?= \
 	$(CURDIR)/meta-gigablue \
 	$(CURDIR)/meta-hd \
 	$(CURDIR)/meta-hypercube \
-	$(CURDIR)/meta-i \
 	$(CURDIR)/meta-ixuss \
 	$(CURDIR)/meta-linkdroid \
 	$(CURDIR)/meta-maxytec \
