@@ -13,6 +13,10 @@
 	url = https://github.com/openembedded/openembedded-core.git
 	branch = master
 	shallow = true
+[submodule "meta-amiko"]
+	path = meta-amiko
+	url = https://github.com/open-amiko/meta-amiko.git
+	shallow = true
 [submodule "meta-ax"]
 	path = meta-ax
 	url = https://github.com/OpenVisionE2/meta-ax.git
@@ -69,9 +73,33 @@
 	path = meta-entwopia
 	url = https://github.com/OpenVisionE2/meta-entwopia.git
 	shallow = true
+[submodule "meta-formuler"]
+	path = meta-formuler
+	url = https://github.com/formuler/meta-formuler.git
+	branch = master
+	shallow = true
 [submodule "meta-gb"]
 	path = meta-gb
 	url = https://github.com/OpenVisionE2/meta-gb.git
+	shallow = true
+[submodule "meta-gfutures"]
+	path = meta-gfutures
+	url = https://github.com/HD-Digital/meta-gfutures.git
+	branch = master
+	shallow = true
+[submodule "meta-gi"]
+	path = meta-gi
+	url = https://github.com/GIDeveloperTeam/meta-gi.git
+	branch = master
+	shallow = true
+[submodule "meta-gigablue"]
+	path = meta-gigablue
+	url = https://github.com/GigaBlue-STB/meta-gigablue
+	branch = master
+	shallow = true
+[submodule "meta-hd"]
+	path = meta-hd
+	url = https://github.com/HD-Digital/meta-hd.git
 	shallow = true
 [submodule "meta-hypercube"]
 	path = meta-hypercube
@@ -89,9 +117,18 @@
 	path = meta-linkdroid
 	url = https://github.com/OpenVisionE2/meta-linkdroid.git
 	shallow = true
+[submodule "meta-maxytec"]
+	path = meta-maxytec
+	url = https://github.com/v8droide2/meta-maxytec
+	branch = master
+	shallow = true
 [submodule "meta-minix"]
 	path = meta-minix
 	url = https://github.com/OpenVisionE2/meta-minix.git
+	shallow = true
+[submodule "meta-miraclebox"]
+	path = meta-miraclebox
+	url = https://github.com/miraclebox-git/meta-miraclebox.git
 	shallow = true
 [submodule "meta-octagon"]
 	path = meta-octagon
@@ -109,13 +146,25 @@
 	path = meta-protek
 	url = https://github.com/OpenVisionE2/meta-protek.git
 	shallow = true
+[submodule "meta-qviart-5"]
+	path = meta-qviart-5
+	url = https://github.com/pli3/meta-qviart-5.git
+	shallow = true
 [submodule "meta-raspberrypi"]
 	path = meta-raspberrypi
 	url = https://github.com/OpenVisionE2/meta-raspberrypi.git
 	shallow = true
+[submodule "meta-sab"]
+	path = meta-sab
+	url = https://github.com/mariner2/meta-sab.git
+	shallow = true
 [submodule "meta-sh4"]
 	path = meta-sh4
 	url = https://github.com/OpenVisionE2/meta-sh4.git
+	shallow = true
+[submodule "meta-spycat"]
+	path = meta-spycat
+	url = https://github.com/open-spycat/meta-spycat.git
 	shallow = true
 [submodule "meta-tiviar"]
 	path = meta-tiviar
@@ -137,6 +186,11 @@
 	path = meta-viper
 	url = https://github.com/OpenVisionE2/meta-viper.git
 	shallow = true
+[submodule "meta-vuplus"]
+	path = meta-vuplus
+	url = https://github.com/vu-plus/meta-vuplus.git
+	branch = master
+	shallow = true
 [submodule "meta-wetek"]
 	path = meta-wetek
 	url = https://github.com/OpenVisionE2/meta-wetek.git
@@ -145,58 +199,29 @@
 	path = meta-xcore
 	url = https://github.com/OpenVisionE2/meta-xcore.git
 	shallow = true
+[submodule "meta-xp"]
+	path = meta-xp
+	url = https://github.com/XP-Master/meta-xp.git
+	shallow = true
+[submodule "meta-xpeedc"]
+	path = meta-xpeedc
+	url = https://github.com/XpeedDeveloperTeam/meta-xpeedc.git
+	branch = master
+	shallow = true
+[submodule "meta-xsarius.pli5"]
+	path = meta-xsarius.pli5
+	url = https://github.com/pli3/meta-xsarius.pli5.git
+	shallow = true
 [submodule "meta-xt"]
 	path = meta-xt
 	url = https://github.com/OpenVisionE2/meta-xt.git
 	shallow = true
-[submodule "meta-formuler"]
-	path = meta-formuler
-	url = https://github.com/formuler/meta-formuler.git
-[submodule "meta-hd"]
-	path = meta-hd
-	url = https://github.com/HD-Digital/meta-hd.git
-[submodule "meta-vuplus"]
-	path = meta-vuplus
-	url = https://github.com/vu-plus/meta-vuplus.git
-[submodule "meta-xp"]
-	path = meta-xp
-	url = https://github.com/XP-Master/meta-xp.git
-[submodule "meta-xpeedc"]
-	path = meta-xpeedc
-	url = https://github.com/XpeedDeveloperTeam/meta-xpeedc.git
-[submodule "meta-zgemma"]
-	path = meta-zgemma
-	url = https://github.com/zgemma-star/meta-zgemma.git
-[submodule "meta-miraclebox"]
-	path = meta-miraclebox
-	url = https://github.com/miraclebox-git/meta-miraclebox.git
-[submodule "meta-spycat"]
-	path = meta-spycat
-	url = https://github.com/open-spycat/meta-spycat.git
 [submodule "meta-xtrend"]
 	path = meta-xtrend
 	url = https://github.com/nextv-xtrend/meta-xtrend.git
-[submodule "meta-gi"]
-	path = meta-gi
-	url = https://github.com/GIDeveloperTeam/meta-gi.git
-[submodule "meta-gfutures"]
-	path = meta-gfutures
-	url = https://github.com/HD-Digital/meta-gfutures.git
-[submodule "meta-sab"]
-	path = meta-sab
-	url = https://github.com/mariner2/meta-sab.git
-[submodule "meta-xsarius.pli5"]
-	path = meta-xsarius.pli5
-	url = https://github.com/pli3/meta-xsarius.pli5.git
-[submodule "meta-gigablue"]
-	path = meta-gigablue
-	url = https://github.com/GigaBlue-STB/meta-gigablue
-[submodule "meta-amiko"]
-	path = meta-amiko
-	url = https://github.com/open-amiko/meta-amiko.git
-[submodule "meta-qviart-5"]
-	path = meta-qviart-5
-	url = https://github.com/pli3/meta-qviart-5.git
-[submodule "meta-maxytec"]
-	path = meta-maxytec
-	url = https://github.com/v8droide2/meta-maxytec
+	shallow = true
+[submodule "meta-zgemma"]
+	path = meta-zgemma
+	url = https://github.com/zgemma-star/meta-zgemma.git
+	branch = master
+	shallow = true
