@@ -124,12 +124,12 @@ else
     echo $'BOX_BRAND = "ini"' >> meta-miraclebox/conf/machine/include/miraclebox.inc
     echo -e "${BLUE}Done, now you can use BOX_BRAND${NC}"
 fi
-if grep -Fqi "BOX_BRAND" meta-qviart/conf/machine/include/qviart-wifi.inc
+if grep -Fqi "BOX_BRAND" meta-qviart-5/conf/machine/include/qviart-wifi.inc
 then
     echo -e "${BLUE}You have BOX_BRAND in qviart-wifi.inc${NC}"
 else
     echo -e "${YELLOW}We need to modify qviart-wifi.inc${NC}"
-    echo $'BOX_BRAND = "dags"' >> meta-qviart/conf/machine/include/qviart-wifi.inc
+    echo $'BOX_BRAND = "dags"' >> meta-qviart-5/conf/machine/include/qviart-wifi.inc
     echo -e "${BLUE}Done, now you can use BOX_BRAND${NC}"
 fi
 if grep -Fqi "BOX_BRAND" meta-sab/conf/machine/include/alphatriplehd.inc
