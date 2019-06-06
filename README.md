@@ -1,6 +1,6 @@
 # Open Vision enigma2 images
 
-![alt tag](https://raw.github.com/OpenVisionE2/openvision-oe/develop/recipes-openvision/bootlogo/openvision-bootlogo/bootlogo.jpg)
+![alt tag](https://raw.github.com/OpenVisionE2/openvision-development-platform/develop/meta-openvision/recipes-openvision/bootlogo/openvision-bootlogo/bootlogo.jpg)
 
 # Download
 
