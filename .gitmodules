@@ -2,17 +2,14 @@
 	path = bitbake
 	url = https://github.com/openembedded/bitbake.git
 	branch = master
-	shallow = true
 [submodule "meta-openembedded"]
 	path = meta-openembedded
 	url = https://github.com/openembedded/meta-openembedded.git
 	branch = master
-	shallow = true
 [submodule "openembedded-core"]
 	path = openembedded-core
 	url = https://github.com/openembedded/openembedded-core.git
 	branch = master
-	shallow = true
 [submodule "meta-amiko"]
 	path = meta-amiko
 	url = https://github.com/open-amiko/meta-amiko.git
