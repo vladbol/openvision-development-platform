@@ -11,7 +11,7 @@ You could use https://sourceforge.net/projects/win32diskimager/ or similar tools
 
 # Support
 
-Please use our forum at https://forum.openvision.tech or our issue page at https://github.com/OpenVisionE2/openvision-oe/issues
+Please use our forum at https://forum.openvision.tech or our issue page at https://github.com/OpenVisionE2/openvision-development-platform/issues
 
 # FAQ
 
@@ -26,7 +26,7 @@ Please use our forum at https://forum.openvision.tech or our issue page at https
 * Do we need more Vision Developers? Absolutely yes! Contribute to our git and we contact you!
 * Do we need more Vision Testers? Absolutely yes! Test our images and report bugs, help us grow you'll see the title flows.
 
-If you see your model in https://github.com/OpenVisionE2/openvision-oe/blob/develop/README.md it means there will be Open Vision for it otherwise read https://forum.openvision.tech/viewtopic.php?f=2&t=30 and don't spam the board!
+If you see your model in https://github.com/OpenVisionE2/openvision-development-platform/blob/develop/README.md it means there will be Open Vision for it otherwise read https://forum.openvision.tech/viewtopic.php?f=2&t=30 and don't spam the board!
 
 ---
 
