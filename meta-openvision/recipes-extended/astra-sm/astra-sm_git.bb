@@ -14,7 +14,6 @@ inherit gitpkgv autotools-brokensep pkgconfig update-rc.d
 
 PV = "0.2+git${SRCPV}"
 PKGV = "0.2+git${GITPKGV}"
-PR = "1"
 
 S="${WORKDIR}/git"
 

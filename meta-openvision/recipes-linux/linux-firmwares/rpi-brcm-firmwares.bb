@@ -4,7 +4,6 @@ require conf/license/license-close.inc
 
 PACKAGE_ARCH = "all"
 
-PR = "r1"
 
 SRC_URI = "https://raw.githubusercontent.com/OpenVisionE2/linux-firmwares/master/rpi-brcm-firmwares.zip"
 

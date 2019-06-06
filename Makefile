@@ -22,7 +22,6 @@ BBLAYERS ?= \
 	$(CURDIR)/meta-openembedded/meta-networking \
 	$(CURDIR)/meta-openembedded/meta-python \
 	$(CURDIR)/openembedded-core/meta \
-	$(CURDIR)/meta-openpli \
 	$(CURDIR)/meta-openvision \
 	$(CURDIR)/meta-amiko \
 	$(CURDIR)/meta-ax \

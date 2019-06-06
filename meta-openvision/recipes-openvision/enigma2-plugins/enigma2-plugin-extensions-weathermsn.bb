@@ -9,7 +9,6 @@ inherit gitpkgv allarch
 
 PV = "0.7+git${SRCPV}"
 PKGV = "0.7+git${GITPKGV}"
-PR = "r1"
 
 SRC_URI = "git://github.com/Sirius0103/enigma2-plugins.git;protocol=https"
 SRCREV = "ab75d3dd2ac6c26d91b52b237d3b5b55a360d93b"
