@@ -57,6 +57,7 @@
 [submodule "meta-dream"]
 	path = meta-dream
 	url = https://github.com/OpenVisionE2/meta-dream.git
+	branch = one
 	shallow = true
 [submodule "meta-ebox"]
 	path = meta-ebox
