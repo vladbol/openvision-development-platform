@@ -194,8 +194,8 @@ then
 	echo -e "\n"
 	cd ..
 	cd meta-dream
-	echo "Checking out meta-dream develop branch:"
-	git checkout develop
+	echo "Checking out meta-dream upcoming branch:"
+	git checkout upcoming
 	git pull
 	echo -e "\n"
 	cd ..
