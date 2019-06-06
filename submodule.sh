@@ -338,8 +338,8 @@ then
 	echo -e "\n"
 	cd ..
 	cd meta-sh4
-	echo "Checking out meta-sh4 develop branch:"
-	git checkout develop
+	echo "Checking out meta-sh4 upcoming branch:"
+	git checkout upcoming
 	git pull
 	echo -e "\n"
 	cd ..
