@@ -6,7 +6,11 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=fbc093901857fcd118f065f900982c24"
 
 inherit distutils
 
-SRC_URI = "http://jerakeen.org/files/PythonDaap-${PV}.tar.gz"
+SRC_URI = " \
+	http://jerakeen.org/files/PythonDaap-${PV}.tar.gz \
+	file://python-daap.patch \
+"
+
 S = "${WORKDIR}/PythonDaap-${PV}"
 
 RDEPENDS_${PN} = "python-compression"
