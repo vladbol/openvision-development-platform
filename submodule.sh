@@ -23,7 +23,9 @@ echo "Stage 1: git pull for new changes"
 echo ""
 if [ $SUBMODULETYPE = "Specific" ]
 then
-	echo -e "${NC}Enter submodule name without meta-:${GREEN}"
+	echo -e "${NC}Specific mode does not support BitBake, OpenEmbedded and Core"
+	echo -e ""
+	echo -e "Enter submodule name without meta-:${GREEN}"
 	echo -e ""
 	read SUBMODULENAME
 	echo -e "${NC}"
@@ -123,6 +125,8 @@ then
 fi
 if [ $SUBMODULETYPE = "All" ]
 then
+	echo -e "All mode does not support BitBake, OpenEmbedded and Core"
+	echo -e ""
 	cd meta-amiko
 	echo "Checking out meta-amiko master branch:"
 	git checkout master
