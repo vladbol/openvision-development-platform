@@ -3,8 +3,6 @@ SECTION = "libs/multimedia"
 LICENSE = "GPLv2+"
 LIC_FILES_CHKSUM = "file://COPYING;md5=751419260aa954499f7abaabaa882bbe"
 
-PR = "r1"
-
 inherit autotools
 
 SRC_URI = "https://download.videolan.org/pub/videolan/libdca/${PV}/libdca-${PV}.tar.bz2"
