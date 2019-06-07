@@ -1,9 +1,9 @@
 SUMMARY = "UCL is a portable lossless data compression library written in ANSI C."
 HOMEPAGE = "http://www.oberhumer.com/opensource/ucl/"
 SECTION = "libs"
-PRIORITY = "optional"
-
-require conf/license/openpli-gplv2.inc
+PRIORITY = "gplv2"
+LICENSE = "GPL-2.0"
+LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/GPL-2.0;md5=801f80980d171dd6425610833a22dbe6"
 
 inherit autotools-brokensep
 
