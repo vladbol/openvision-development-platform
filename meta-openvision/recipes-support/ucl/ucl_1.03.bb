@@ -1,7 +1,7 @@
 SUMMARY = "UCL is a portable lossless data compression library written in ANSI C."
 HOMEPAGE = "http://www.oberhumer.com/opensource/ucl/"
 SECTION = "libs"
-PRIORITY = "gplv2"
+PRIORITY = "optional"
 LICENSE = "GPL-2.0"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/GPL-2.0;md5=801f80980d171dd6425610833a22dbe6"
 
