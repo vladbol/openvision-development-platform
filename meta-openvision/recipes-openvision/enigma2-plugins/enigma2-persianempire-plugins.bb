@@ -44,7 +44,7 @@ DEPENDS = "\
     ${@bb.utils.contains("MACHINE", "dm800", "", "dvb-apps", d)} \
     hairtunes \
     hddtemp \
-    python-subprocess \
+    python-subprocess32 \
     unrar \
     "
 
