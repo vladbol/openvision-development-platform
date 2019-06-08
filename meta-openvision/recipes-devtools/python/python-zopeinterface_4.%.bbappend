@@ -1,4 +1,5 @@
-# Just a comment line to avoid PAK archive (application/x-pak)
+include python-package-split.inc
+
 PACKAGES =+ "${PN}-src"
 RDEPENDS_{PN}-src = "${PN}"
 FILES_${PN}-src += "${PYTHON_SITEPACKAGES_DIR}/zope/interface/*.py"
