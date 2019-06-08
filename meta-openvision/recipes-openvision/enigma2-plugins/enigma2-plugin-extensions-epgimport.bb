@@ -26,8 +26,8 @@ RCONFLICTS_${PN} = "enigma2-plugin-extensions-xmltvimport"
 
 PLUGIN = "EPGImport"
 
-FILES_${PN} = "/usr/lib/enigma2/python"
-FILES_${PN}-dbg = "/usr/lib/enigma2/python/Plugins/Extensions/${PLUGIN}/.debug /usr/src/debug"
+FILES_${PN} = "${libdir}/enigma2/python"
+FILES_${PN}-dbg = "${libdir}/enigma2/python/Plugins/Extensions/${PLUGIN}/.debug /usr/src/debug"
 
 pkg_postinst_${PN}() {
 
@@ -43,7 +43,7 @@ pkg_postinst_${PN}() {
 	else
 		[ -f $D/usr/bin/enigma2.sh.xmltvbak ] || {
 			cp $D/usr/bin/enigma2.sh $D/usr/bin/enigma2.sh.xmltvbak
-			sed '3ipython $D/usr/lib/enigma2/python/Plugins/Extensions/EPGImport/boot.py' $D/usr/bin/enigma2.sh.xmltvbak > $D/usr/bin/enigma2.sh
+			sed '3ipython $D${libdir}/enigma2/python/Plugins/Extensions/EPGImport/boot.py' $D/usr/bin/enigma2.sh.xmltvbak > $D/usr/bin/enigma2.sh
 		}
 	fi
 }

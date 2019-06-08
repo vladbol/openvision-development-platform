@@ -13,7 +13,7 @@ PKGV = "0.7+git${GITPKGV}"
 SRC_URI = "git://github.com/Sirius0103/enigma2-plugins.git;protocol=https"
 SRCREV = "ab75d3dd2ac6c26d91b52b237d3b5b55a360d93b"
 
-FILES_${PN} = "/usr/lib/enigma2/"
+FILES_${PN} = "${libdir}/enigma2/"
 
 S = "${WORKDIR}/git"
 
@@ -21,7 +21,7 @@ do_compile() {
 }
 
 do_install() {
-	install -d ${D}/usr/lib/enigma2/python/Plugins/Extensions
+	install -d ${D}${libdir}/enigma2/python/Plugins/Extensions
 	cp -r --preserve=mode,links ${S}/python/Plugins/Extensions/WeatherMSN ${D}/usr/lib/enigma2/python/Plugins/Extensions/
-	chmod -R a+rX ${D}/usr/lib/enigma2/
+	chmod -R a+rX ${D}${libdir}/enigma2/
 }

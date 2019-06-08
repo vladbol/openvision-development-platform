@@ -23,8 +23,8 @@ do_install() {
 	install -d ${D}/usr/local/hbb-browser
 	cp -avR ${S}/opera/* ${D}/usr/local/hbb-browser/
 
-	install -d ${D}/usr/lib
-	cp -avR ${S}/dfb/usr/lib/* ${D}/usr/lib/
+	install -d ${D}${libdir}
+	cp -avR ${S}/dfb${libdir}/* ${D}${libdir}
 }
 
 do_package_qa() {
@@ -54,4 +54,4 @@ libidirectfbimageprovider_jpeg.so \
 libicoreresourcemanager_test.so \
 libdirectfb_vuplus.so"
 
-FILES_${PN} = "/usr/lib /usr/local"
+FILES_${PN} = "${libdir} /usr/local"

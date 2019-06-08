@@ -64,8 +64,8 @@ do_install() {
 	install -d ${D}${sysconfdir}/enigma2
 	install -m 0755 ${WORKDIR}/settings ${D}${sysconfdir}/enigma2
 	install -d ${D}/usr/share/enigma2/picon
-	install -d ${D}/usr/lib/python2.7
-	install -m 0644 ${WORKDIR}/ov.pyo ${D}/usr/lib/python2.7
+	install -d ${D}${libdir}/python2.7
+	install -m 0644 ${WORKDIR}/ov.pyo ${D}${libdir}/python2.7
 	install -d ${D}${sysconfdir}/init.d
 	install -m 0755 ${WORKDIR}/openvision-remover.sh ${D}${sysconfdir}/init.d
 	install -d ${D}${sysconfdir}/rcS.d

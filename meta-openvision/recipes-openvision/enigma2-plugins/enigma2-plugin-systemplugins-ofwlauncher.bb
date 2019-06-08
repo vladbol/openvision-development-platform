@@ -25,13 +25,13 @@ python populate_packages_prepend () {
 }
 
 do_install() {
-	install -d  ${D}/usr/lib/enigma2/python/Plugins/SystemPlugins/OFW_Launcher
+	install -d  ${D}${libdir}/enigma2/python/Plugins/SystemPlugins/OFW_Launcher
 	
 	install -m 0644 ${S}/*.pyo \
-	${D}/usr/lib/enigma2/python/Plugins/SystemPlugins/OFW_Launcher
+	${D}${libdir}/enigma2/python/Plugins/SystemPlugins/OFW_Launcher
 }
 
-FILES_${PN} = "/usr/lib/enigma2/python/Plugins/SystemPlugins/OFW_Launcher"
+FILES_${PN} = "${libdir}/enigma2/python/Plugins/SystemPlugins/OFW_Launcher"
 
 PACKAGES = "enigma2-plugin-systemplugins-ofwlauncher"
 

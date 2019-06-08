@@ -12,7 +12,7 @@ PKGV = "0.1+git${GITPKGV}"
 require conf/license/license-gplv2.inc
 require openplugins.inc
 
-PLUGINPATH = "/usr/lib/enigma2/python/Plugins/Extensions/${MODULE}"
+PLUGINPATH = "${libdir}/enigma2/python/Plugins/Extensions/${MODULE}"
 do_install() {
 	install -d ${D}${PLUGINPATH}
 	cp -r --preserve=mode,links ${S}/plugin/* ${D}${PLUGINPATH}

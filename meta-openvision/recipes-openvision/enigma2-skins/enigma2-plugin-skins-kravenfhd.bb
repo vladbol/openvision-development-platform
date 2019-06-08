@@ -29,9 +29,9 @@ do_install() {
 do_postrm_append() {
 #!/bin/sh
 rm -rf /usr/share/enigma2/KravenFHD
-rm -rf /usr/lib/enigma2/python/Plugins/Extensions/KravenFHD
-rm -rf /usr/lib/enigma2/python/Components/Converter/KravenFHD*
-rm -rf /usr/lib/enigma2/python/Components/Renderer/KravenFHD*
+rm -rf ${libdir}/enigma2/python/Plugins/Extensions/KravenFHD
+rm -rf ${libdir}/enigma2/python/Components/Converter/KravenFHD*
+rm -rf ${libdir}/enigma2/python/Components/Renderer/KravenFHD*
 echo "                                                          "
 echo "              ...Skin successful removed.                 "
 echo "                                                          "

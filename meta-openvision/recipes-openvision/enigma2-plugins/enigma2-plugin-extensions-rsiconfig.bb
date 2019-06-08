@@ -25,26 +25,26 @@ python populate_packages_prepend () {
 }
 
 do_install() {
-	install -d  ${D}/usr/lib/enigma2/python/Plugins/Extensions/RSIConfig
-	install -d  ${D}/usr/lib/enigma2/python/Plugins/Extensions/RSIConfig/keymaps
+	install -d  ${D}${libdir}/enigma2/python/Plugins/Extensions/RSIConfig
+	install -d  ${D}${libdir}/enigma2/python/Plugins/Extensions/RSIConfig/keymaps
 
 	install -m 0644 ${S}/*.pyo \
-	${D}/usr/lib/enigma2/python/Plugins/Extensions/RSIConfig
+	${D}${libdir}/enigma2/python/Plugins/Extensions/RSIConfig
 	
 	install -m 0755 ${S}/ntp* \
-	${D}/usr/lib/enigma2/python/Plugins/Extensions/RSIConfig
+	${D}${libdir}/enigma2/python/Plugins/Extensions/RSIConfig
 	
 	install -m 0755 ${S}/dvb* \
-	${D}/usr/lib/enigma2/python/Plugins/Extensions/RSIConfig
+	${D}${libdir}/enigma2/python/Plugins/Extensions/RSIConfig
 	
 	install -m 0755 ${S}/man* \
-	${D}/usr/lib/enigma2/python/Plugins/Extensions/RSIConfig
+	${D}${libdir}/enigma2/python/Plugins/Extensions/RSIConfig
 	
 	install -m 0755 ${S}/keymaps/*.xml \
-	${D}/usr/lib/enigma2/python/Plugins/Extensions/RSIConfig/keymaps
+	${D}${libdir}/enigma2/python/Plugins/Extensions/RSIConfig/keymaps
 }
 
-FILES_${PN} = "/usr/lib/enigma2/python/Plugins/Extensions/RSIConfig"
+FILES_${PN} = "${libdir}/enigma2/python/Plugins/Extensions/RSIConfig"
 
 PACKAGES = "enigma2-plugin-extensions-rsiconfig"
 

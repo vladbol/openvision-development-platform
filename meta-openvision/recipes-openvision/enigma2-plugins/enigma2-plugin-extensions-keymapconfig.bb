@@ -25,16 +25,16 @@ python populate_packages_prepend () {
 }
 
 do_install() {
-	install -d  ${D}/usr/lib/enigma2/python/Plugins/Extensions/KeymapConfig
+	install -d  ${D}${libdir}/enigma2/python/Plugins/Extensions/KeymapConfig
 	
 	install -m 0644 ${S}/*.pyo \
-	${D}/usr/lib/enigma2/python/Plugins/Extensions/KeymapConfig
+	${D}${libdir}/enigma2/python/Plugins/Extensions/KeymapConfig
 
-        install -d ${D}/usr/lib/enigma2/python/Plugins/Extensions/KeymapConfig/keymap/
-        install -m 0644 ${S}/keymap/*.xml ${D}/usr/lib/enigma2/python/Plugins/Extensions/KeymapConfig/keymap/
+        install -d ${D}${libdir}/enigma2/python/Plugins/Extensions/KeymapConfig/keymap/
+        install -m 0644 ${S}/keymap/*.xml ${D}${libdir}/enigma2/python/Plugins/Extensions/KeymapConfig/keymap/
 }
 
-FILES_${PN} = "/usr/lib/enigma2/python/Plugins/Extensions/KeymapConfig"
+FILES_${PN} = "${libdir}/enigma2/python/Plugins/Extensions/KeymapConfig"
 
 PACKAGES = "enigma2-plugin-extensions-keymapconfig"
 

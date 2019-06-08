@@ -27,9 +27,9 @@ do_install() {
 do_postrm_append() {
 #!/bin/sh
 rm -rf /usr/share/enigma2/SevenHD
-rm -rf /usr/lib/enigma2/python/Plugins/Extensions/SevenHD
-rm -rf /usr/lib/enigma2/python/Components/Converter/SevenHD*
-rm -rf /usr/lib/enigma2/python/Components/Renderer/SevenHD*
+rm -rf ${libdir}/enigma2/python/Plugins/Extensions/SevenHD
+rm -rf ${libdir}/enigma2/python/Components/Converter/SevenHD*
+rm -rf ${libdir}/enigma2/python/Components/Renderer/SevenHD*
 echo "                                                          "
 echo "              ...Skin successful removed.                 "
 echo "                                                          "

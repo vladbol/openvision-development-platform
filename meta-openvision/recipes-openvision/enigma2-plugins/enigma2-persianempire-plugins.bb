@@ -85,7 +85,7 @@ EXTRA_OECONF = "\
 
 do_install_append() {
     # remove unused .pyc files
-    find ${D}/usr/lib/enigma2/python/ -name '*.pyc' -exec rm {} \;
+    find ${D}${libdir}/enigma2/python/ -name '*.pyc' -exec rm {} \;
     # make scripts executable
     find "${D}" -name '*.sh' -exec chmod a+x '{}' ';'
 }

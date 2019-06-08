@@ -25,7 +25,7 @@ do_install() {
 
 do_install_append() {
     # remove unused .pyc files
-    find ${D}/usr/lib/enigma2/python/ -name '*.pyc' -exec rm {} \;
+    find ${D}${libdir}/enigma2/python/ -name '*.pyc' -exec rm {} \;
 }
 
 do_compile_append() {
@@ -33,6 +33,6 @@ do_compile_append() {
 }
 
 FILES_${PN}-src = "\
-    /usr/lib/enigma2/python/*/*.py \
-    /usr/lib/enigma2/python/*/*/*.py \
+    ${libdir}/enigma2/python/*/*.py \
+    ${libdir}/enigma2/python/*/*/*.py \
     "

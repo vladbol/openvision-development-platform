@@ -28,77 +28,77 @@ do_install_azboxhd() {
 	install -d ${D}/usr/bin/
 	install -m 0755 ${S}/bin/dvd_player-ForHD ${D}/usr/bin/dvd_player
 
-	install -d ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/
-	install -m 0644 ${S}/plugin/*.pyo ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/
+	install -d ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/
+	install -m 0644 ${S}/plugin/*.pyo ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/
 
-	install -d ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/
-	install -m 0644 ${S}/plugin/*.png ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/
+	install -d ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/
+	install -m 0644 ${S}/plugin/*.png ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/
 
-	install -d ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/
-	install -m 0755 ${S}/plugin/*.so ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/
+	install -d ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/
+	install -m 0755 ${S}/plugin/*.so ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/
 
-	install -d ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/
-	install -m 0755 ${S}/plugin/*.xml ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/
+	install -d ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/
+	install -m 0755 ${S}/plugin/*.xml ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/
 
-        install -d ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/fonts/
-        install -m 0644 ${S}/plugin/fonts/*.* ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/fonts/
+        install -d ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/fonts/
+        install -m 0644 ${S}/plugin/fonts/*.* ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/fonts/
 
-        install -d ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/skins/
-        install -m 0644 ${S}/plugin/skins/*.* ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/skins/
+        install -d ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/skins/
+        install -m 0644 ${S}/plugin/skins/*.* ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/skins/
 
-        install -d ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/
-        install -m 0755 ${S}/plugin/skins/default/*.* ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/
+        install -d ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/
+        install -m 0755 ${S}/plugin/skins/default/*.* ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/
 
-        install -d ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/images/
-        install -m 0644 ${S}/plugin/skins/default/images/*.* ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/images/
+        install -d ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/images/
+        install -m 0644 ${S}/plugin/skins/default/images/*.* ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/images/
 
-        install -d ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/images/buttons/
-        install -m 0644 ${S}/plugin/skins/default/images/buttons/*.* ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/images/buttons/
+        install -d ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/images/buttons/
+        install -m 0644 ${S}/plugin/skins/default/images/buttons/*.* ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/images/buttons/
 
-        install -d ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/images/icons/
-        install -m 0644 ${S}/plugin/skins/default/images/icons/*.* ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/images/icons/
+        install -d ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/images/icons/
+        install -m 0644 ${S}/plugin/skins/default/images/icons/*.* ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/images/icons/
 }
 
 do_install() {
 	install -d ${D}/usr/bin/
 	install -m 0755 ${S}/bin/dvd_player ${D}/usr/bin/
 
-	install -d ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/
-	install -m 0644 ${S}/plugin/*.pyo ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/
+	install -d ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/
+	install -m 0644 ${S}/plugin/*.pyo ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/
 
-	install -d ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/
-	install -m 0644 ${S}/plugin/*.png ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/
+	install -d ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/
+	install -m 0644 ${S}/plugin/*.png ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/
 
-	install -d ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/
-	install -m 0755 ${S}/plugin/*.so ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/
+	install -d ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/
+	install -m 0755 ${S}/plugin/*.so ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/
 
-	install -d ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/
-	install -m 0755 ${S}/plugin/*.xml ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/
+	install -d ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/
+	install -m 0755 ${S}/plugin/*.xml ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/
 
-        install -d ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/fonts/
+        install -d ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/fonts/
         install -m 0644 ${S}/plugin/fonts/*.* ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/fonts/
 
-        install -d ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/skins/
-        install -m 0644 ${S}/plugin/skins/*.* ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/skins/
+        install -d ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/skins/
+        install -m 0644 ${S}/plugin/skins/*.* ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/skins/
 
-        install -d ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/
-        install -m 0755 ${S}/plugin/skins/default/*.* ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/
+        install -d ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/
+        install -m 0755 ${S}/plugin/skins/default/*.* ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/
 
         install -d ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/images/
         install -m 0644 ${S}/plugin/skins/default/images/*.* ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/images/
 
-        install -d ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/images/buttons/
-        install -m 0644 ${S}/plugin/skins/default/images/buttons/*.* ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/images/buttons/
+        install -d ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/images/buttons/
+        install -m 0644 ${S}/plugin/skins/default/images/buttons/*.* ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/images/buttons/
 
-        install -d ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/images/icons/
-        install -m 0644 ${S}/plugin/skins/default/images/icons/*.* ${D}/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/images/icons/
+        install -d ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/images/icons/
+        install -m 0644 ${S}/plugin/skins/default/images/icons/*.* ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/images/icons/
 }
 
 FILES_${PN} = "/usr/bin/"
-FILES_${PN} += "/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/"
-FILES_${PN} += "/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/fonts/"
-FILES_${PN} += "/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/skins/"
-FILES_${PN} += "/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/"
-FILES_${PN} += "/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/images/"
-FILES_${PN} += "/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/images/buttons/"
-FILES_${PN} += "/usr/lib/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/images/icons/"
+FILES_${PN} += "${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/"
+FILES_${PN} += "${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/fonts/"
+FILES_${PN} += "${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/skins/"
+FILES_${PN} += "${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/"
+FILES_${PN} += "${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/images/"
+FILES_${PN} += "${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/images/buttons/"
+FILES_${PN} += "${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/images/icons/"
