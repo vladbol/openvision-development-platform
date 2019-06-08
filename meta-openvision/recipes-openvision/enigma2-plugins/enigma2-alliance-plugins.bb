@@ -73,7 +73,7 @@ DEPENDS = "\
     libupnp \
     minidlna \
     neon \
-    python-beautifulsoup python-dnspython python-gdata python-icalendar python-lxml python-pexpect python-pyamf python-pyusb python-simplejson \
+    python-beautifulsoup4 python-dnspython python-gdata python-icalendar python-lxml python-pexpect python-pyamf python-pyusb python-simplejson \
     ${@bb.utils.contains("MACHINE", "dm800", "", "satipclient", d)} \
     "
 
