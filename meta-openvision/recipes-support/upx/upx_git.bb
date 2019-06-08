@@ -2,8 +2,8 @@ SUMMARY = "UPX is a free, portable, extendable, high-performance executable pack
 HOMEPAGE = "https://upx.github.io/"
 SECTION = "base"
 PRIORITY = "optional"
-LICENSE = "GPL-2.0"
-LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/GPL-2.0;md5=801f80980d171dd6425610833a22dbe6"
+
+require conf/license/openpli-gplv2.inc
 
 DEPENDS = "zlib ucl"
 
