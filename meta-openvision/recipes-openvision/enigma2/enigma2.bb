@@ -113,7 +113,7 @@ inherit gitpkgv pythonnative upx_compress
 PV = "develop+git${SRCPV}"
 PKGV = "develop+git${GITPKGV}"
 
-ENIGMA2_BRANCH ?= "develop"
+ENIGMA2_BRANCH ?= "upcoming"
 
 SRC_URI = "\
 	git://github.com/OpenVisionE2/enigma2-openvision.git;branch=${ENIGMA2_BRANCH};name=enigma2 \
