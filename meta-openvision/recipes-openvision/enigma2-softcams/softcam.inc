@@ -18,8 +18,8 @@ PACKAGES = "${PN}"
 RDEPENDS_${PN} += "softcam-support"
 INSANE_SKIP_${PN} += "already-stripped"
 
-CAMLINK = "/etc/init.d/softcam"
-CAMPATH = "/etc/init.d/softcam.${CAMNAME}"
+CAMLINK = "$D${sysconfdir}/init.d/softcam"
+CAMPATH = "$D${sysconfdir}/init.d/softcam.${CAMNAME}"
 
 CAMSTART ?= "exec start-stop-daemon -S -x /usr/bin/${CAMNAME}"
 CAMSTOP  ?= "exec start-stop-daemon -K -R 2 -x /usr/bin/${CAMNAME}"
@@ -63,8 +63,8 @@ EOF
 
 # Install routine, should be ok for most cams.
 do_install_append () {
-	install -d ${D}/etc/init.d
-	install -m 755 ${S}/init.${CAMNAME} ${D}/etc/init.d/softcam.${CAMNAME}
+	install -d ${D}${sysconfdir}/init.d
+	install -m 755 ${S}/init.${CAMNAME} ${D}${sysconfdir}/init.d/softcam.${CAMNAME}
 }
 
 # If no cam selected yet, install and start this cam (and don't start it on the build host).
