@@ -9,6 +9,8 @@ RDEPENDS_${PN} = "ntpdate"
 PV = "${VISIONVERSION}"
 PR = "${VISIONREVISION}"
 
+INSANE_SKIP_${PN} += "file-rdeps"
+
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 SRC_URI = "file://settings \
