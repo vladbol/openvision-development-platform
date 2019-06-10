@@ -14,7 +14,6 @@ SRC_URI="git://github.com/oe-alliance/YahooWeather.git"
 
 S = "${WORKDIR}/git"
 
-PACKAGES =+ "${PN}-src"
 PACKAGES =+ "${PN}-po"
 
 FILES_${PN} = "${libdir}"
