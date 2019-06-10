@@ -11,9 +11,7 @@ inherit gitpkgv upx_compress
 PV = "63+gitr${SRCPV}"
 PKGV = "63+gitr${GITPKGV}"
 
-SRC_URI = " git://github.com/e2iplayer/exteplayer3.git;branch=master \
-			file://define-audio-get-pts.patch \
-"
+SRC_URI = "git://github.com/e2iplayer/exteplayer3.git;branch=master"
 
 S = "${WORKDIR}/git/"
 
