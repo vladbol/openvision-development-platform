@@ -25,6 +25,7 @@ Please use our forum at https://forum.openvision.tech or our issue page at https
 * Do we provide support for self-building? No! We prefer to work on our projects.
 * Do we need more Vision Developers? Absolutely yes! Contribute to our git and we contact you!
 * Do we need more Vision Testers? Absolutely yes! Test our images and report bugs, help us grow you'll see the title flows.
+* Do we support our image in multiboot situations? No! Check about screen and if our module is not loaded then you're on your own!
 
 If you see your model in https://github.com/OpenVisionE2/openvision-development-platform/blob/develop/README.md it means there will be Open Vision for it otherwise read https://forum.openvision.tech/viewtopic.php?f=2&t=30 and don't spam the board!
 
@@ -68,6 +69,7 @@ git clone --depth 1 https://github.com/OpenVisionE2/openvision-development-platf
 cd openvision-development-platform
 ./image.sh
 ```
+If you want to compile an image for only 1 machine just choose "Specific".
 # Hints for multiple architectures
 * Removing the "build" directory solves most of the errors. For a fast remove use "rm -rf build".
 (If you just want to reduce the build size use "cleanup.sh".)
