@@ -7,7 +7,7 @@
 # Description:
 ### END INIT INFO
 
-DAEMON=/usr/bin/bluealsa
+DAEMON=${bindir}/bluealsa
 NAME=bluealsa
 DESC="Bluetooth Audio ALSA Backend"
 ARGS="-p a2dp-source -p a2dp-sink"

@@ -1,6 +1,6 @@
 LICENSE = "CLOSED"
 
-FILES_${PN} = "/usr/bin /etc"
+FILES_${PN} = "${bindir} /etc"
 
 # no docs, locales etc.
 PACKAGES = "${PN}"
@@ -10,8 +10,8 @@ RDEPENDS_${PN} += "cardserver-support"
 CSLINK = "/etc/init.d/cardserver"
 CSPATH = "/etc/init.d/cardserver.${CSNAME}"
 
-CSSTART ?= "exec start-stop-daemon -S -x /usr/bin/${CSNAME}"
-CSSTOP  ?= "exec start-stop-daemon -K -R 2 -x /usr/bin/${CSNAME}"
+CSSTART ?= "exec start-stop-daemon -S -x ${bindir}/${CSNAME}"
+CSSTOP  ?= "exec start-stop-daemon -K -R 2 -x ${bindir}/${CSNAME}"
 
 # Generate a simplistic standard init script
 # (sorry for the sleep 1, but start-stop-daemon -R does not work as advertised)

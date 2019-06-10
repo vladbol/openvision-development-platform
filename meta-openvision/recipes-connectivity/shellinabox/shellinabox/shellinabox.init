@@ -15,8 +15,8 @@ NO_START=0
 
 test ! -r /etc/default/shellinabox || . /etc/default/shellinabox
 
-PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-DAEMON=/usr/bin/shellinaboxd
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:${bindir}
+DAEMON=${bindir}/shellinaboxd
 NAME=shellinabox
 DESC="Shell In A Box server"
 PIDFILE=/var/run/shellinabox.pid

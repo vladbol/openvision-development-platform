@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if ! [ -x /usr/bin/satipclient ]; then
+if ! [ -x ${bindir}/satipclient ]; then
 	exit 0
 fi
 
@@ -10,10 +10,10 @@ fi
 
 case "$1" in
 	start)
-		start-stop-daemon -S -b -x /usr/bin/satipclient
+		start-stop-daemon -S -b -x ${bindir}/satipclient
 		;;
 	stop)
-		start-stop-daemon -K -x /usr/bin/satipclient
+		start-stop-daemon -K -x ${bindir}/satipclient
 		;;
 	restart|reload)
 		$0 stop

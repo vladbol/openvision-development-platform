@@ -11,7 +11,7 @@ PKGV = "2+git${GITPKGV}"
 RDEPENDS_${PN} = "enigma2-plugin-systemplugins-transcodingsetup"
 
 SRC_URI = "git://github.com/eriksl/streamproxy.git;protocol=git"
-FILES_${PN} = "/usr/bin/streamproxy /etc/init.d/streamproxy.sh /etc/enigma2/streamproxy.conf"
+FILES_${PN} = "${bindir}/streamproxy /etc/init.d/streamproxy.sh /etc/enigma2/streamproxy.conf"
 CONFFILES_${PN} = "/etc/enigma2/streamproxy.conf"
 S = "${WORKDIR}/git"
 

@@ -3,7 +3,7 @@ a#!/bin/sh
 # lcd4linux
 #
 PLUGINDIR="${libdir}/enigma2/python/Plugins/Extensions/LCD4linux"
-DAEMON=/usr/bin/lcd4linux
+DAEMON=${bindir}/lcd4linux
 NICELEVEL="0"
 
 

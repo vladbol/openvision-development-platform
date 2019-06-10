@@ -41,9 +41,9 @@ pkg_postinst_${PN}() {
 		# PLi needs no patch...
 		true
 	else
-		[ -f $D/usr/bin/enigma2.sh.xmltvbak ] || {
-			cp $D/usr/bin/enigma2.sh $D/usr/bin/enigma2.sh.xmltvbak
-			sed '3ipython $D${libdir}/enigma2/python/Plugins/Extensions/EPGImport/boot.py' $D/usr/bin/enigma2.sh.xmltvbak > $D/usr/bin/enigma2.sh
+		[ -f $D${bindir}/enigma2.sh.xmltvbak ] || {
+			cp $D${bindir}/enigma2.sh $D${bindir}/enigma2.sh.xmltvbak
+			sed '3ipython $D${libdir}/enigma2/python/Plugins/Extensions/EPGImport/boot.py' $D${bindir}/enigma2.sh.xmltvbak > $D${bindir}/enigma2.sh
 		}
 	fi
 }

@@ -20,13 +20,13 @@ do_install() {
 	install -m 0755 -d "${D}/etc/tuxbox"
 	install -m 0755 -d "${D}/etc/tuxbox/scce"
 	install -m 0755 -d "${D}/usr/keys"
-	install -m 0755 -d "${D}/usr/bin"
+	install -m 0755 -d "${D}${bindir}"
 	install -m 0755 -d "${D}/var"
 
 	install -m 0644 "${S}"/*.xml "${D}/etc/tuxbox"
 
 	ln -s "/etc/tuxbox/scce"	"${D}/var/"
 	ln -s "/usr/keys"			"${D}/var/"
-	ln -s "/usr/bin"			"${D}/var/"
+	ln -s "${bindir}"			"${D}/var/"
 	ln -s "/etc"				"${D}/var/"
 }

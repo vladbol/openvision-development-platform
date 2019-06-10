@@ -14,7 +14,7 @@ inherit gitpkgv
 PV = "9.7+git${SRCPV}"
 PKGV = "9.7+git${GITPKGV}"
 
-FILES_${PN} = "/usr/bin"
+FILES_${PN} = "${bindir}"
 
 do_compile () {
         make -C ${S}/src dreamciplus
@@ -22,23 +22,23 @@ do_compile () {
 
 do_install() {
   find "${D}" -name '*.sh' -exec chmod a+x '{}' ';'
-  install -d ${D}/usr/bin
-  install -m 0755 ${S}/src/dreamciplus ${D}/usr/bin
-  install -m 0755 ${S}/src/enigma2_pre_start_ciplus.sh ${D}/usr/bin
+  install -d ${D}${bindir}
+  install -m 0755 ${S}/src/dreamciplus ${D}${bindir}
+  install -m 0755 ${S}/src/enigma2_pre_start_ciplus.sh ${D}${bindir}
 }
 
 pkg_postinst_${PN} () {
 #!/bin/sh
-  if [ -e /usr/bin/dreamciplus ]; then
-     /usr/bin/dreamciplus $1
+  if [ -e ${bindir}/dreamciplus ]; then
+     ${bindir}/dreamciplus $1
   fi
 exit 0
 }
 
 pkg_prerm_${PN} () {
 #!/bin/sh
-  if [ -e /usr/bin/dreamciplus ]; then
-     /usr/bin/dreamciplus $1
+  if [ -e ${bindir}/dreamciplus ]; then
+     ${bindir}/dreamciplus $1
   fi
 exit 0
 }

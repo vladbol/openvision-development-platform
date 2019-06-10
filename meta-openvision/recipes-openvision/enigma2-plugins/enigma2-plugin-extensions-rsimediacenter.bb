@@ -25,8 +25,8 @@ python populate_packages_prepend () {
 }
 
 do_install_azboxhd() {
-	install -d ${D}/usr/bin/
-	install -m 0755 ${S}/bin/dvd_player-ForHD ${D}/usr/bin/dvd_player
+	install -d ${D}${bindir}/
+	install -m 0755 ${S}/bin/dvd_player-ForHD ${D}${bindir}/dvd_player
 
 	install -d ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/
 	install -m 0644 ${S}/plugin/*.pyo ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/
@@ -60,8 +60,8 @@ do_install_azboxhd() {
 }
 
 do_install() {
-	install -d ${D}/usr/bin/
-	install -m 0755 ${S}/bin/dvd_player ${D}/usr/bin/
+	install -d ${D}${bindir}/
+	install -m 0755 ${S}/bin/dvd_player ${D}${bindir}/
 
 	install -d ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/
 	install -m 0644 ${S}/plugin/*.pyo ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/
@@ -94,7 +94,7 @@ do_install() {
         install -m 0644 ${S}/plugin/skins/default/images/icons/*.* ${D}${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/skins/default/images/icons/
 }
 
-FILES_${PN} = "/usr/bin/"
+FILES_${PN} = "${bindir}/"
 FILES_${PN} += "${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/"
 FILES_${PN} += "${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/fonts/"
 FILES_${PN} += "${libdir}/enigma2/python/Plugins/Extensions/MediaCenter/skins/"

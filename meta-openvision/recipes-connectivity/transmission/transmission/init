@@ -11,22 +11,22 @@ TRANSOPTIONS="-g /var/lib/transmission-daemon"
 case "$1" in
   start)
     echo  "Starting transmission-daemon"
-    /sbin/start-stop-daemon $SSDOPTIONS --start --quiet --exec /usr/bin/transmission-daemon -- $TRANSOPTIONS
+    /sbin/start-stop-daemon $SSDOPTIONS --start --quiet --exec ${bindir}/transmission-daemon -- $TRANSOPTIONS
     ;;
   stop)
     echo  "Stopping transmission-daemon"
-    /sbin/start-stop-daemon --stop --quiet --exec /usr/bin/transmission-daemon
+    /sbin/start-stop-daemon --stop --quiet --exec ${bindir}/transmission-daemon
     ;;
   restart)
     echo -n "Stopping transmission-daemon"
-    /sbin/start-stop-daemon --stop --quiet --exec /usr/bin/transmission-daemon
+    /sbin/start-stop-daemon --stop --quiet --exec ${bindir}/transmission-daemon
     for i in 1 2 3 ;
     do
         sleep 1
         echo -n "."
     done
     echo  "Restarting transmission-daemon" 
-    /sbin/start-stop-daemon $SSDOPTIONS --start --quiet --exec /usr/bin/transmission-daemon -- $TRANSOPTIONS
+    /sbin/start-stop-daemon $SSDOPTIONS --start --quiet --exec ${bindir}/transmission-daemon -- $TRANSOPTIONS
     ;;
   *)
     echo "Usage: /etc/init.d/tranmission {start|stop|restart}"

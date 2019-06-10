@@ -8,13 +8,13 @@ S = "${WORKDIR}/newcs-1.67_RC1"
 INHIBIT_PACKAGE_STRIP = "1"
 
 CSNAME = "newcs"
-CSSTART = "exec start-stop-daemon -S -b -x /usr/bin/${CSNAME}"
+CSSTART = "exec start-stop-daemon -S -b -x ${bindir}${CSNAME}"
 
 require cardserver.inc
 
 do_install() {
-	install -d ${D}/usr/bin
-	install -m 0755 ${S}/bin/newcs.mips ${D}/usr/bin/newcs
+	install -d ${D}${bindir}
+	install -m 0755 ${S}/bin/newcs.mips ${D}${bindir}/newcs
 	install -d ${D}/etc/tuxbox/config
 	install -m 0644 ${WORKDIR}/newcs.xml ${D}/etc/tuxbox/config/newcs.xml.example
 }
