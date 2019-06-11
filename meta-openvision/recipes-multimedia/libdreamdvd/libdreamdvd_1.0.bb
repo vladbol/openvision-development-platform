@@ -5,6 +5,4 @@ DEPENDS = "libdvdnav"
 
 inherit autotools pkgconfig git-project
 
-SRC_URI = " git://github.com/mirakels/libdreamdvd.git \
-			file://define-video-get-frame-rate.patch \
-"
+SRC_URI = "git://github.com/mirakels/libdreamdvd.git"
