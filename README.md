@@ -1,5 +1,5 @@
-# Open Vision enigma2 images
-
+Open Vision enigma2 images [![Build Status](https://travis-ci.org/OpenVisionE2/openvision-development-platform.svg?branch=develop)](https://travis-ci.org/OpenVisionE2/openvision-development-platform)
+==========================
 ![alt tag](https://raw.github.com/OpenVisionE2/openvision-development-platform/develop/meta-openvision/recipes-openvision/bootlogo/openvision-bootlogo/bootlogo.jpg)
 
 # Download
