@@ -1,7 +1,7 @@
 SUMMARY = "OE-Alliance plugins for Open Vision "
 MAINTAINER = "Open Vision Developers"
 LICENSE = "GPLv3"
-LIC_FILES_CHKSUM = "file://COPYING;md5=8e37f34d0e40d32ea2bc90ee812c9131"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=1ebbd3e34237af26da5dc08a4e440464"
 
 inherit autotools-brokensep gitpkgv pythonnative gettext
 
