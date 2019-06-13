@@ -2,8 +2,6 @@ DESCRIPTION = "Inittab for sysvinit"
 
 require conf/license/openpli-gplv2.inc
 
-PR = "r6"
-
 SRC_URI = "file://inittab"
 
 S = "${WORKDIR}/sysvinit-${PV}"
