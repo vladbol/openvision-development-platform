@@ -40,8 +40,6 @@ RDEPENDS_${PN} = " \
     python-html \
     "
 
-PACKAGES =+ " ${PN}-src"
-
 RDEPENDS_{PN}-src = "${PN}"
 
 FILES_${PN}-src = " \
