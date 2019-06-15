@@ -10,9 +10,6 @@
 	path = openembedded-core
 	url = https://github.com/openembedded/openembedded-core.git
 	branch = master
-[submodule "meta-amiko"]
-	path = meta-amiko
-	url = https://github.com/open-amiko/meta-amiko.git
 [submodule "meta-ax"]
 	path = meta-ax
 	url = https://github.com/OpenVisionE2/meta-ax.git
@@ -56,13 +53,6 @@
 [submodule "meta-entwopia"]
 	path = meta-entwopia
 	url = https://github.com/OpenVisionE2/meta-entwopia.git
-[submodule "meta-formuler"]
-	path = meta-formuler
-	url = https://github.com/formuler/meta-formuler.git
-	branch = master
-[submodule "meta-gb"]
-	path = meta-gb
-	url = https://github.com/OpenVisionE2/meta-gb.git
 [submodule "meta-gfutures"]
 	path = meta-gfutures
 	url = https://github.com/HD-Digital/meta-gfutures.git
@@ -70,10 +60,6 @@
 [submodule "meta-gi"]
 	path = meta-gi
 	url = https://github.com/GIDeveloperTeam/meta-gi.git
-	branch = master
-[submodule "meta-gigablue"]
-	path = meta-gigablue
-	url = https://github.com/GigaBlue-STB/meta-gigablue
 	branch = master
 [submodule "meta-hd"]
 	path = meta-hd
@@ -140,9 +126,6 @@
 [submodule "meta-v8plus"]
 	path = meta-v8plus
 	url = https://github.com/OpenVisionE2/meta-v8plus.git
-[submodule "meta-viper"]
-	path = meta-viper
-	url = https://github.com/OpenVisionE2/meta-viper.git
 [submodule "meta-vuplus"]
 	path = meta-vuplus
 	url = https://github.com/vu-plus/meta-vuplus.git
@@ -163,13 +146,3 @@
 [submodule "meta-xsarius.pli5"]
 	path = meta-xsarius.pli5
 	url = https://github.com/pli3/meta-xsarius.pli5.git
-[submodule "meta-xt"]
-	path = meta-xt
-	url = https://github.com/OpenVisionE2/meta-xt.git
-[submodule "meta-xtrend"]
-	path = meta-xtrend
-	url = https://github.com/nextv-xtrend/meta-xtrend.git
-[submodule "meta-zgemma"]
-	path = meta-zgemma
-	url = https://github.com/zgemma-star/meta-zgemma.git
-	branch = master
