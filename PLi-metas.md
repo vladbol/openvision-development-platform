@@ -1,17 +1,5 @@
 # Here is the list of what PLi supports:
 
-# Amiko
-* vipercombo
-* vipercombohdd
-* viperslim
-* vipert2c
-
-# Formuler
-* formuler1
-* formuler3
-* formuler4
-* formuler4turbo
-
 # GFutures
 * bre2ze4k
 * hd11
@@ -31,10 +19,6 @@
 # GI
 * et1x000
 * et7000mini
-
-# GigaBlue
-* gbquad4k
-* gbue4k
 
 # MaxyTec
 * multibox
@@ -86,27 +70,3 @@
 * purehd
 * purehdse
 * revo4k
-
-# Xtrend
-* et10000
-* et4x00
-* et5x00
-* et6x00
-* et7x00
-* et8000
-* et8500
-* et9x00
-
-# Zgemma
-* h10
-* h3
-* h4
-* h5
-* h6
-* h7
-* h9
-* h9combo
-* i55
-* i55plus
-* lc
-* sh1

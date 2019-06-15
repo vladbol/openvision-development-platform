@@ -63,7 +63,7 @@ then
 	echo ""
 	git add bitbake
 	git commit --dry-run
-	read -p "This is serious shit we're talking about here, if you don't know what is this or you're not 100% sure about it just [A]bort otherwise the above changes will be committed and pushed to Open Vision and the result could be catastrophic, [P]roceed? " choice
+	read -p "This is serious, if you don't know what is this or you're not 100% sure about it just [A]bort otherwise the above changes will be committed and pushed to Open Vision and the result could be catastrophic, [P]roceed? " choice
 	if [ "$choice" = "P" -o "$choice" = "p" ];then
 		git commit -S -m "Update bitbake submodule using submodule.sh"
 		echo "Stage 3: git push for new changes"
@@ -87,7 +87,7 @@ then
 	echo ""
 	git add meta-openembedded
 	git commit --dry-run
-	read -p "This is serious shit we're talking about here, if you don't know what is this or you're not 100% sure about it just [A]bort otherwise the above changes will be committed and pushed to Open Vision and the result could be catastrophic, [P]roceed? " choice
+	read -p "This is serious, if you don't know what is this or you're not 100% sure about it just [A]bort otherwise the above changes will be committed and pushed to Open Vision and the result could be catastrophic, [P]roceed? " choice
 	if [ "$choice" = "P" -o "$choice" = "p" ];then
 		git commit -S -m "Update meta-openembedded submodule using submodule.sh"
 		echo "Stage 3: git push for new changes"
@@ -111,7 +111,7 @@ then
 	echo ""
 	git add openembedded-core
 	git commit --dry-run
-	read -p "This is serious shit we're talking about here, if you don't know what is this or you're not 100% sure about it just [A]bort otherwise the above changes will be committed and pushed to Open Vision and the result could be catastrophic, [P]roceed? " choice
+	read -p "This is serious, if you don't know what is this or you're not 100% sure about it just [A]bort otherwise the above changes will be committed and pushed to Open Vision and the result could be catastrophic, [P]roceed? " choice
 	if [ "$choice" = "P" -o "$choice" = "p" ];then
 		git commit -S -m "Update openembedded-core submodule using submodule.sh"
 		echo "Stage 3: git push for new changes"
@@ -128,8 +128,8 @@ then
 	echo -e "All mode does not support BitBake, OpenEmbedded and Core"
 	echo -e ""
 	cd meta-amiko
-	echo "Checking out meta-amiko master branch:"
-	git checkout master
+	echo "Checking out meta-amiko develop branch:"
+	git checkout develop
 	git pull
 	echo -e "\n"
 	cd ..
@@ -220,12 +220,6 @@ then
 	cd meta-formuler
 	echo "Checking out meta-formuler master branch:"
 	git checkout master
-	git pull
-	echo -e "\n"
-	cd ..
-	cd meta-gb
-	echo "Checking out meta-gb develop branch:"
-	git checkout develop
 	git pull
 	echo -e "\n"
 	cd ..
@@ -373,12 +367,6 @@ then
 	git pull
 	echo -e "\n"
 	cd ..
-	cd meta-viper
-	echo "Checking out meta-viper develop branch:"
-	git checkout develop
-	git pull
-	echo -e "\n"
-	cd ..
 	cd meta-vuplus
 	echo "Checking out meta-vuplus master branch:"
 	git checkout master
@@ -412,12 +400,6 @@ then
 	cd meta-xsarius.pli5
 	echo "Checking out meta-xsarius.pli5 master branch:"
 	git checkout master
-	git pull
-	echo -e "\n"
-	cd ..
-	cd meta-xt
-	echo "Checking out meta-xt develop branch:"
-	git checkout develop
 	git pull
 	echo -e "\n"
 	cd ..

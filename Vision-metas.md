@@ -1,5 +1,12 @@
 # Here is the list of what we support:
 
+# Amiko
+* viper4k
+* vipercombo
+* vipercombohdd
+* viperslim
+* vipert2c
+
 # AX
 * triplex
 * ultrabox
@@ -146,7 +153,13 @@
 * marvel1
 * x2plus
 
-# GB
+# Formuler
+* formuler1
+* formuler3
+* formuler4
+* formuler4turbo
+
+# GigaBlue
 * gb800se
 * gb800seplus
 * gb800solo
@@ -154,8 +167,10 @@
 * gb800ueplus
 * gbipbox
 * gbquad
+* gbquad4k
 * gbquadplus
 * gbtrio4k
+* gbue4k
 * gbultrase
 * gbultraue
 * gbultraueh
@@ -304,9 +319,6 @@
 # V8Plus
 * v8plus
 
-# Viper
-* viper4k
-
 # WeTek
 * wetekhub
 * wetekplay
@@ -319,6 +331,28 @@
 * spycat4kmini
 * vp7358ci
 
-# XT
+# Xtrend
 * beyonwizu4
+* et10000
 * et13000
+* et4x00
+* et5x00
+* et6x00
+* et7x00
+* et8000
+* et8500
+* et9x00
+
+# Zgemma
+* h10
+* h3
+* h4
+* h5
+* h6
+* h7
+* h9
+* h9combo
+* i55
+* i55plus
+* lc
+* sh1
