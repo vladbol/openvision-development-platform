@@ -1,9 +1,7 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
 SRC_URI_append = "\
-    file://fsxattr.patch \
-    file://dmx_set_source.patch \
-    file://audio_video_ioctl.patch \
+	file://audio_video_ioctl.patch \
 "
 
 # sh4 boxes require some headers from the kernel modules (for the framebuffer and ioctls) which
