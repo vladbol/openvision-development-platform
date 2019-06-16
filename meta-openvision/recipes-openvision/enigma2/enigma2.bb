@@ -53,6 +53,7 @@ PYTHON_RDEPS = " \
 	python-pickle \
 	python-re \
 	python-shell \
+	python-service-identity \
 	python-threading \
 	python-twisted-core \
 	python-twisted-web \
