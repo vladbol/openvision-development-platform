@@ -313,12 +313,6 @@ then
 	git pull
 	echo -e "\n"
 	cd ..
-	cd meta-qviart-5
-	echo "Checking out meta-qviart-5 master branch:"
-	git checkout master
-	git pull
-	echo -e "\n"
-	cd ..
 	cd meta-raspberrypi
 	echo "Checking out meta-raspberrypi develop branch:"
 	git checkout develop
@@ -334,12 +328,6 @@ then
 	cd meta-sh4
 	echo "Checking out meta-sh4 upcoming branch:"
 	git checkout upcoming
-	git pull
-	echo -e "\n"
-	cd ..
-	cd meta-spycat
-	echo "Checking out meta-spycat master branch:"
-	git checkout master
 	git pull
 	echo -e "\n"
 	cd ..
@@ -393,12 +381,6 @@ then
 	cd ..
 	cd meta-xpeedc
 	echo "Checking out meta-xpeedc master branch:"
-	git checkout master
-	git pull
-	echo -e "\n"
-	cd ..
-	cd meta-xsarius.pli5
-	echo "Checking out meta-xsarius.pli5 master branch:"
 	git checkout master
 	git pull
 	echo -e "\n"
