@@ -380,14 +380,14 @@ then
 	echo -e "\n"
 	cd ..
 	cd meta-xtrend
-	echo "Checking out meta-xtrend master branch:"
-	git checkout master
+	echo "Checking out meta-xtrend develop branch:"
+	git checkout develop
 	git pull
 	echo -e "\n"
 	cd ..
 	cd meta-zgemma
-	echo "Checking out meta-zgemma master branch:"
-	git checkout master
+	echo "Checking out meta-zgemma develop branch:"
+	git checkout develop
 	git pull
 	echo -e "\n"
 	cd ..
