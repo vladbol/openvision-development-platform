@@ -91,7 +91,6 @@ ENIGMA2_PLUGINS += "\
 DEPENDS += "\
 	enigma2 \
 	enigma2-2boom-plugins \
-	enigma2-alliance-plugins \
 	enigma2-locale-meta \
 	enigma2-persianempire-plugins \
 	enigma2-pliplugins \
@@ -137,6 +136,7 @@ IMAGE_INSTALL += "\
 	${@bb.utils.contains("MACHINE_FEATURES", "smallflash", "", " \
 	astra-sm \
 	curl \
+	enigma2-alliance-plugins \
 	enigma2-plugin-skins-octetfhd \
 	fuse-exfat \
 	${MACHINE_FEATURE_RELATED_PLUGINS} \
