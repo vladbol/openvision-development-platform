@@ -9,10 +9,10 @@ RCONFLICTS_${PN} = "libcrypto1.0.0 libssl1.0.0 libcrypto0.9.8 libssl0.9.8"
 
 do_install () {
     install -d ${D}${libdir}
-    ln -sf libcrypto.so.1.0.2 ${D}${libdir}/libcrypto.so.0.9.8
-    ln -sf libssl.so.1.0.2 ${D}${libdir}/libssl.so.0.9.8
-    ln -sf libcrypto.so.1.0.2 ${D}${libdir}/libcrypto.so.1.0.0
-    ln -sf libssl.so.1.0.2 ${D}${libdir}/libssl.so.1.0.0
+    ln -sf libcrypto.so.1.1 ${D}${libdir}/libcrypto.so.0.9.8
+    ln -sf libssl.so.1.1 ${D}${libdir}/libssl.so.0.9.8
+    ln -sf libcrypto.so.1.1 ${D}${libdir}/libcrypto.so.1.0.0
+    ln -sf libssl.so.1.1 ${D}${libdir}/libssl.so.1.0.0
 }
 
 FILES_${PN} = "${libdir}"
