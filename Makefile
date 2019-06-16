@@ -39,7 +39,6 @@ BBLAYERS ?= \
 	$(CURDIR)/meta-edision \
 	$(CURDIR)/meta-entwopia \
 	$(CURDIR)/meta-formuler \
-	$(CURDIR)/meta-gb \
 	$(CURDIR)/meta-gfutures \
 	$(CURDIR)/meta-gi \
 	$(CURDIR)/meta-gigablue \
@@ -64,14 +63,12 @@ BBLAYERS ?= \
 	$(CURDIR)/meta-tripledot \
 	$(CURDIR)/meta-uclan \
 	$(CURDIR)/meta-v8plus \
-	$(CURDIR)/meta-viper \
 	$(CURDIR)/meta-vuplus \
 	$(CURDIR)/meta-wetek \
 	$(CURDIR)/meta-xcore \
 	$(CURDIR)/meta-xp \
 	$(CURDIR)/meta-xpeedc \
 	$(CURDIR)/meta-xsarius.pli5 \
-	$(CURDIR)/meta-xt \
 	$(CURDIR)/meta-xtrend \
 	$(CURDIR)/meta-zgemma	
 
