@@ -25,6 +25,7 @@ echo -e "${GREEN}No ${NC}- ${GREEN}Yes"
 echo -e ""
 echo -e "${RED}Enter conflict mode:${NC}"
 echo -e "${GREEN}"
+rm -Rf meta-hd
 rm -Rf meta-gb
 rm -Rf meta-qviart-5
 rm -Rf meta-spycat

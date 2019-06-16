@@ -61,9 +61,6 @@
 	path = meta-gi
 	url = https://github.com/GIDeveloperTeam/meta-gi.git
 	branch = master
-[submodule "meta-hd"]
-	path = meta-hd
-	url = https://github.com/HD-Digital/meta-hd.git
 [submodule "meta-hypercube"]
 	path = meta-hypercube
 	url = https://github.com/OpenVisionE2/meta-hypercube.git

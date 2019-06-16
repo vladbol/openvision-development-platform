@@ -218,8 +218,8 @@ then
 	echo -e "\n"
 	cd ..
 	cd meta-formuler
-	echo "Checking out meta-formuler master branch:"
-	git checkout master
+	echo "Checking out meta-formuler develop branch:"
+	git checkout develop
 	git pull
 	echo -e "\n"
 	cd ..
@@ -236,14 +236,8 @@ then
 	echo -e "\n"
 	cd ..
 	cd meta-gigablue
-	echo "Checking out meta-gigablue master branch:"
-	git checkout master
-	git pull
-	echo -e "\n"
-	cd ..
-	cd meta-hd
-	echo "Checking out meta-hd master branch:"
-	git checkout master
+	echo "Checking out meta-gigablue develop branch:"
+	git checkout develop
 	git pull
 	echo -e "\n"
 	cd ..

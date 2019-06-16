@@ -42,7 +42,6 @@ BBLAYERS ?= \
 	$(CURDIR)/meta-gfutures \
 	$(CURDIR)/meta-gi \
 	$(CURDIR)/meta-gigablue \
-	$(CURDIR)/meta-hd \
 	$(CURDIR)/meta-hypercube \
 	$(CURDIR)/meta-ini \
 	$(CURDIR)/meta-ixuss \
