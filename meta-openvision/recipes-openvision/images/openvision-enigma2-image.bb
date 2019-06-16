@@ -1,4 +1,5 @@
 require openvision-image.bb
+require ../../recipes-core/package-index/package-index.bb
 
 KERNEL_WIFI_DRIVERS += "\
 	firmware-carl9170 \
