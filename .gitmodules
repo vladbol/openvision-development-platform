@@ -98,9 +98,6 @@
 [submodule "meta-protek"]
 	path = meta-protek
 	url = https://github.com/OpenVisionE2/meta-protek.git
-[submodule "meta-qviart-5"]
-	path = meta-qviart-5
-	url = https://github.com/pli3/meta-qviart-5.git
 [submodule "meta-raspberrypi"]
 	path = meta-raspberrypi
 	url = https://github.com/OpenVisionE2/meta-raspberrypi.git
@@ -111,9 +108,6 @@
 	path = meta-sh4
 	url = https://github.com/OpenVisionE2/meta-sh4.git
 	branch = upcoming
-[submodule "meta-spycat"]
-	path = meta-spycat
-	url = https://github.com/open-spycat/meta-spycat.git
 [submodule "meta-tiviar"]
 	path = meta-tiviar
 	url = https://github.com/OpenVisionE2/meta-tiviar.git
@@ -126,26 +120,16 @@
 [submodule "meta-v8plus"]
 	path = meta-v8plus
 	url = https://github.com/OpenVisionE2/meta-v8plus.git
-[submodule "meta-vuplus"]
-	path = meta-vuplus
-	url = https://github.com/vu-plus/meta-vuplus.git
-	branch = master
 [submodule "meta-wetek"]
 	path = meta-wetek
 	url = https://github.com/OpenVisionE2/meta-wetek.git
 [submodule "meta-xcore"]
 	path = meta-xcore
 	url = https://github.com/OpenVisionE2/meta-xcore.git
-[submodule "meta-xp"]
-	path = meta-xp
-	url = https://github.com/XP-Master/meta-xp.git
 [submodule "meta-xpeedc"]
 	path = meta-xpeedc
 	url = https://github.com/XpeedDeveloperTeam/meta-xpeedc.git
 	branch = master
-[submodule "meta-xsarius.pli5"]
-	path = meta-xsarius.pli5
-	url = https://github.com/pli3/meta-xsarius.pli5.git
 [submodule "meta-gigablue"]
 	path = meta-gigablue
 	url = https://github.com/OpenVisionE2/meta-gigablue.git
