@@ -54,11 +54,9 @@ BBLAYERS ?= \
 	$(CURDIR)/meta-odin \
 	$(CURDIR)/meta-odroid \
 	$(CURDIR)/meta-protek \
-	$(CURDIR)/meta-qviart-5 \
 	$(CURDIR)/meta-raspberrypi \
 	$(CURDIR)/meta-sab \
 	$(CURDIR)/meta-sh4 \
-	$(CURDIR)/meta-spycat \
 	$(CURDIR)/meta-tiviar \
 	$(CURDIR)/meta-tripledot \
 	$(CURDIR)/meta-uclan \
@@ -68,7 +66,6 @@ BBLAYERS ?= \
 	$(CURDIR)/meta-xcore \
 	$(CURDIR)/meta-xp \
 	$(CURDIR)/meta-xpeedc \
-	$(CURDIR)/meta-xsarius.pli5 \
 	$(CURDIR)/meta-xtrend \
 	$(CURDIR)/meta-zgemma	
 

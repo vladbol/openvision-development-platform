@@ -11,8 +11,8 @@ echo -e "${GREEN}Amiko ${NC}- ${GREEN}AX ${NC}- ${GREEN}AZBox  ${NC}- ${GREEN}Be
 echo -e "Clap ${NC}- ${GREEN}Cube ${NC}- ${GREEN}DAGS ${NC}- ${GREEN}Dinobot ${NC}- ${GREEN}Dreambox ${NC}- ${GREEN}EBox ${NC}- ${GREEN}Edision ${NC}- ${GREEN}Entwopia"
 echo -e "Formuler ${NC}- ${GREEN}GFutures ${NC}- ${GREEN}GI ${NC}- ${GREEN}GigaBlue ${NC}- ${GREEN}HyperCube ${NC}- ${GREEN}INI ${NC}- ${GREEN}IXUSS"
 echo -e "Linkdroid ${NC}- ${GREEN}MaxyTec ${NC}- ${GREEN}MINIX ${NC}- ${GREEN}MiracleBox ${NC}- ${GREEN}Octagon ${NC}- ${GREEN}Odin ${NC}- ${GREEN}Odroid"
-echo -e "Protek ${NC}- ${GREEN}Qviart ${NC}- ${GREEN}RaspberryPi ${NC}- ${GREEN}SH4 ${NC}- ${GREEN}Sab ${NC}- ${GREEN}SpyCat ${NC}- ${GREEN}Tiviar ${NC}- ${GREEN}Tripledot"
-echo -e "Uclan ${NC}- ${GREEN}V8Plus ${NC}- ${GREEN}VuPlus ${NC}- ${GREEN}WeTek ${NC}- ${GREEN}XCore ${NC}- ${GREEN}XP ${NC}- ${GREEN}Xpeed ${NC}- ${GREEN}Xsarius"
+echo -e "Protek ${NC}- ${GREEN}RaspberryPi ${NC}- ${GREEN}SH4 ${NC}- ${GREEN}Sab ${NC}- ${GREEN}Tiviar ${NC}- ${GREEN}Tripledot"
+echo -e "Uclan ${NC}- ${GREEN}V8Plus ${NC}- ${GREEN}VuPlus ${NC}- ${GREEN}WeTek ${NC}- ${GREEN}XCore ${NC}- ${GREEN}XP ${NC}- ${GREEN}Xpeed"
 echo -e "Xtrend ${NC}- ${GREEN}Zgemma ${NC}- ${GREEN}ALL ${NC}- ${GREEN}Specific"
 echo -e ""
 echo -e "${GREEN}ALL${RED}: Compiles all brands/models, As it requires huge free space it's not recommended!"
@@ -23,7 +23,7 @@ echo -e "${RED}Enter the meta name:${NC}"
 echo -e "${GREEN}"
 read META
 echo -e "${NC}"
-if [ $META != "Amiko" -a $META != "AX" -a $META != "AZBox" -a $META != "Beyonwiz" -a $META != "BlackBox" -a $META != "BroadMedia" -a $META != "Ceryon" -a $META != "Clap" -a $META != "Cube" -a $META != "DAGS" -a $META != "Dinobot" -a $META != "Dreambox" -a $META != "EBox" -a $META != "Edision" -a $META != "Entwopia" -a $META != "Formuler" -a $META != "GFutures" -a $META != "GI" -a $META != "GigaBlue" -a $META != "HyperCube" -a $META != "INI" -a $META != "IXUSS" -a $META != "Linkdroid" -a $META != "MaxyTec" -a $META != "MINIX" -a $META != "MiracleBox" -a $META != "Octagon" -a $META != "Odin" -a $META != "Odroid" -a $META != "Protek" -a $META != "Qviart" -a $META != "RaspberryPi" -a $META != "SH4" -a $META != "Sab" -a $META != "SpyCat" -a $META != "Tiviar" -a $META != "Tripledot" -a $META != "Uclan" -a $META != "V8Plus" -a $META != "VuPlus" -a $META != "WeTek" -a $META != "XCore" -a $META != "XP" -a $META != "Xpeed" -a $META != "Xsarius" -a $META != "Xtrend" -a $META != "Zgemma" -a $META != "ALL" -a $META != "Specific" ]
+if [ $META != "Amiko" -a $META != "AX" -a $META != "AZBox" -a $META != "Beyonwiz" -a $META != "BlackBox" -a $META != "BroadMedia" -a $META != "Ceryon" -a $META != "Clap" -a $META != "Cube" -a $META != "DAGS" -a $META != "Dinobot" -a $META != "Dreambox" -a $META != "EBox" -a $META != "Edision" -a $META != "Entwopia" -a $META != "Formuler" -a $META != "GFutures" -a $META != "GI" -a $META != "GigaBlue" -a $META != "HyperCube" -a $META != "INI" -a $META != "IXUSS" -a $META != "Linkdroid" -a $META != "MaxyTec" -a $META != "MINIX" -a $META != "MiracleBox" -a $META != "Octagon" -a $META != "Odin" -a $META != "Odroid" -a $META != "Protek" -a $META != "RaspberryPi" -a $META != "SH4" -a $META != "Sab" -a $META != "Tiviar" -a $META != "Tripledot" -a $META != "Uclan" -a $META != "V8Plus" -a $META != "VuPlus" -a $META != "WeTek" -a $META != "XCore" -a $META != "XP" -a $META != "Xpeed" -a $META != "Xtrend" -a $META != "Zgemma" -a $META != "ALL" -a $META != "Specific" ]
 then
 	echo -e "${RED}Not a valid answer!${NC}"
 	echo -e ""
@@ -144,10 +144,16 @@ then
 	MACHINE=force3uhd $IMAGECMD
 	MACHINE=force3uhdplus $IMAGECMD
 	MACHINE=force4 $IMAGECMD
+	MACHINE=fusionhd $IMAGECMD
+	MACHINE=fusionhdse $IMAGECMD
+	MACHINE=galaxy4k $IMAGECMD
 	MACHINE=iqonios100hd $IMAGECMD
 	MACHINE=iqonios200hd $IMAGECMD
 	MACHINE=iqonios300hd $IMAGECMD
 	MACHINE=iqonios300hdv2 $IMAGECMD
+	MACHINE=lunix $IMAGECMD
+	MACHINE=lunix3-4k $IMAGECMD
+	MACHINE=lunix4k $IMAGECMD
 	MACHINE=mediabox $IMAGECMD
 	MACHINE=optimussos $IMAGECMD
 	MACHINE=optimussos1 $IMAGECMD
@@ -155,6 +161,9 @@ then
 	MACHINE=optimussos2 $IMAGECMD
 	MACHINE=optimussos2plus $IMAGECMD
 	MACHINE=optimussos3plus $IMAGECMD
+	MACHINE=purehd $IMAGECMD
+	MACHINE=purehdse $IMAGECMD
+	MACHINE=revo4k $IMAGECMD
 	MACHINE=tm2t $IMAGECMD
 	MACHINE=tm4ksuper $IMAGECMD
 	MACHINE=tmnano $IMAGECMD
@@ -380,12 +389,6 @@ if [ $META = "Protek" ]
 then
 	MACHINE=9900lx $IMAGECMD
 fi
-if [ $META = "Qviart" ]
-then
-	MACHINE=lunix $IMAGECMD
-	MACHINE=lunix3-4k $IMAGECMD
-	MACHINE=lunix4k $IMAGECMD
-fi
 if [ $META = "RaspberryPi" ]
 then
 	MACHINE=raspberrypi $IMAGECMD
@@ -436,12 +439,6 @@ fi
 if [ $META = "Sab" ]
 then
 	MACHINE=alphatriplehd $IMAGECMD
-fi
-if [ $META = "SpyCat" ]
-then
-	MACHINE=spycat $IMAGECMD
-	MACHINE=spycatmini $IMAGECMD
-	MACHINE=spycatminiplus $IMAGECMD
 fi
 if [ $META = "Tiviar" ]
 then
@@ -495,9 +492,12 @@ fi
 if [ $META = "XCore" ]
 then
 	MACHINE=bcm7358 $IMAGECMD
+	MACHINE=spycat $IMAGECMD
 	MACHINE=spycat4k $IMAGECMD
 	MACHINE=spycat4kcombo $IMAGECMD
 	MACHINE=spycat4kmini $IMAGECMD
+	MACHINE=spycatmini $IMAGECMD
+	MACHINE=spycatminiplus $IMAGECMD
 	MACHINE=vp7358ci $IMAGECMD
 fi
 if [ $META = "XP" ]
@@ -507,15 +507,6 @@ fi
 if [ $META = "Xpeed" ]
 then
 	MACHINE=xpeedc $IMAGECMD
-fi
-if [ $META = "Xsarius" ]
-then
-	MACHINE=fusionhd $IMAGECMD
-	MACHINE=fusionhdse $IMAGECMD
-	MACHINE=galaxy4k $IMAGECMD
-	MACHINE=purehd $IMAGECMD
-	MACHINE=purehdse $IMAGECMD
-	MACHINE=revo4k $IMAGECMD
 fi
 if [ $META = "Xtrend" ]
 then
@@ -592,10 +583,16 @@ then
 	MACHINE=force3uhd $IMAGECMD
 	MACHINE=force3uhdplus $IMAGECMD
 	MACHINE=force4 $IMAGECMD
+	MACHINE=fusionhd $IMAGECMD
+	MACHINE=fusionhdse $IMAGECMD
+	MACHINE=galaxy4k $IMAGECMD
 	MACHINE=iqonios100hd $IMAGECMD
 	MACHINE=iqonios200hd $IMAGECMD
 	MACHINE=iqonios300hd $IMAGECMD
 	MACHINE=iqonios300hdv2 $IMAGECMD
+	MACHINE=lunix $IMAGECMD
+	MACHINE=lunix3-4k $IMAGECMD
+	MACHINE=lunix4k $IMAGECMD
 	MACHINE=mediabox $IMAGECMD
 	MACHINE=optimussos $IMAGECMD
 	MACHINE=optimussos1 $IMAGECMD
@@ -603,6 +600,9 @@ then
 	MACHINE=optimussos2 $IMAGECMD
 	MACHINE=optimussos2plus $IMAGECMD
 	MACHINE=optimussos3plus $IMAGECMD
+	MACHINE=purehd $IMAGECMD
+	MACHINE=purehdse $IMAGECMD
+	MACHINE=revo4k $IMAGECMD
 	MACHINE=tm2t $IMAGECMD
 	MACHINE=tm4ksuper $IMAGECMD
 	MACHINE=tmnano $IMAGECMD
@@ -768,9 +768,6 @@ then
 	MACHINE=starsatlx $IMAGECMD
 	MACHINE=odroidc2 $IMAGECMD
 	MACHINE=9900lx $IMAGECMD
-	MACHINE=lunix $IMAGECMD
-	MACHINE=lunix3-4k $IMAGECMD
-	MACHINE=lunix4k $IMAGECMD
 	MACHINE=raspberrypi $IMAGECMD
 	MACHINE=raspberrypi0 $IMAGECMD
 	MACHINE=raspberrypi2 $IMAGECMD
@@ -813,9 +810,6 @@ then
 	MACHINE=vip2_v1 $IMAGECMD
 	MACHINE=vitamin_hd5000 $IMAGECMD
 	MACHINE=alphatriplehd $IMAGECMD
-	MACHINE=spycat $IMAGECMD
-	MACHINE=spycatmini $IMAGECMD
-	MACHINE=spycatminiplus $IMAGECMD
 	MACHINE=tiviaraplus $IMAGECMD
 	MACHINE=tiviarmin $IMAGECMD
 	MACHINE=enibox $IMAGECMD
@@ -848,18 +842,15 @@ then
 	MACHINE=wetekplay $IMAGECMD
 	MACHINE=wetekplay2 $IMAGECMD
 	MACHINE=bcm7358 $IMAGECMD
+	MACHINE=spycat $IMAGECMD
 	MACHINE=spycat4k $IMAGECMD
 	MACHINE=spycat4kcombo $IMAGECMD
 	MACHINE=spycat4kmini $IMAGECMD
+	MACHINE=spycatmini $IMAGECMD
+	MACHINE=spycatminiplus $IMAGECMD
 	MACHINE=vp7358ci $IMAGECMD
 	MACHINE=xp1000 $IMAGECMD
 	MACHINE=xpeedc $IMAGECMD
-	MACHINE=fusionhd $IMAGECMD
-	MACHINE=fusionhdse $IMAGECMD
-	MACHINE=galaxy4k $IMAGECMD
-	MACHINE=purehd $IMAGECMD
-	MACHINE=purehdse $IMAGECMD
-	MACHINE=revo4k $IMAGECMD
 	MACHINE=beyonwizu4 $IMAGECMD
 	MACHINE=et10000 $IMAGECMD
 	MACHINE=et13000 $IMAGECMD

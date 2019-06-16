@@ -26,7 +26,10 @@ echo -e ""
 echo -e "${RED}Enter conflict mode:${NC}"
 echo -e "${GREEN}"
 rm -Rf meta-gb
+rm -Rf meta-qviart-5
+rm -Rf meta-spycat
 rm -Rf meta-viper
+rm -Rf meta-xsarius.pli5
 rm -Rf meta-xt
 read CONFLICTMODE
 echo -e "${NC}"

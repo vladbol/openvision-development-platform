@@ -64,10 +64,16 @@
 * force3uhd
 * force3uhdplus
 * force4
+* fusionhd
+* fusionhdse
+* galaxy4k
 * iqonios100hd
 * iqonios200hd
 * iqonios300hd
 * iqonios300hdv2
+* lunix
+* lunix3-4k
+* lunix4k
 * mediabox
 * optimussos
 * optimussos1
@@ -75,6 +81,9 @@
 * optimussos2
 * optimussos2plus
 * optimussos3plus
+* purehd
+* purehdse
+* revo4k
 * tm2t
 * tm4ksuper
 * tmnano
@@ -319,6 +328,22 @@
 # V8Plus
 * v8plus
 
+# VuPlus
+* vuduo
+* vuduo2
+* vuduo4k
+* vusolo
+* vusolo2
+* vusolo4k
+* vusolose
+* vuultimo
+* vuultimo4k
+* vuuno
+* vuuno4k
+* vuuno4kse
+* vuzero
+* vuzero4k
+
 # WeTek
 * wetekhub
 * wetekplay
@@ -326,10 +351,16 @@
 
 # XCore
 * bcm7358
+* spycat
 * spycat4k
 * spycat4kcombo
 * spycat4kmini
+* spycatmini
+* spycatminiplus
 * vp7358ci
+
+# XP
+* xp1000
 
 # Xtrend
 * beyonwizu4

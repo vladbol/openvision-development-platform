@@ -28,45 +28,8 @@
 * mbmicrov2
 * mbtwinplus
 
-# Qviart
-* lunix
-* lunix3-4k
-* lunix4k
-
 # Sab
 * alphatriplehd
 
-# SpyCat
-* spycat
-* spycatmini
-* spycatminiplus
-
-# VuPlus
-* vuduo
-* vuduo2
-* vuduo4k
-* vusolo
-* vusolo2
-* vusolo4k
-* vusolose
-* vuultimo
-* vuultimo4k
-* vuuno
-* vuuno4k
-* vuuno4kse
-* vuzero
-* vuzero4k
-
-# XP
-* xp1000
-
 # Xpeed
 * xpeedc
-
-# Xsarius
-* fusionhd
-* fusionhdse
-* galaxy4k
-* purehd
-* purehdse
-* revo4k
