@@ -356,8 +356,8 @@ then
 	echo -e "\n"
 	cd ..
 	cd meta-vuplus
-	echo "Checking out meta-vuplus master branch:"
-	git checkout master
+	echo "Checking out meta-vuplus develop branch:"
+	git checkout develop
 	git pull
 	echo -e "\n"
 	cd ..
@@ -374,8 +374,8 @@ then
 	echo -e "\n"
 	cd ..
 	cd meta-xp
-	echo "Checking out meta-xp master branch:"
-	git checkout master
+	echo "Checking out meta-xp develop branch:"
+	git checkout develop
 	git pull
 	echo -e "\n"
 	cd ..
