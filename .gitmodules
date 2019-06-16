@@ -145,3 +145,9 @@
 [submodule "meta-xtrend"]
 	path = meta-xtrend
 	url = https://github.com/OpenVisionE2/meta-xtrend.git
+[submodule "meta-vuplus"]
+	path = meta-vuplus
+	url = https://github.com/OpenVisionE2/meta-vuplus.git
+[submodule "meta-xp"]
+	path = meta-xp
+	url = https://github.com/OpenVisionE2/meta-xp.git
