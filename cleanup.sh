@@ -19,7 +19,7 @@ then
 	echo -e ""
 	exit 0
 fi
-echo -e "Now check ${RED}Vision-metas.md ${NC}or ${RED}PLi-metas.md ${NC}and enter a specific machine to cleanup:"
+echo -e "Now check ${RED}Vision-metas.md ${NC}and enter a specific machine to cleanup:"
 echo -e "${GREEN}"
 read MACHINE
 echo -e "${NC}"
