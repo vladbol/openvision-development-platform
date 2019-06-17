@@ -4,26 +4,26 @@ RED='\033[0;31m'
 NC='\033[0m' # No Color
 GREEN='\033[0;32m'
 echo -e "${RED}Welcome to Open Vision's image compile script!"
-echo -e "Check ${NC}Vision-metas.md ${RED}or ${NC}PLi-metas.md ${RED}and enter a meta or a specific machine to compile."
+echo -e "Check ${NC}Vision-metas.md ${RED}and enter a meta or a specific machine to compile."
 echo -e "Answers are in ${GREEN}green:${NC}"
 echo -e ""
 echo -e "${GREEN}Amiko ${NC}- ${GREEN}AX ${NC}- ${GREEN}AZBox  ${NC}- ${GREEN}Beyonwiz ${NC}- ${GREEN}BlackBox ${NC}- ${GREEN}BroadMedia ${NC}- ${GREEN}Ceryon"
 echo -e "Clap ${NC}- ${GREEN}Cube ${NC}- ${GREEN}DAGS ${NC}- ${GREEN}Dinobot ${NC}- ${GREEN}Dreambox ${NC}- ${GREEN}EBox ${NC}- ${GREEN}Edision ${NC}- ${GREEN}Entwopia"
-echo -e "Formuler ${NC}- ${GREEN}GFutures ${NC}- ${GREEN}GI ${NC}- ${GREEN}GigaBlue ${NC}- ${GREEN}HyperCube ${NC}- ${GREEN}INI ${NC}- ${GREEN}IXUSS"
-echo -e "Linkdroid ${NC}- ${GREEN}MaxyTec ${NC}- ${GREEN}MINIX ${NC}- ${GREEN}MiracleBox ${NC}- ${GREEN}Octagon ${NC}- ${GREEN}Odin ${NC}- ${GREEN}Odroid"
-echo -e "Protek ${NC}- ${GREEN}RaspberryPi ${NC}- ${GREEN}SH4 ${NC}- ${GREEN}Sab ${NC}- ${GREEN}Tiviar ${NC}- ${GREEN}Tripledot"
-echo -e "Uclan ${NC}- ${GREEN}V8Plus ${NC}- ${GREEN}VuPlus ${NC}- ${GREEN}WeTek ${NC}- ${GREEN}XCore ${NC}- ${GREEN}XP ${NC}- ${GREEN}Xpeed"
+echo -e "Formuler ${NC}- ${GREEN}GFutures ${NC}- ${GREEN}GigaBlue ${NC}- ${GREEN}HyperCube ${NC}- ${GREEN}INI ${NC}- ${GREEN}IXUSS"
+echo -e "Linkdroid ${NC}- ${GREEN}MaxyTec ${NC}- ${GREEN}MINIX ${NC}- ${GREEN}Octagon ${NC}- ${GREEN}Odin ${NC}- ${GREEN}Odroid"
+echo -e "Protek ${NC}- ${GREEN}RaspberryPi ${NC}- ${GREEN}SH4 ${NC}- ${GREEN}Tiviar ${NC}- ${GREEN}Tripledot"
+echo -e "Uclan ${NC}- ${GREEN}UltraMini ${NC}- ${GREEN}VuPlus ${NC}- ${GREEN}WeTek ${NC}- ${GREEN}XCore ${NC}- ${GREEN}XP"
 echo -e "Xtrend ${NC}- ${GREEN}Zgemma ${NC}- ${GREEN}ALL ${NC}- ${GREEN}Specific"
 echo -e ""
 echo -e "${GREEN}ALL${RED}: Compiles all brands/models, As it requires huge free space it's not recommended!"
 echo -e ""
-echo -e "${GREEN}Specific${RED}: You have a specific machine in mind, Check ${NC}Vision-metas.md ${RED}or ${NC}PLi-metas.md"
+echo -e "${GREEN}Specific${RED}: You have a specific machine in mind, Check ${NC}Vision-metas.md"
 echo -e ""
 echo -e "${RED}Enter the meta name:${NC}"
 echo -e "${GREEN}"
 read META
 echo -e "${NC}"
-if [ $META != "Amiko" -a $META != "AX" -a $META != "AZBox" -a $META != "Beyonwiz" -a $META != "BlackBox" -a $META != "BroadMedia" -a $META != "Ceryon" -a $META != "Clap" -a $META != "Cube" -a $META != "DAGS" -a $META != "Dinobot" -a $META != "Dreambox" -a $META != "EBox" -a $META != "Edision" -a $META != "Entwopia" -a $META != "Formuler" -a $META != "GFutures" -a $META != "GI" -a $META != "GigaBlue" -a $META != "HyperCube" -a $META != "INI" -a $META != "IXUSS" -a $META != "Linkdroid" -a $META != "MaxyTec" -a $META != "MINIX" -a $META != "MiracleBox" -a $META != "Octagon" -a $META != "Odin" -a $META != "Odroid" -a $META != "Protek" -a $META != "RaspberryPi" -a $META != "SH4" -a $META != "Sab" -a $META != "Tiviar" -a $META != "Tripledot" -a $META != "Uclan" -a $META != "V8Plus" -a $META != "VuPlus" -a $META != "WeTek" -a $META != "XCore" -a $META != "XP" -a $META != "Xpeed" -a $META != "Xtrend" -a $META != "Zgemma" -a $META != "ALL" -a $META != "Specific" ]
+if [ $META != "Amiko" -a $META != "AX" -a $META != "AZBox" -a $META != "Beyonwiz" -a $META != "BlackBox" -a $META != "BroadMedia" -a $META != "Ceryon" -a $META != "Clap" -a $META != "Cube" -a $META != "DAGS" -a $META != "Dinobot" -a $META != "Dreambox" -a $META != "EBox" -a $META != "Edision" -a $META != "Entwopia" -a $META != "Formuler" -a $META != "GFutures" -a $META != "GigaBlue" -a $META != "HyperCube" -a $META != "INI" -a $META != "IXUSS" -a $META != "Linkdroid" -a $META != "MaxyTec" -a $META != "MINIX" -a $META != "Octagon" -a $META != "Odin" -a $META != "Odroid" -a $META != "Protek" -a $META != "RaspberryPi" -a $META != "SH4" -a $META != "Tiviar" -a $META != "Tripledot" -a $META != "Uclan" -a $META != "UltraMini" -a $META != "VuPlus" -a $META != "WeTek" -a $META != "XCore" -a $META != "XP" -a $META != "Xtrend" -a $META != "Zgemma" -a $META != "ALL" -a $META != "Specific" ]
 then
 	echo -e "${RED}Not a valid answer!${NC}"
 	echo -e ""
@@ -62,7 +62,7 @@ then
 fi
 if [ $META = "Specific" ]
 then
-	echo -e "${RED}Enter your specific machine name exactly like what you see in ${NC}Vision-metas.md ${RED}or ${NC}PLi-metas.md"
+	echo -e "${RED}Enter your specific machine name exactly like what you see in ${NC}Vision-metas.md"
 	echo -e "${GREEN}"
 	read MACHINESPECIFIC
 	echo -e "${NC}"
@@ -100,7 +100,9 @@ then
 fi
 if [ $META = "BroadMedia" ]
 then
+	MACHINE=alphatriplehd $IMAGECMD
 	MACHINE=bre2zet2c $IMAGECMD
+	MACHINE=mbtwinplus $IMAGECMD
 	MACHINE=sf128 $IMAGECMD
 	MACHINE=sf138 $IMAGECMD
 	MACHINE=sf3038 $IMAGECMD
@@ -114,6 +116,8 @@ then
 	MACHINE=e4hdcombo $IMAGECMD
 	MACHINE=e4hdhybrid $IMAGECMD
 	MACHINE=e4hdultra $IMAGECMD
+	MACHINE=mbmicro $IMAGECMD
+	MACHINE=mbmicrov2 $IMAGECMD
 	MACHINE=odin2hybrid $IMAGECMD
 	MACHINE=odinplus $IMAGECMD
 	MACHINE=protek4k $IMAGECMD
@@ -256,6 +260,7 @@ then
 fi
 if [ $META = "GFutures" ]
 then
+	MACHINE=axultra $IMAGECMD
 	MACHINE=bre2ze4k $IMAGECMD
 	MACHINE=hd11 $IMAGECMD
 	MACHINE=hd1100 $IMAGECMD
@@ -270,11 +275,6 @@ then
 	MACHINE=hd61 $IMAGECMD
 	MACHINE=vs1000 $IMAGECMD
 	MACHINE=vs1500 $IMAGECMD
-fi
-if [ $META = "GI" ]
-then
-	MACHINE=et1x000 $IMAGECMD
-	MACHINE=et7000mini $IMAGECMD
 fi
 if [ $META = "GigaBlue" ]
 then
@@ -349,16 +349,11 @@ fi
 if [ $META = "MaxyTec" ]
 then
 	MACHINE=multibox $IMAGECMD
+	MACHINE=v8plus $IMAGECMD
 fi
 if [ $META = "MINIX" ]
 then
 	MACHINE=x8hp $IMAGECMD
-fi
-if [ $META = "MiracleBox" ]
-then
-	MACHINE=mbmicro $IMAGECMD
-	MACHINE=mbmicrov2 $IMAGECMD
-	MACHINE=mbtwinplus $IMAGECMD
 fi
 if [ $META = "Octagon" ]
 then
@@ -436,10 +431,6 @@ then
 	MACHINE=vip2_v1 $IMAGECMD
 	MACHINE=vitamin_hd5000 $IMAGECMD
 fi
-if [ $META = "Sab" ]
-then
-	MACHINE=alphatriplehd $IMAGECMD
-fi
 if [ $META = "Tiviar" ]
 then
 	MACHINE=tiviaraplus $IMAGECMD
@@ -462,9 +453,10 @@ if [ $META = "Uclan" ]
 then
 	MACHINE=ustym4kpro $IMAGECMD
 fi
-if [ $META = "V8Plus" ]
+if [ $META = "UltraMini" ]
 then
-	MACHINE=v8plus $IMAGECMD
+	MACHINE=et7000mini $IMAGECMD
+	MACHINE=xpeedc $IMAGECMD
 fi
 if [ $META = "VuPlus" ]
 then
@@ -504,15 +496,12 @@ if [ $META = "XP" ]
 then
 	MACHINE=xp1000 $IMAGECMD
 fi
-if [ $META = "Xpeed" ]
-then
-	MACHINE=xpeedc $IMAGECMD
-fi
 if [ $META = "Xtrend" ]
 then
 	MACHINE=beyonwizu4 $IMAGECMD
 	MACHINE=et10000 $IMAGECMD
 	MACHINE=et13000 $IMAGECMD
+	MACHINE=et1x000 $IMAGECMD
 	MACHINE=et4x00 $IMAGECMD
 	MACHINE=et5x00 $IMAGECMD
 	MACHINE=et6x00 $IMAGECMD
@@ -551,7 +540,9 @@ then
 	MACHINE=beyonwizv2 $IMAGECMD
 	MACHINE=sogno8800hd $IMAGECMD
 	MACHINE=uniboxhde $IMAGECMD
+	MACHINE=alphatriplehd $IMAGECMD
 	MACHINE=bre2zet2c $IMAGECMD
+	MACHINE=mbtwinplus $IMAGECMD
 	MACHINE=sf128 $IMAGECMD
 	MACHINE=sf138 $IMAGECMD
 	MACHINE=sf3038 $IMAGECMD
@@ -562,6 +553,8 @@ then
 	MACHINE=e4hdcombo $IMAGECMD
 	MACHINE=e4hdhybrid $IMAGECMD
 	MACHINE=e4hdultra $IMAGECMD
+	MACHINE=mbmicro $IMAGECMD
+	MACHINE=mbmicrov2 $IMAGECMD
 	MACHINE=odin2hybrid $IMAGECMD
 	MACHINE=odinplus $IMAGECMD
 	MACHINE=protek4k $IMAGECMD
@@ -692,6 +685,7 @@ then
 	MACHINE=gbx2 $IMAGECMD
 	MACHINE=gbx3 $IMAGECMD
 	MACHINE=gbx3h $IMAGECMD
+	MACHINE=axultra $IMAGECMD
 	MACHINE=bre2ze4k $IMAGECMD
 	MACHINE=hd11 $IMAGECMD
 	MACHINE=hd1100 $IMAGECMD
@@ -748,9 +742,6 @@ then
 	MACHINE=multibox $IMAGECMD
 	MACHINE=v8plus $IMAGECMD
 	MACHINE=x8hp $IMAGECMD
-	MACHINE=mbmicro $IMAGECMD
-	MACHINE=mbmicrov2 $IMAGECMD
-	MACHINE=mbtwinplus $IMAGECMD
 	MACHINE=sf4008 $IMAGECMD
 	MACHINE=sf5008 $IMAGECMD
 	MACHINE=sf8008 $IMAGECMD
@@ -809,7 +800,6 @@ then
 	MACHINE=vip1_v2 $IMAGECMD
 	MACHINE=vip2_v1 $IMAGECMD
 	MACHINE=vitamin_hd5000 $IMAGECMD
-	MACHINE=alphatriplehd $IMAGECMD
 	MACHINE=tiviaraplus $IMAGECMD
 	MACHINE=tiviarmin $IMAGECMD
 	MACHINE=enibox $IMAGECMD
@@ -823,7 +813,8 @@ then
 	MACHINE=x1plus $IMAGECMD
 	MACHINE=xcombo $IMAGECMD
 	MACHINE=ustym4kpro $IMAGECMD
-	MACHINE=v8plus $IMAGECMD
+	MACHINE=et7000mini $IMAGECMD
+	MACHINE=xpeedc $IMAGECMD
 	MACHINE=vuduo $IMAGECMD
 	MACHINE=vuduo2 $IMAGECMD
 	MACHINE=vuduo4k $IMAGECMD
@@ -850,10 +841,10 @@ then
 	MACHINE=spycatminiplus $IMAGECMD
 	MACHINE=vp7358ci $IMAGECMD
 	MACHINE=xp1000 $IMAGECMD
-	MACHINE=xpeedc $IMAGECMD
 	MACHINE=beyonwizu4 $IMAGECMD
 	MACHINE=et10000 $IMAGECMD
 	MACHINE=et13000 $IMAGECMD
+	MACHINE=et1x000 $IMAGECMD
 	MACHINE=et4x00 $IMAGECMD
 	MACHINE=et5x00 $IMAGECMD
 	MACHINE=et6x00 $IMAGECMD

@@ -24,7 +24,9 @@
 * uniboxhde
 
 # BroadMedia
+* alphatriplehd
 * bre2zet2c
+* mbtwinplus
 * sf128
 * sf138
 * sf3038
@@ -37,6 +39,8 @@
 * e4hdcombo
 * e4hdhybrid
 * e4hdultra
+* mbmicro
+* mbmicrov2
 * odin2hybrid
 * odinplus
 * protek4k
@@ -168,6 +172,23 @@
 * formuler4
 * formuler4turbo
 
+# GFutures
+* axultra
+* bre2ze4k
+* hd11
+* hd1100
+* hd1200
+* hd1265
+* hd1500
+* hd2400
+* hd500c
+* hd51
+* hd530c
+* hd60
+* hd61
+* vs1000
+* vs1500
+
 # GigaBlue
 * gb800se
 * gb800seplus
@@ -232,6 +253,10 @@
 * k2prov2
 * k3pro
 * kvim2
+
+# MaxyTec
+* multibox
+* v8plus
 
 # MINIX
 * x8hp
@@ -325,8 +350,9 @@
 # Uclan
 * ustym4kpro
 
-# V8Plus
-* v8plus
+# UltraMini
+* et7000mini
+* xpeedc
 
 # VuPlus
 * vuduo
@@ -366,6 +392,7 @@
 * beyonwizu4
 * et10000
 * et13000
+* et1x000
 * et4x00
 * et5x00
 * et6x00

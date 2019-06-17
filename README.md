@@ -33,7 +33,6 @@ If you see your model in https://github.com/OpenVisionE2/openvision-development-
 
 # Compile
 You could compile Open Vision for so many brands/models:
-* PLi-metas: https://github.com/OpenVisionE2/openvision-development-platform/blob/develop/PLi-metas.md
 * Vision-metas: https://github.com/OpenVisionE2/openvision-development-platform/blob/develop/Vision-metas.md
 
 # Ubuntu 18.04.x LTS setup

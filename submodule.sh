@@ -224,14 +224,8 @@ then
 	echo -e "\n"
 	cd ..
 	cd meta-gfutures
-	echo "Checking out meta-gfutures master branch:"
-	git checkout master
-	git pull
-	echo -e "\n"
-	cd ..
-	cd meta-gi
-	echo "Checking out meta-gi master branch:"
-	git checkout master
+	echo "Checking out meta-gfutures develop branch:"
+	git checkout develop
 	git pull
 	echo -e "\n"
 	cd ..
@@ -266,20 +260,14 @@ then
 	echo -e "\n"
 	cd ..
 	cd meta-maxytec
-	echo "Checking out meta-maxytec master branch:"
-	git checkout master
+	echo "Checking out meta-maxytec develop branch:"
+	git checkout develop
 	git pull
 	echo -e "\n"
 	cd ..
 	cd meta-minix
 	echo "Checking out meta-minix develop branch:"
 	git checkout develop
-	git pull
-	echo -e "\n"
-	cd ..
-	cd meta-miraclebox
-	echo "Checking out meta-miraclebox master branch:"
-	git checkout master
 	git pull
 	echo -e "\n"
 	cd ..
@@ -313,12 +301,6 @@ then
 	git pull
 	echo -e "\n"
 	cd ..
-	cd meta-sab
-	echo "Checking out meta-sab master branch:"
-	git checkout master
-	git pull
-	echo -e "\n"
-	cd ..
 	cd meta-sh4
 	echo "Checking out meta-sh4 upcoming branch:"
 	git checkout upcoming
@@ -343,8 +325,8 @@ then
 	git pull
 	echo -e "\n"
 	cd ..
-	cd meta-v8plus
-	echo "Checking out meta-v8plus develop branch:"
+	cd meta-ultramini
+	echo "Checking out meta-ultramini develop branch:"
 	git checkout develop
 	git pull
 	echo -e "\n"
@@ -370,12 +352,6 @@ then
 	cd meta-xp
 	echo "Checking out meta-xp develop branch:"
 	git checkout develop
-	git pull
-	echo -e "\n"
-	cd ..
-	cd meta-xpeedc
-	echo "Checking out meta-xpeedc master branch:"
-	git checkout master
 	git pull
 	echo -e "\n"
 	cd ..

@@ -40,7 +40,6 @@ BBLAYERS ?= \
 	$(CURDIR)/meta-entwopia \
 	$(CURDIR)/meta-formuler \
 	$(CURDIR)/meta-gfutures \
-	$(CURDIR)/meta-gi \
 	$(CURDIR)/meta-gigablue \
 	$(CURDIR)/meta-hypercube \
 	$(CURDIR)/meta-ini \
@@ -48,23 +47,19 @@ BBLAYERS ?= \
 	$(CURDIR)/meta-linkdroid \
 	$(CURDIR)/meta-maxytec \
 	$(CURDIR)/meta-minix \
-	$(CURDIR)/meta-miraclebox \
 	$(CURDIR)/meta-octagon \
 	$(CURDIR)/meta-odin \
 	$(CURDIR)/meta-odroid \
 	$(CURDIR)/meta-protek \
 	$(CURDIR)/meta-raspberrypi \
-	$(CURDIR)/meta-sab \
 	$(CURDIR)/meta-sh4 \
 	$(CURDIR)/meta-tiviar \
 	$(CURDIR)/meta-tripledot \
 	$(CURDIR)/meta-uclan \
-	$(CURDIR)/meta-v8plus \
 	$(CURDIR)/meta-vuplus \
 	$(CURDIR)/meta-wetek \
 	$(CURDIR)/meta-xcore \
 	$(CURDIR)/meta-xp \
-	$(CURDIR)/meta-xpeedc \
 	$(CURDIR)/meta-xtrend \
 	$(CURDIR)/meta-zgemma	
 
