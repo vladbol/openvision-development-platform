@@ -123,3 +123,9 @@
 [submodule "meta-xp"]
 	path = meta-xp
 	url = https://github.com/OpenVisionE2/meta-xp.git
+[submodule "meta-gfutures"]
+	path = meta-gfutures
+	url = https://github.com/OpenVisionE2/meta-gfutures.git
+[submodule "meta-maxytec"]
+	path = meta-maxytec
+	url = https://github.com/OpenVisionE2/meta-maxytec.git
