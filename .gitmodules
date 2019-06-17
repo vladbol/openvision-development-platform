@@ -129,3 +129,6 @@
 [submodule "meta-maxytec"]
 	path = meta-maxytec
 	url = https://github.com/OpenVisionE2/meta-maxytec.git
+[submodule "meta-ultramini"]
+	path = meta-ultramini
+	url = https://github.com/OpenVisionE2/meta-ultramini.git
