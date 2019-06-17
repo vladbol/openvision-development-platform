@@ -53,14 +53,6 @@
 [submodule "meta-entwopia"]
 	path = meta-entwopia
 	url = https://github.com/OpenVisionE2/meta-entwopia.git
-[submodule "meta-gfutures"]
-	path = meta-gfutures
-	url = https://github.com/HD-Digital/meta-gfutures.git
-	branch = master
-[submodule "meta-gi"]
-	path = meta-gi
-	url = https://github.com/GIDeveloperTeam/meta-gi.git
-	branch = master
 [submodule "meta-hypercube"]
 	path = meta-hypercube
 	url = https://github.com/OpenVisionE2/meta-hypercube.git
@@ -73,16 +65,9 @@
 [submodule "meta-linkdroid"]
 	path = meta-linkdroid
 	url = https://github.com/OpenVisionE2/meta-linkdroid.git
-[submodule "meta-maxytec"]
-	path = meta-maxytec
-	url = https://github.com/v8droide2/meta-maxytec
-	branch = master
 [submodule "meta-minix"]
 	path = meta-minix
 	url = https://github.com/OpenVisionE2/meta-minix.git
-[submodule "meta-miraclebox"]
-	path = meta-miraclebox
-	url = https://github.com/miraclebox-git/meta-miraclebox.git
 [submodule "meta-octagon"]
 	path = meta-octagon
 	url = https://github.com/OpenVisionE2/meta-octagon.git
@@ -98,9 +83,6 @@
 [submodule "meta-raspberrypi"]
 	path = meta-raspberrypi
 	url = https://github.com/OpenVisionE2/meta-raspberrypi.git
-[submodule "meta-sab"]
-	path = meta-sab
-	url = https://github.com/mariner2/meta-sab.git
 [submodule "meta-sh4"]
 	path = meta-sh4
 	url = https://github.com/OpenVisionE2/meta-sh4.git
@@ -114,19 +96,12 @@
 [submodule "meta-uclan"]
 	path = meta-uclan
 	url = https://github.com/OpenVisionE2/meta-uclan.git
-[submodule "meta-v8plus"]
-	path = meta-v8plus
-	url = https://github.com/OpenVisionE2/meta-v8plus.git
 [submodule "meta-wetek"]
 	path = meta-wetek
 	url = https://github.com/OpenVisionE2/meta-wetek.git
 [submodule "meta-xcore"]
 	path = meta-xcore
 	url = https://github.com/OpenVisionE2/meta-xcore.git
-[submodule "meta-xpeedc"]
-	path = meta-xpeedc
-	url = https://github.com/XpeedDeveloperTeam/meta-xpeedc.git
-	branch = master
 [submodule "meta-gigablue"]
 	path = meta-gigablue
 	url = https://github.com/OpenVisionE2/meta-gigablue.git
