@@ -51,7 +51,6 @@ echo -e "${RED}Updated.${NC}"
 echo -e ""
 echo -e "${RED}Compiling${GREEN} $META ${RED}images, please wait ...${NC}"
 echo -e ""
-cd ..
 if [ $IMAGETYPE = "Vision" ]
 then
 	IMAGECMD='make image'
