@@ -1,0 +1,19 @@
+--- eglibc-2.19/libc/locale/xlocale.h.orig	2018-12-20 10:45:30.566083800 +0100
++++ eglibc-2.19/libc/locale/xlocale.h	2018-12-20 10:46:33.423462842 +0100
+@@ -17,6 +17,11 @@
+    License along with the GNU C Library; if not, see
+    <http://www.gnu.org/licenses/>.  */
+ 
++#ifdef HAVE_CTYPE_H
++#include_next <ctype.h>
++#endif
++
++#ifndef _BITS_TYPES___LOCALE_T_H
+ #ifndef _XLOCALE_H
+ #define _XLOCALE_H	1
+ 
+@@ -42,3 +47,4 @@
+ typedef __locale_t locale_t;
+ 
+ #endif /* xlocale.h */
++#endif

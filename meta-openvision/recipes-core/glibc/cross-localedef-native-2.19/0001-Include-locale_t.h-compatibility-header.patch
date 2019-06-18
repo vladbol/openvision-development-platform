@@ -1,0 +1,4 @@
+--- /dev/null	2018-12-18 15:54:10.411752733 +0100
++++ eglibc-2.19/libc/locale/bits/types/locale_t.h	2018-12-20 10:39:22.877716131 +0100
+@@ -0,0 +1 @@
++#include <xlocale.h>
