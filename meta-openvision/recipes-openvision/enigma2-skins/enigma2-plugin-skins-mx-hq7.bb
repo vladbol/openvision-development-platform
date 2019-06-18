@@ -4,7 +4,7 @@ SECTION = "misc"
 PRIORITY = "optional"
 LICENSE = "CLOSED"
 
-RDEPENDS_${PN} += "font-tiny enigma2-plugin-systemplugins-bh-skin-support"
+RDEPENDS_${PN} += "font-tiny"
 
 inherit gitpkgv allarch
 
