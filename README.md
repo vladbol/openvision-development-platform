@@ -63,7 +63,7 @@ sudo apt-get install xfce4
 ```
 git clone --depth 1 https://github.com/OpenVisionE2/openvision-development-platform.git
 ```
-2. Run our image.sh script:
+2. Run our image.sh script (Do not run bitbake or any related script as root!):
 ```
 cd openvision-development-platform
 ./image.sh
