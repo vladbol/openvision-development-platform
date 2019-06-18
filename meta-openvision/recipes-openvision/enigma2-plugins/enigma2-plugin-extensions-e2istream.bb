@@ -1,10 +1,10 @@
-SUMMARY = "E2i Player for E2"
-DESCRIPTION = "E2i Player for E2"
-HOMEPAGE = "http://www.iptvplayer.gitlab.io/"
+SUMMARY = "E2i Stream for E2"
+DESCRIPTION = "E2i Stream for E2"
 SECTION = "multimedia"
-LICENSE = "PD"
-LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/GPL-2.0;md5=801f80980d171dd6425610833a22dbe6"
-SRC_URI = "git://github.com/OpenVisionE2/e2istream.git;protocol=http"
+LICENSE = "GPLv3"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=1ebbd3e34237af26da5dc08a4e440464"
+
+SRC_URI = "git://github.com/persianpros/e2istream.git;protocol=http"
 
 S = "${WORKDIR}/git"
 
@@ -19,6 +19,7 @@ RCONFLICTS_${PN} = "enigma2-plugin-extensions-iptvplayer"
 RREPLACES_${PN} = "enigma2-plugin-extensions-iptvplayer"
 
 DEPENDS = "gettext-native python"
+
 RRECOMMENDS_${PN} = " \
 	enigma2-plugin-extensions-e2iplayer-deps \
 	python-compression \
@@ -32,6 +33,7 @@ RRECOMMENDS_${PN} = " \
 	"
 
 RDEPENDS_{PN}-src = "${PN}"
+
 FILES_${PN}-src = " \
 	${libdir}/enigma2/python/Plugins/*/*.py \
 	${libdir}/enigma2/python/Plugins/*/*/*.py \
