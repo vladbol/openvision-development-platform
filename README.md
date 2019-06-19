@@ -69,6 +69,8 @@ cd openvision-development-platform
 ./image.sh
 ```
 If you want to compile an image for only 1 machine just choose "Specific".
+
+If you want to go clean again, do not remove your "sources" directoy! Never!
 # Hints for multiple architectures
 * Removing the "build" directory solves most of the errors. For a fast remove use "rm -rf build".
 (If you just want to reduce the build size use "cleanup.sh".)
