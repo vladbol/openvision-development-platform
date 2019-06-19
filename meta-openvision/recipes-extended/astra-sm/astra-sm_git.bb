@@ -19,9 +19,9 @@ do_install_append() {
 	install -d ${D}${bindir}
 	install -m 0755 ${S}/src/tests/t2mi_decap ${D}${bindir}/
 	install -d ${D}${sysconfdir}/init.d/astra
-	install -D -m 755 ${WORKDIR}/astra-sm ${D}${sysconfdir}/init.d/astra/
-	install -D -m 644 ${WORKDIR}/astra-sm.lua ${D}${sysconfdir}/astra/
-	install -D -m 644 ${WORKDIR}/astra-sm.conf ${D}${sysconfdir}/astra/
+	install -D -m 755 ${S}/astra-sm ${D}${sysconfdir}/init.d/astra/
+	install -D -m 644 ${S}/astra-sm.lua ${D}${sysconfdir}/astra/
+	install -D -m 644 ${S}/astra-sm.conf ${D}${sysconfdir}/astra/
 }
 
 FILES_${PN} += "${sysconfdir}/init.d/"
