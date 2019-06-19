@@ -134,7 +134,6 @@ IMAGE_INSTALL += "\
 	${@bb.utils.contains_any("MACHINE", "vuuno vuduo vuultimo vusolo vusolo2 vuduo2 vusolose vuzero vuuno4k vuuno4kse vuzero4k vuultimo4k vusolo4k vuduo4k", "vuplus-tuner-turbo", "", d)} \
 	wget \
 	${@bb.utils.contains("MACHINE_FEATURES", "smallflash", "", " \
-	astra-sm \
 	curl \
 	enigma2-alliance-plugins \
 	enigma2-plugin-skins-octetfhd \
