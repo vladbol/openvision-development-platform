@@ -16,18 +16,18 @@ Please use our forum at https://forum.openvision.tech or our issue page at https
 # FAQ
 
 * Are you allowed to compile development versions? Yes!
-* Are you allowed to distribute development versions? No!
+* Are you allowed to distribute development versions? Yes but only with "unofficial-version" tag.
 * Are you allowed to make our images compatible with clones? Yes!
-* Are you allowed to distribute cloned images? Yes but only with "clone-version" tag and no development versions.
+* Are you allowed to distribute cloned images? Yes but only with "clone-version" tag.
 * Do we support clones? No!
 * Are you allowed to make backup of our images? Yes!
-* Are you allowed to distribute backup images? Yes but only with "backup-version" tag and no development versions.
+* Are you allowed to distribute backup images? Yes but only with "backup-version" tag.
 * Do we provide support for self-building? No! We prefer to work on our projects.
-* Do we need more Vision Developers? Absolutely yes! Contribute to our git and we contact you!
+* Do we need more Vision Developers? Absolutely yes! Contribute to our git and we will contact you!
 * Do we need more Vision Testers? Absolutely yes! Test our images and report bugs, help us grow you'll see the title flows.
 * Do we support our image in multiboot situations? No! Check about screen and if our module is not loaded then you're on your own!
 
-If you see your model in https://github.com/OpenVisionE2/openvision-development-platform/blob/develop/README.md it means there will be Open Vision for it otherwise read https://forum.openvision.tech/viewtopic.php?f=2&t=30 and don't spam the board!
+If you see your model in https://github.com/OpenVisionE2/openvision-development-platform/blob/develop/Vision-metas.md it means there will be Open Vision for it otherwise read https://forum.openvision.tech/viewtopic.php?f=2&t=30 and don't spam the board!
 
 ---
 
