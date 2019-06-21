@@ -10,7 +10,7 @@ SRC_URI = "git://github.com/OpenVuPlus/dvbapp.git;protocol=http;branch=${BRANCH}
 
 inherit gitpkgv
 SRCREV = "9e71a84b987082e466bc6c9c3b58255748bfe338"
-PR = "r1"
+
 PV = "git${SRCPV}"
 PKGV = "git${GITPKGV}"
 
