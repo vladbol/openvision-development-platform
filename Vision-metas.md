@@ -122,6 +122,7 @@
 * dinobot4kpro
 * dinobot4kse
 * dinoboth265
+* dinobotu43
 * dinobotu55
 * ferguson4k
 * mediabox4k
