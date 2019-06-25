@@ -1,6 +1,6 @@
-Open Vision enigma2 images [![Build Status](https://travis-ci.org/OpenVisionE2/openvision-development-platform.svg?branch=develop)](https://travis-ci.org/OpenVisionE2/openvision-development-platform) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+Open Vision 9.1 enigma2 images, version 9.1 is for developers only and it's not suitable for daily use. [![Build Status](https://travis-ci.org/OpenVisionE2/openvision-development-platform.svg?branch=upcoming)](https://travis-ci.org/OpenVisionE2/openvision-development-platform) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 ==========================
-![alt tag](https://raw.github.com/OpenVisionE2/openvision-development-platform/develop/meta-openvision/recipes-openvision/bootlogo/openvision-bootlogo/bootlogo.jpg)
+![alt tag](https://raw.github.com/OpenVisionE2/openvision-development-platform/upcoming/meta-openvision/recipes-openvision/bootlogo/openvision-bootlogo/bootlogo.jpg)
 
 # Download
 
@@ -27,13 +27,13 @@ Please use our forum at https://forum.openvision.tech or our issue page at https
 * Do we need more Vision Testers? Absolutely yes! Test our images and report bugs, help us grow you'll see the title flows.
 * Do we support our image in multiboot situations? No! Check about screen and if our module is not loaded then you're on your own!
 
-If you see your model in https://github.com/OpenVisionE2/openvision-development-platform/blob/develop/Vision-metas.md it means there will be Open Vision for it otherwise read https://forum.openvision.tech/viewtopic.php?f=2&t=30 and don't spam the board!
+If you see your model in https://github.com/OpenVisionE2/openvision-development-platform/blob/upcoming/Vision-metas.md it means there will be Open Vision for it otherwise read https://forum.openvision.tech/viewtopic.php?f=2&t=30 and don't spam the board!
 
 ---
 
 # Compile
 You could compile Open Vision for so many brands/models:
-* Vision-metas: https://github.com/OpenVisionE2/openvision-development-platform/blob/develop/Vision-metas.md
+* Vision-metas: https://github.com/OpenVisionE2/openvision-development-platform/blob/upcoming/Vision-metas.md
 
 # Ubuntu 18.04.x LTS setup
 * Run our ltsubuntu.sh
