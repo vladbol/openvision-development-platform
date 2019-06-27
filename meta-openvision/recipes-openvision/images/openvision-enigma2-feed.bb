@@ -227,6 +227,7 @@ ENIGMA2_OPTIONAL += " \
 	enigma2-plugin-systemplugins-hrtunerproxy \
 	${@bb.utils.contains("MACHINE_FEATURES", "micom", "enigma2-plugin-systemplugins-micomupgrade" , "", d)} \
 	enigma2-plugin-systemplugins-mountmanager \
+	enigma2-plugin-systemplugins-radiotimesemulatorgui \
 	enigma2-plugin-systemplugins-serviceapp \
 	enigma2-plugin-systemplugins-signalfinder \
 	enigma2-plugin-systemplugins-quadpip \
