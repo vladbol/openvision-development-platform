@@ -58,7 +58,6 @@ OPTIONAL_PACKAGES += " \
 	nano \
 	nbench-byte \
 	net-tools \
-	${@bb.utils.contains("TARGET_FPU", "soft", "", "nodejs", d)} \
 	ntfs-3g \
 	ntp \
 	ofgwrite \
