@@ -2,6 +2,10 @@ Open Vision 9.1 enigma2 images (for developers only, not suitable for daily use!
 ==========================
 ![alt tag](https://raw.github.com/OpenVisionE2/openvision-development-platform/upcoming/meta-openvision/recipes-openvision/bootlogo/openvision-bootlogo/bootlogo.jpg)
 
+# Contribution
+
+Do you want to contribute to Open Vision and you don’t know where to start? https://forum.openvision.tech/viewtopic.php?f=2&t=306 is for you.
+
 # Download
 
 You could download our builds from https://openvision.tech/stb-images/
@@ -13,7 +17,7 @@ You could use https://sourceforge.net/projects/win32diskimager/ or similar tools
 
 Please use our forum at https://forum.openvision.tech or our issue page at https://github.com/OpenVisionE2/openvision-development-platform/issues
 
-# FAQ
+# Distribution
 
 * Are you allowed to compile development versions? Yes!
 * Are you allowed to distribute development versions? Yes but only with "unofficial-version" tag.
