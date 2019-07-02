@@ -16,6 +16,8 @@ require softcam.inc
 
 INHIBIT_PACKAGE_STRIP = "1"
 
+INSANE_SKIP_${PN} += "file-rdeps"
+
 CONFFILES = "/etc/CCcam.cfg"
 
 do_install() {
