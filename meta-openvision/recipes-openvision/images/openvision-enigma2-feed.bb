@@ -218,6 +218,7 @@ ENIGMA2_OPTIONAL += " \
 	enigma2-plugin-skins-xionhdf \
 	enigma2-plugin-softcams-oscam \
 	enigma2-plugin-softcams-oscam-emu \
+	enigma2-plugin-softcams-ncam \
 	enigma2-plugin-systemplugins-crossepg \
 	enigma2-plugin-systemplugins-extnumberzap \
 	enigma2-plugin-systemplugins-extrafancontrol \
