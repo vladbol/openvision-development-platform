@@ -332,8 +332,8 @@ then
 	echo -e "\n"
 	cd ..
 	cd meta-vuplus
-	echo "Checking out meta-vuplus develop branch:"
-	git checkout develop
+	echo "Checking out meta-vuplus upcoming branch:"
+	git checkout upcoming
 	git pull
 	echo -e "\n"
 	cd ..
