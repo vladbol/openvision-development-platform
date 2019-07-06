@@ -14,7 +14,7 @@ DEPENDS = " \
 	python-imaging python-twisted python-wifi \
 	swig-native \
 	tuxtxt-enigma2 \
-	${@bb.utils.contains("MACHINE_FEATURES", "uianimation", "libvugles2-${MACHINE} libgles-${MACHINE}", "", d)} \
+	${@bb.utils.contains("MACHINE_FEATURES", "uianimation", "libvugles2 libgles-${MACHINE}", "", d)} \
 	openvision-extra-rc-models \
 	"
 
@@ -30,7 +30,7 @@ RDEPENDS_${PN} = " \
 	${PYTHON_RDEPS} \
 	enigma2-plugin-extensions-pespeedup \
 	${@bb.utils.contains("MACHINE_FEATURES", "smallflash", "", "glibc-gconv-cp1250", d)} \
-	${@bb.utils.contains("MACHINE_FEATURES", "uianimation", "libvugles2-${MACHINE} libgles-${MACHINE}", "", d)} \
+	${@bb.utils.contains("MACHINE_FEATURES", "uianimation", "libvugles2 libgles-${MACHINE}", "", d)} \
 	"
 
 RRECOMMENDS_${PN} = "\
