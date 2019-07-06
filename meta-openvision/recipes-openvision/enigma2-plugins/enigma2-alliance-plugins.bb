@@ -8,7 +8,7 @@ inherit autotools-brokensep gitpkgv pythonnative gettext
 PV = "git${SRCPV}"
 PKGV = "git${GITPKGV}"
 
-SRC_URI = "git://github.com/OpenVisionE2/alliance-plugins.git;branch=upcoming;protocol=http"
+SRC_URI = "git://github.com/OpenVisionE2/alliance-plugins.git;protocol=http"
 
 S = "${WORKDIR}/git"
 
