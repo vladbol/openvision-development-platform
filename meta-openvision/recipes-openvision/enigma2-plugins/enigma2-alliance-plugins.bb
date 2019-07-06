@@ -30,7 +30,6 @@ PROVIDES = "\
     enigma2-plugin-extensions-tunerserver \
     enigma2-plugin-extensions-webbrowser \
     enigma2-plugin-systemplugins-abmcustommiximporter \
-    enigma2-plugin-systemplugins-animationsetup \
     enigma2-plugin-systemplugins-audioeffect \
     enigma2-plugin-systemplugins-blindscan \
     enigma2-plugin-systemplugins-channelsimporter \
