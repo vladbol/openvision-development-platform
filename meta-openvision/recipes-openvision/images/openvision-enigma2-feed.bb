@@ -184,6 +184,7 @@ ENIGMA2_OPTIONAL += " \
 	enigma2-plugin-extensions-install-exteplayer3 \
 	enigma2-plugin-extensions-install-ffmpeg \
 	enigma2-plugin-extensions-install-gstplayer \
+	enigma2-plugin-extensions-keyadder \
 	${@bb.utils.contains_any("MACHINE_FEATURES", "azbox", "enigma2-plugin-extensions-keymapconfig enigma2-plugin-extensions-rsiconfig enigma2-plugin-extensions-rsimediacenter enigma2-plugin-systemplugins-ofwlauncher enigma2-plugin-extensions-aziptv enigma2-plugin-extensions-azplay", "", d)} \
 	${@bb.utils.contains_any("MACHINE_FEATURES", "colorlcd colorlcd220 colorlcd390 colorlcd400 colorlcd480 colorlcd720 colorlcd800 bwlcd140 bwlcd255", "enigma2-plugin-extensions-lcd4linux", "", d)} \
 	enigma2-plugin-extensions-managerautofs \
