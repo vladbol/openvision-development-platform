@@ -5,13 +5,18 @@ KERNEL_WIFI_DRIVERS += "\
 	firmware-carl9170 \
 	firmware-htc7010 \
 	firmware-htc9271 \
+	firmware-mt7601u \
 	firmware-rt2870 \
 	firmware-rt73 \
+	firmware-rt3070 \
+	firmware-rtl8188eu \
+	firmware-rtl8192cu \
 	firmware-rtl8712u \
+	firmware-rtl8xxxu \
 	firmware-zd1211 \
 	${@bb.utils.contains_any("MACHINE", "c300 c300pro c400plus k1plus k1pro k2pro k2prov2 k3pro kvim2 cube su980 et13000 alien5 alien4 sf5008 beyonwizu4 dreamone", "", "kernel-module-ath9k-htc kernel-module-carl9170 kernel-module-r8712u", d)} \
-	${@bb.utils.contains_any("MACHINE", "c300 c300pro c400plus k1plus k1pro k2pro k2prov2 k3pro kvim2 cube su980 et13000 alien5 alien4 sf5008 beyonwizu4 hs7429 hs7420 hs7119 hs7110 fortis_hdbox cuberevo_mini cuberevo_mini2 cuberevo cuberevo_9500hd cuberevo_3000hd cuberevo_250hd cuberevo_2000hd atevio7500 hs7810a hs7819 ipbox55 ipbox9900 ipbox99 tf7700 ufs910 ufs912 dreamone", "", "kernel-module-rt2500usb kernel-module-rt2800usb kernel-module-rt73usb kernel-module-rtl8187 kernel-module-zd1211rw", d)} \
-	"
+	${@bb.utils.contains_any("MACHINE", "c300 c300pro c400plus k1plus k1pro k2pro k2prov2 k3pro kvim2 cube su980 et13000 alien5 alien4 sf5008 beyonwizu4 hs7429 hs7420 hs7119 hs7110 fortis_hdbox cuberevo_mini cuberevo_mini2 cuberevo cuberevo_9500hd cuberevo_3000hd cuberevo_250hd cuberevo_2000hd atevio7500 hs7810a hs7819 ipbox55 ipbox9900 ipbox99 tf7700 ufs910 ufs912 dreamone", "","kernel-module-ath kernel-module-ar9170usb kernel-module-rtl8187 kernel-module-zd1211rw kernel-module-mt7601u kernel-module-rt2870sta kernel-module-rt3070sta kernel-module-rt5370sta kernel-module-rtl8188eu kernel-module-rtl8192cu kernel-module-rtl8192du kernel-module-rtl8192eu kernel-module-rtl871x", d)} \
+    "
 
 KERNEL_WIFI_DRIVERS_remove_sh4 += "\
 	kernel-module-ath9k-htc \
@@ -28,7 +33,6 @@ EXTRA_KERNEL_WIFI_DRIVERS += "\
 
 EXTRA_KERNEL_WIFI_DRIVERS_remove_sh4 += "\
 	kernel-module-r8188eu \
-	kernel-module-rtl8192cu \
 	"
 
 MACHINE_SPECIFIC_VFD = "${@bb.utils.contains_any("MACHINE", "gbquad4k gbue4k gb800se gb800seplus gb800solo gb800ue gb800ueplus gbipbox gbquad gbquadplus gbultrase gbultraue gbultraueh gbx1 gbx2 gbx3 gbx3h sezam1000hd xpeedlx mbmini atemio5x00 bwidowx atemio6000 atemio6100 atemio6200 mbminiplus mbhybrid bwidowx2 beyonwizt2 opticumtt evoslim sf128 sf138 bre2zet2c bre2ze4k et1x000 g100 g101 hd51 hd1100 hd1200 hd1265 hd1500 hd500c hd530c formuler3 formuler4 formuler4turbo tiviarmin xcombo enibox mago x1plus sf108 t2cable 9910lx 9911lx 9920lx e4hdcombo odin2hybrid odinplus sh1 h3 h5 h7 lc vs1000 enfinity marvel1 bre2ze xp1000 classm axodin axodinc starsatlx genius evo galaxym6 9900lx sf8008 spycat spycatmini spycatminiplus bcm7358 vp7358ci osnino osninoplus gbtrio4k spark spark7162", "", "enigma2-plugin-systemplugins-vfdcontrol", d)}"
