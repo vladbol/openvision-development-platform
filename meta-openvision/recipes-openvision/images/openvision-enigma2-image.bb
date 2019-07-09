@@ -15,7 +15,7 @@ KERNEL_WIFI_DRIVERS += "\
 	firmware-rtl8xxxu \
 	firmware-zd1211 \
 	${@bb.utils.contains_any("MACHINE", "c300 c300pro c400plus k1plus k1pro k2pro k2prov2 k3pro kvim2 cube su980 et13000 alien5 alien4 sf5008 beyonwizu4 dreamone", "", "kernel-module-ath9k-htc kernel-module-carl9170 kernel-module-r8712u", d)} \
-	${@bb.utils.contains_any("MACHINE", "c300 c300pro c400plus k1plus k1pro k2pro k2prov2 k3pro kvim2 cube su980 et13000 alien5 alien4 sf5008 beyonwizu4 hs7429 hs7420 hs7119 hs7110 fortis_hdbox cuberevo_mini cuberevo_mini2 cuberevo cuberevo_9500hd cuberevo_3000hd cuberevo_250hd cuberevo_2000hd atevio7500 hs7810a hs7819 ipbox55 ipbox9900 ipbox99 tf7700 ufs910 ufs912 dreamone", "","kernel-module-ath kernel-module-ar9170usb kernel-module-rtl8187 kernel-module-zd1211rw kernel-module-mt7601u kernel-module-rt2870sta kernel-module-rt3070sta kernel-module-rt5370sta kernel-module-rtl8188eu kernel-module-rtl8192cu kernel-module-rtl8192du kernel-module-rtl8192eu kernel-module-rtl871x", d)} \
+	${@bb.utils.contains_any("MACHINE", "c300 c300pro c400plus k1plus k1pro k2pro k2prov2 k3pro kvim2 cube su980 et13000 alien5 alien4 sf5008 beyonwizu4 hs7429 hs7420 hs7119 hs7110 fortis_hdbox cuberevo_mini cuberevo_mini2 cuberevo cuberevo_9500hd cuberevo_3000hd cuberevo_250hd cuberevo_2000hd atevio7500 hs7810a hs7819 ipbox55 ipbox9900 ipbox99 tf7700 ufs910 ufs912 dreamone", "","kernel-module-ath kernel-module-rtl8187 kernel-module-zd1211rw kernel-module-mt7601u kernel-module-rt2870sta kernel-module-rt3070sta kernel-module-rt5370sta kernel-module-rtl8188eu kernel-module-rtl8192cu kernel-module-rtl8192du kernel-module-rtl8192eu kernel-module-rtl871x", d)} \
     "
 
 KERNEL_WIFI_DRIVERS_remove_sh4 += "\
