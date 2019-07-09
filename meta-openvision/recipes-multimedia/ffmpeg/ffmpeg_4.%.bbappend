@@ -24,6 +24,7 @@ SRC_URI_append += " \
 	file://A11-FFmpeg-devel-amfenc-Add-support-for-pict_type-field.patch \
 	file://A10-mpeg-quarter-sample.patch \
 	file://A02-corrupt-h264-frames.patch \
+	file://4_10_remove_avpriv_request_sample.patch \
 	"
 
 EXTRA_FFCONF = " \
