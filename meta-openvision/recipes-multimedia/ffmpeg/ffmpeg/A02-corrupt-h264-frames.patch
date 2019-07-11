@@ -1,10 +1,10 @@
 diff --git a/libavcodec/h264_slice.c b/libavcodec/h264_slice.c
-index d71ddbe9ba..215a6d3c65 100644
+index 1c9a270fb6..a68ada8f8c 100644
 --- a/libavcodec/h264_slice.c
 +++ b/libavcodec/h264_slice.c
-@@ -1407,6 +1407,12 @@ static int h264_field_start(H264Context *h, const H264SliceContext *sl,
- 
-     sps = h->ps.sps;
+@@ -1463,6 +1463,12 @@ static int h264_field_start(H264Context *h, const H264SliceContext *sl,
+         h->avctx->has_b_frames = sps->num_reorder_frames;
+     }
  
 +    if (sps && sps->bitstream_restriction_flag &&
 +        h->avctx->has_b_frames < sps->num_reorder_frames) {
