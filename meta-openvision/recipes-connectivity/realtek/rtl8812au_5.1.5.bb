@@ -6,14 +6,16 @@ LIC_FILES_CHKSUM = "file://ifcfg-wlan0;md5=a84acae65af4b2d44d5035aa9f63cd85"
 
 inherit module
 
-SRC_URI = " \
-          https://raw.githubusercontent.com/OpenVisionE2/linux-firmwares/master/rtl8812AU-driver-5.1.5-20170914.zip \
-          file://0001-add-linux-kernel-4.15-support.patch \
-          file://0001-add-linux-kernel-4.19-support.patch \
-          file://0001-add-linux-kernel-4.20-support.patch \
-          file://0001-add-linux-kernel-5.0-support.patch \
-          file://0001-add-linux-kernel-5.1-support.patch \
-          "
+SRC_URI = "http://source.mynonpublic.com/rtl8812AU-driver-5.1.5-20170914.zip \
+    file://remove-efuse-config-file.patch \
+    file://0001-add-linux-kernel-4.14-support.patch \
+    file://0001-add-linux-kernel-4.15-support.patch \
+    file://0001-add-linux-kernel-4.19-support.patch \
+    file://0001-add-linux-kernel-4.20-support.patch \
+    file://0001-add-linux-kernel-5.0-support.patch \
+    file://0001-add-linux-kernel-5.1-support.patch \
+    file://0001-add-linux-kernel-5.2-support.patch \
+"
 
 SRC_URI[md5sum] = "5bb6be1683428b09bd3e4deb1e2c7622"
 SRC_URI[sha256sum] = "f3ac257ea4cdadfc9da8e275bfc19b3bd720f17d72cf5d23231ba7fb73bc28b3"

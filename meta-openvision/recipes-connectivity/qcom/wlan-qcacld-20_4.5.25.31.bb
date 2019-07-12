@@ -11,6 +11,9 @@ SRC_URI = "${CAF_MIRROR}/qcacld-2.0/snapshot/qcacld-2.0-${PV}.tar.gz \
     file://qcacld-2.0-support.patch \
 "
 
+SRC_URI[md5sum] = "36620d06d813895ead1fd123fc5fa056"
+SRC_URI[sha256sum] = "2ad7dcaa6f80c67d4affeef39ee17a20e40bb763246d2b6c7b9dfaab99749e4d"
+
 SRC_URI_append_spycat4kmini += "file://qcacld-2.0-support-xc7439.patch"
 SRC_URI_append_spycat4k += "file://qcacld-2.0-support-xc7439.patch"
 SRC_URI_append_spycat4kcombo += "file://qcacld-2.0-support-xc7439.patch"
@@ -26,6 +29,3 @@ python do_package_prepend() {
     d.appendVar('PKGV', '-')
     d.appendVar('PKGV', d.getVar("KERNEL_VERSION", True).split("-")[0])
 }
-
-SRC_URI[md5sum] = "e0e8c8e714923607a2c93a8ddbb2b456"
-SRC_URI[sha256sum] = "bec9d86a911d5d90a5bb1c59d53bf4adb7c88cb54ec5ec949b2433622b578479"
