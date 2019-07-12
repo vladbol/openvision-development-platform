@@ -137,6 +137,7 @@ IMAGE_INSTALL += "\
 	wget \
 	${@bb.utils.contains("MACHINE_FEATURES", "smallflash", "", " \
 	curl \
+	enigma2-alliance-plugins \
 	fuse-exfat \
 	${MACHINE_FEATURE_RELATED_PLUGINS} \
 	nfs-utils \
