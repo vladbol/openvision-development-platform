@@ -12,15 +12,15 @@ SRC_URI = " \
           file://rt8723bs-remove-debug.patch \
           file://rt8723bs-gcc5.patch \
           file://rt8723bs-add-4.8-support.patch;apply=no \
-          file://rt8723bs-add-4.11-support.patch \
-          file://rt8723bs-add-4.12-support.patch \
-          file://0001-add-kernel-4.15-support.patch \
-          file://compat.patch \
-          file://rt8723bs-add-4.19-support.patch \
-          file://rt8723bs-add-4.20-support.patch \
-          file://rt8723bs-add-5.0-support.patch \
-          file://rt8723bs-add-5.1-support.patch \
-          file://rt8723bs-add-5.2-support.patch \
+          file://rt8723bs-add-4.11-support.patch;apply=no \
+          file://rt8723bs-add-4.12-support.patch;apply=no \
+          file://0001-add-kernel-4.15-support.patch;apply=no \
+          file://compat.patch;apply=no \
+          file://rt8723bs-add-4.19-support.patch;apply=no \
+          file://rt8723bs-add-4.20-support.patch;apply=no \
+          file://rt8723bs-add-5.0-support.patch;apply=no \
+          file://rt8723bs-add-5.1-support.patch;apply=no \
+          file://rt8723bs-add-5.2-support.patch;apply=no \
           "
 
 SRC_URI[md5sum] = "6003f12a873946bc56f495391705e729"

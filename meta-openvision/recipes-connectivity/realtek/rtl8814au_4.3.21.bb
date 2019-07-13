@@ -9,11 +9,11 @@ inherit module
 SRC_URI = " \
           https://raw.githubusercontent.com/OpenVisionE2/linux-firmwares/master/rtl8814AU-driver-4.3.21-20170707.zip \
           file://0001-add-support-kernel-4.15.patch;apply=no \
-          file://0002-add-linux-4.19-support.patch \
-          file://add-linux-4.20-support.patch \
-          file://add-linux-5.0-support.patch \
-          file://add-linux-5.1-support.patch \
-          file://add-linux-5.2-support.patch \
+          file://0002-add-linux-4.19-support.patch;apply=no \
+          file://add-linux-4.20-support.patch;apply=no \
+          file://add-linux-5.0-support.patch;apply=no \
+          file://add-linux-5.1-support.patch;apply=no \
+          file://add-linux-5.2-support.patch;apply=no \
           "
 
 SRC_URI[md5sum] = "538691f32b98a62c99c32ad80d2d8430"
