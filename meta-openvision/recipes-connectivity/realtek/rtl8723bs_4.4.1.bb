@@ -11,7 +11,7 @@ SRC_URI = " \
           file://rt8723bs-makefile.patch \
           file://rt8723bs-remove-debug.patch \
           file://rt8723bs-gcc5.patch \
-          file://rt8723bs-add-4.8-support.patch \
+          file://rt8723bs-add-4.8-support.patch;apply=no \
           file://rt8723bs-add-4.11-support.patch \
           file://rt8723bs-add-4.12-support.patch \
           file://0001-add-kernel-4.15-support.patch \

@@ -1,6 +1,8 @@
---- a/include/osdep_service_linux.h	2018-09-05 09:10:22.425499934 +0200
-+++ b/include/osdep_service_linux.h	2018-09-05 09:12:02.094044218 +0200
-@@ -274,8 +274,12 @@
+diff --git a/include/osdep_service_linux.h b/include/osdep_service_linux.h
+index 354cc9b..a6b2313 100644
+--- a/include/osdep_service_linux.h
++++ b/include/osdep_service_linux.h
+@@ -274,8 +274,12 @@ __inline static void _init_timer(_timer *ptimer,_nic_hdl nic_hdl,void *pfunc,voi
  {
  	//setup_timer(ptimer, pfunc,(u32)cntx);	
  	ptimer->function = pfunc;

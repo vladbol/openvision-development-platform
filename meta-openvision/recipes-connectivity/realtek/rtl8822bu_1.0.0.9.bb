@@ -8,7 +8,7 @@ inherit module
 
 SRC_URI = " \
           https://raw.githubusercontent.com/OpenVisionE2/linux-firmwares/master/rtl8822bu-driver-1.0.0.9-20180511a.zip \
-          file://0001-fix-compile-with-4-7-x-kernel.patch \
+          file://0001-fix-compile-with-4-7-x-kernel.patch;apply=no \
           file://add-linux-4.19-support.patch \
           file://add-linux-4.20-support.patch \
           file://add-linux-5.0-support.patch \
