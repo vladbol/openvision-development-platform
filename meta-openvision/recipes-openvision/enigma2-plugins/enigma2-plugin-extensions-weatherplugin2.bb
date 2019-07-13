@@ -23,6 +23,8 @@ do_install() {
 	cp -r ${S}/usr/* ${D}/usr/
 }
 
+PACKAGES =+ " ${PN}-src"
+
 FILES_${PN}-src = "\
 	${libdir}/enigma2/python/Plugins/Extensions/WeatherPlugin2/*.py \
 	${libdir}/enigma2/python/Plugins/SystemPlugins/WeatherComponentHandler/*.py \
