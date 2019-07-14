@@ -1,8 +1,8 @@
 diff --git a/include/wifi.h b/include/wifi.h
-index f7693c6056c1..ce67e53f3eb7 100644
+index f7693c6..89fd4a0 100644
 --- a/include/wifi.h
 +++ b/include/wifi.h
-@@ -1016,7 +1016,11 @@ typedef enum _HT_CAP_AMPDU_DENSITY {
+@@ -1016,8 +1016,11 @@ typedef enum _HT_CAP_AMPDU_DENSITY {
   * According to IEEE802.11n spec size varies from 8K to 64K (in powers of 2)
   */
  #define IEEE80211_MIN_AMPDU_BUF 0x8
@@ -10,12 +10,13 @@ index f7693c6056c1..ce67e53f3eb7 100644
 +#define IEEE80211_MAX_AMPDU_BUF 0x100
 +#else
  #define IEEE80211_MAX_AMPDU_BUF 0x40
+-
 +#endif
  
- 
  /* Spatial Multiplexing Power Save Modes */
+ #define WLAN_HT_CAP_SM_PS_STATIC		0
 diff --git a/os_dep/linux/ioctl_cfg80211.c b/os_dep/linux/ioctl_cfg80211.c
-index 6e9cd618c126..63b2983091e2 100644
+index 6e9cd61..63b2983 100644
 --- a/os_dep/linux/ioctl_cfg80211.c
 +++ b/os_dep/linux/ioctl_cfg80211.c
 @@ -345,6 +345,13 @@ rtw_cfg80211_default_mgmt_stypes[NUM_NL80211_IFTYPES] = {
