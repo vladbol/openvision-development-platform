@@ -1,5 +1,5 @@
 diff --git a/os_dep/linux/ioctl_cfg80211.c b/os_dep/linux/ioctl_cfg80211.c
-index 66b0870bec77..72bcb9f383e0 100644
+index 66b0870..72bcb9f 100644
 --- a/os_dep/linux/ioctl_cfg80211.c
 +++ b/os_dep/linux/ioctl_cfg80211.c
 @@ -800,6 +800,19 @@ check_bss:
@@ -87,7 +87,7 @@ index 66b0870bec77..72bcb9f383e0 100644
  	wiphy->max_sched_scan_ssids = MAX_PNO_LIST_COUNT;
  #endif
 diff --git a/os_dep/linux/os_intfs.c b/os_dep/linux/os_intfs.c
-index ff20062396be..0dbe51f53d5b 100644
+index ff20062..0dbe51f 100644
 --- a/os_dep/linux/os_intfs.c
 +++ b/os_dep/linux/os_intfs.c
 @@ -3093,7 +3093,9 @@ void rtw_ndev_destructor(struct net_device *ndev)
@@ -100,6 +100,3 @@ index ff20062396be..0dbe51f53d5b 100644
  }
  
  #ifdef CONFIG_ARP_KEEP_ALIVE
--- 
-2.14.1
-

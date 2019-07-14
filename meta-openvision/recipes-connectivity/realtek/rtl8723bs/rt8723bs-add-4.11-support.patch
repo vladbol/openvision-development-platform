@@ -1,5 +1,5 @@
 diff --git a/include/osdep_service_linux.h b/include/osdep_service_linux.h
-index a4926e6051da..8413cf48c94e 100644
+index a4926e6..8413cf4 100644
 --- a/include/osdep_service_linux.h
 +++ b/include/osdep_service_linux.h
 @@ -46,6 +46,9 @@
