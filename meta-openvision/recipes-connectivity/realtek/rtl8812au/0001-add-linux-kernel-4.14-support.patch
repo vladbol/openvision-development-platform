@@ -1,5 +1,5 @@
 diff --git a/os_dep/osdep_service.c b/os_dep/osdep_service.c
-index a568fbe23abe..d2f671b01bcb 100644
+index a568fbe..d2f671b 100644
 --- a/os_dep/osdep_service.c
 +++ b/os_dep/osdep_service.c
 @@ -1919,7 +1919,9 @@ static int readFile(struct file *fp, char *buf, int len)

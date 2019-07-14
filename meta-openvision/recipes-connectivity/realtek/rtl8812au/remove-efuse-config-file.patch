@@ -1,5 +1,5 @@
 diff --git a/Makefile b/Makefile
-index 995c63ccef37..9a07bae563e9 100644
+index 995c63c..9a07bae 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -50,7 +50,7 @@ CONFIG_WIFI_TEST = n

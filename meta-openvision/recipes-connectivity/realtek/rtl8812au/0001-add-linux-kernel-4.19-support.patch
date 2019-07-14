@@ -1,6 +1,8 @@
---- a/os_dep/linux/os_intfs.c	2018-10-23 20:58:43.820534368 +0200
-+++ b/os_dep/linux/os_intfs.c	2018-10-23 21:00:46.337305126 +0200
-@@ -1052,7 +1052,11 @@
+diff --git a/os_dep/linux/os_intfs.c b/os_dep/linux/os_intfs.c
+index 204e62b..8ea1096 100644
+--- a/os_dep/linux/os_intfs.c
++++ b/os_dep/linux/os_intfs.c
+@@ -1052,7 +1052,11 @@ unsigned int rtw_classify8021d(struct sk_buff *skb)
  	return dscp >> 5;
  }
  
@@ -13,7 +15,7 @@
  static u16 rtw_select_queue(struct net_device *dev, struct sk_buff *skb
  #if LINUX_VERSION_CODE >= KERNEL_VERSION(3, 13, 0)
  	, void *accel_priv
-@@ -1060,6 +1064,7 @@
+@@ -1060,6 +1064,7 @@ static u16 rtw_select_queue(struct net_device *dev, struct sk_buff *skb
  	, select_queue_fallback_t fallback
  	#endif
  #endif

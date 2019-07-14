@@ -1,5 +1,5 @@
 diff --git a/os_dep/linux/os_intfs.c b/os_dep/linux/os_intfs.c
-index 8ea1096caefe..42cc4310d314 100644
+index 8ea1096..42cc431 100644
 --- a/os_dep/linux/os_intfs.c
 +++ b/os_dep/linux/os_intfs.c
 @@ -1054,8 +1054,10 @@ unsigned int rtw_classify8021d(struct sk_buff *skb)
