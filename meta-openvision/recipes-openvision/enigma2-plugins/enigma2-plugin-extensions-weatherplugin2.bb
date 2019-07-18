@@ -1,7 +1,7 @@
 DESCRIPTION = "WeatherPlugin2 by Dr.Best modified by RAED"
 MAINTAINER = "Open Vision Developers"
 LICENSE = "GPLv3"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=d32239bcb673463ab874e80d47fae504"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=1ebbd3e34237af26da5dc08a4e440464"
 
 inherit gitpkgv distutils-openplugins gettext
 
@@ -22,8 +22,6 @@ do_install() {
 	install -d ${D}/usr
 	cp -r ${S}/usr/* ${D}/usr/
 }
-
-PACKAGES =+ " ${PN}-src"
 
 FILES_${PN}-src = "\
 	${libdir}/enigma2/python/Plugins/Extensions/WeatherPlugin2/*.py \
