@@ -191,6 +191,8 @@ then
 	MACHINE=anadol4kcombo $IMAGECMD
 	MACHINE=anadol4kv2 $IMAGECMD
 	MACHINE=anadolprohd5 $IMAGECMD
+	MACHINE=arivacombo $IMAGECMD
+	MACHINE=arivatwin $IMAGECMD
 	MACHINE=axashis4kcombo $IMAGECMD
 	MACHINE=axashis4kcomboplus $IMAGECMD
 	MACHINE=axashisc4k $IMAGECMD
@@ -205,7 +207,12 @@ then
 	MACHINE=dinobotu43 $IMAGECMD
 	MACHINE=dinobotu55 $IMAGECMD
 	MACHINE=ferguson4k $IMAGECMD
+	MACHINE=iziboxecohd $IMAGECMD
+	MACHINE=jdhdduo $IMAGECMD
 	MACHINE=mediabox4k $IMAGECMD
+	MACHINE=protek4kx1 $IMAGECMD
+	MACHINE=spycatminiv2 $IMAGECMD
+	MACHINE=turing $IMAGECMD
 fi
 if [ $META = "Dreambox" ]
 then
@@ -390,6 +397,7 @@ then
 	MACHINE=raspberrypi0 $IMAGECMD
 	MACHINE=raspberrypi2 $IMAGECMD
 	MACHINE=raspberrypi3 $IMAGECMD
+	MACHINE=raspberrypi4 $IMAGECMD
 fi
 if [ $META = "SH4" ]
 then
@@ -617,6 +625,8 @@ then
 	MACHINE=anadol4kcombo $IMAGECMD
 	MACHINE=anadol4kv2 $IMAGECMD
 	MACHINE=anadolprohd5 $IMAGECMD
+	MACHINE=arivacombo $IMAGECMD
+	MACHINE=arivatwin $IMAGECMD
 	MACHINE=axashis4kcombo $IMAGECMD
 	MACHINE=axashis4kcomboplus $IMAGECMD
 	MACHINE=axashisc4k $IMAGECMD
@@ -631,7 +641,12 @@ then
 	MACHINE=dinobotu43 $IMAGECMD
 	MACHINE=dinobotu55 $IMAGECMD
 	MACHINE=ferguson4k $IMAGECMD
+	MACHINE=iziboxecohd $IMAGECMD
+	MACHINE=jdhdduo $IMAGECMD
 	MACHINE=mediabox4k $IMAGECMD
+	MACHINE=protek4kx1 $IMAGECMD
+	MACHINE=spycatminiv2 $IMAGECMD
+	MACHINE=turing $IMAGECMD
 	MACHINE=dm500hd $IMAGECMD
 	MACHINE=dm500hdv2 $IMAGECMD
 	MACHINE=dm520 $IMAGECMD
@@ -764,6 +779,7 @@ then
 	MACHINE=raspberrypi0 $IMAGECMD
 	MACHINE=raspberrypi2 $IMAGECMD
 	MACHINE=raspberrypi3 $IMAGECMD
+	MACHINE=raspberrypi4 $IMAGECMD
 	MACHINE=adb_box $IMAGECMD
 	MACHINE=arivalink200 $IMAGECMD
 	MACHINE=atemio520 $IMAGECMD

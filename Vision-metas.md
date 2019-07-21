@@ -111,6 +111,8 @@
 * anadol4kcombo
 * anadol4kv2
 * anadolprohd5
+* arivacombo
+* arivatwin
 * axashis4kcombo
 * axashis4kcomboplus
 * axashisc4k
@@ -125,7 +127,12 @@
 * dinobotu43
 * dinobotu55
 * ferguson4k
+* iziboxecohd
+* jdhdduo
 * mediabox4k
+* protek4kx1
+* spycatminiv2
+* turing
 
 # Dreambox
 * dm500hd
@@ -292,6 +299,7 @@
 * raspberrypi0
 * raspberrypi2
 * raspberrypi3
+* raspberrypi4
 
 # SH4
 * adb_box
