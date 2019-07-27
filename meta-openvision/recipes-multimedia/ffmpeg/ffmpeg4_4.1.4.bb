@@ -23,7 +23,7 @@ LIC_FILES_CHKSUM = "file://COPYING.GPLv2;md5=b234ee4d69f5fce4486a80fdaf4a4263 \
                     file://COPYING.LGPLv2.1;md5=bd7a443320af8c812e4c18d1b79df004 \
                     file://COPYING.LGPLv3;md5=e6a600fd5e1d9cbde2d983680233ad02"
 
-SRCREV = "6872daee87b9b7a8adcb3bd3b1defea6f2153d2b"
+SRCREV = "0c904c0d3ff85ed5f634ff3e3202d5c1cd4a95d1"
 SRC_URI = "git://github.com/FFmpeg/FFmpeg.git;branch=release/4.1 \
            file://mips64_cpu_detection.patch \
            "
@@ -45,7 +45,7 @@ inherit autotools pkgconfig upx_compress
 
 PACKAGECONFIG ??= "avdevice avfilter avcodec avformat swresample swscale postproc avresample \
                    bzlib gpl lzma theora x264 \
-                   ${@bb.utils.contains('DISTRO_FEATURES', 'x11', 'xv', '', d)}"
+                   ${@bb.utils.contains('DISTRO_FEATURES', 'x11', 'xv xcb', '', d)}"
 
 # libraries to build in addition to avutil
 PACKAGECONFIG[avdevice] = "--enable-avdevice,--disable-avdevice"
@@ -64,6 +64,7 @@ PACKAGECONFIG[gsm] = "--enable-libgsm,--disable-libgsm,libgsm"
 PACKAGECONFIG[jack] = "--enable-indev=jack,--disable-indev=jack,jack"
 PACKAGECONFIG[libvorbis] = "--enable-libvorbis,--disable-libvorbis,libvorbis"
 PACKAGECONFIG[lzma] = "--enable-lzma,--disable-lzma,xz"
+PACKAGECONFIG[mfx] = "--enable-libmfx,--disable-libmfx,intel-mediasdk"
 PACKAGECONFIG[mp3lame] = "--enable-libmp3lame,--disable-libmp3lame,lame"
 PACKAGECONFIG[openssl] = "--enable-openssl,--disable-openssl,openssl"
 PACKAGECONFIG[sdl2] = "--enable-sdl2,--disable-sdl2,virtual/libsdl2"
@@ -73,6 +74,7 @@ PACKAGECONFIG[vaapi] = "--enable-vaapi,--disable-vaapi,libva"
 PACKAGECONFIG[vdpau] = "--enable-vdpau,--disable-vdpau,libvdpau"
 PACKAGECONFIG[vpx] = "--enable-libvpx,--disable-libvpx,libvpx"
 PACKAGECONFIG[x264] = "--enable-libx264,--disable-libx264,x264"
+PACKAGECONFIG[xcb] = "--enable-libxcb,--disable-libxcb,libxcb"
 PACKAGECONFIG[xv] = "--enable-outdev=xv,--disable-outdev=xv,libxv"
 
 # Check codecs that require --enable-nonfree
@@ -89,10 +91,6 @@ EXTRA_OECONF = " \
     --enable-pic \
     --enable-shared \
     --enable-pthreads \
-    --disable-libxcb \
-    --disable-libxcb-shm \
-    --disable-libxcb-xfixes \
-    --disable-libxcb-shape \
     ${@bb.utils.contains('USE_NONFREE', 'yes', '--enable-nonfree', '', d)} \
     \
     --cross-prefix=${TARGET_PREFIX} \
@@ -106,7 +104,6 @@ EXTRA_OECONF = " \
     --extra-cflags="${TARGET_CFLAGS} ${HOST_CC_ARCH}${TOOLCHAIN_OPTIONS}" \
     --extra-ldflags="${TARGET_LDFLAGS}" \
     --sysroot="${STAGING_DIR_TARGET}" \
-    --enable-hardcoded-tables \
     ${EXTRA_FFCONF} \
     --libdir=${libdir} \
     --shlibdir=${libdir} \
