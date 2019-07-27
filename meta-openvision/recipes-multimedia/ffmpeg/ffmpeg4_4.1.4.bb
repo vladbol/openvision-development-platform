@@ -41,7 +41,7 @@ DEPENDS = "alsa-lib zlib libogg nasm-native"
 
 S = "${WORKDIR}/git"
 
-inherit autotools pkgconfig inherit upx_compress
+inherit autotools pkgconfig upx_compress
 
 PACKAGECONFIG ??= "avdevice avfilter avcodec avformat swresample swscale postproc avresample \
                    bzlib gpl lzma theora x264 \
