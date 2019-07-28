@@ -15,10 +15,10 @@ Signed-off-by: Maxin B. John <maxin.john@intel.com>
  1 file changed, 3 deletions(-)
 
 diff --git a/configure b/configure
-index 0e3ef23..955b993 100755
+index ec767fbb..cc5e03f3 100755
 --- a/configure
 +++ b/configure
-@@ -911,9 +911,6 @@ if [ $asm = auto -a \( $ARCH = X86 -o $ARCH = X86_64 \) ] ; then
+@@ -932,9 +932,6 @@ if [ $asm = auto -a \( $ARCH = X86 -o $ARCH = X86_64 \) ] ; then
  fi
  
  if [ $asm = auto -a $ARCH = ARM ] ; then
