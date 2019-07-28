@@ -24,8 +24,17 @@ LIC_FILES_CHKSUM = "file://COPYING.GPLv2;md5=b234ee4d69f5fce4486a80fdaf4a4263 \
                     file://COPYING.LGPLv3;md5=e6a600fd5e1d9cbde2d983680233ad02"
 
 SRC_URI = "https://www.ffmpeg.org/releases/${BP}.tar.xz \
-           file://mips64_cpu_detection.patch \
+           file://3_mips64_cpu_detection.patch \
+           file://3_01_dashdec_improvements.patch \
+           file://3_02_fix_mpegts.patch \
+           file://3_03_allow_to_choose_rtmp_impl_at_runtime.patch \
+           file://3_04_hls_replace_key_uri.patch \
+           file://3_05_chunked_transfer_fix_eof.patch \
+           file://3_06_optimize_aac.patch \
+           file://3_07_increase_buffer_size.patch \
+           file://3_08_recheck_discard_flags.patch \
            "
+           
 SRC_URI[md5sum] = "cbf4ead227fcedddf54c86013705a988"
 SRC_URI[sha256sum] = "2b92e9578ef8b3e49eeab229e69305f5f4cbc1fdaa22e927fc7fca18acccd740"
 
@@ -80,17 +89,6 @@ PACKAGECONFIG[xv] = "--enable-outdev=xv,--disable-outdev=xv,libxv"
 
 # Check codecs that require --enable-nonfree
 USE_NONFREE = "${@bb.utils.contains_any('PACKAGECONFIG', [ 'openssl' ], 'yes', '', d)}"
-
-SRC_URI_append += " \
-	file://3_01_dashdec_improvements.patch \
-	file://3_02_fix_mpegts.patch \
-	file://3_03_allow_to_choose_rtmp_impl_at_runtime.patch \
-	file://3_04_hls_replace_key_uri.patch \
-	file://3_05_chunked_transfer_fix_eof.patch \
-	file://3_06_optimize_aac.patch \
-	file://3_07_increase_buffer_size.patch \
-	file://3_08_recheck_discard_flags.patch \
-	"
 
 def cpu(d):
     for arg in (d.getVar('TUNE_CCARGS') or '').split():
