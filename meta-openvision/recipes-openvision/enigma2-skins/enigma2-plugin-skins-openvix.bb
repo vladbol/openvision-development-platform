@@ -14,6 +14,10 @@ PKGV = "git${GITPKGV}"
 SRC_URI = "git://github.com/OpenViX/skins.git;protocol=git"
 
 DEPENDS += "enigma2 font-roboto-enigma font-valis-hd enigma2-plugin-extensions-yahooweather"
+RDEPENDS_${PN} = "font-valis-hd-enigma"
+RDEPENDS_enigma2-plugin-skins-openvix-magic-hd-noire = "font-valis-hd-enigma"
+RDEPENDS_enigma2-plugin-skins-openvix-magic-hd-night = "font-valis-hd-enigma"
+
 
 # note that enigma2-skins is just an empty package to satisfy silly dependencies.
 ALLOW_EMPTY_${PN} = "1"
