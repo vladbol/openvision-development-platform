@@ -5,7 +5,6 @@ inherit allarch
 
 PV = "2010.05.14"
 
-PACKAGES = "font-valis-hd"
 PROVIDES = "font-valis-hd"
 
 SRC_URI = "file://hd.ttf file://hdi.ttf"
