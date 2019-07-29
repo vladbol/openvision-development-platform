@@ -11,8 +11,8 @@ inherit gitpkgv distutils-openplugins gettext
 
 S = "${WORKDIR}/git"
 
-PV = "2.4+git${SRCPV}"
-PKGV = "2.4+git${GITPKGV}"
+PV = "2.5+git${SRCPV}"
+PKGV = "2.5+git${GITPKGV}"
 
 FILES_${PN}-src = "\
     ${libdir}/enigma2/python/*/*.py \
