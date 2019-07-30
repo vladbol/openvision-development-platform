@@ -3,8 +3,6 @@ SECTION = "console"
 LICENSE = "GPLv2+"
 require conf/license/license-gplv2.inc
 
-inherit bluetooth
-
 DEPENDS = "glib-2.0 bluez5"
 
 SRC_URI[md5sum] = "9b8203723ead15813ca731f10ba640aa"
