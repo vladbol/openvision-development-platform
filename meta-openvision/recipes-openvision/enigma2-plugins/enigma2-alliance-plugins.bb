@@ -23,7 +23,6 @@ PROVIDES = "\
     enigma2-plugin-extensions-fempa \
     enigma2-plugin-extensions-lcd4linux \
     enigma2-plugin-extensions-ondemand \
-    enigma2-plugin-extensions-openuitzendinggemist \
     enigma2-plugin-extensions-rcuselect \
     enigma2-plugin-extensions-rezap \
     enigma2-plugin-extensions-streamtv \
@@ -90,7 +89,6 @@ FILES_enigma2-plugin-extensions-lcd4linux_append = "${libdir}/enigma2/python/Com
 FILES_enigma2-plugin-extensions-lcd4linux-src_append = "${libdir}/enigma2/python/Components/Renderer/*.py"
 DESCRIPTION_enigma2-plugin-extensions-ondemand = "Watch on demand TV."
 RDEPENDS_enigma2-plugin-extensions-ondemand = "python-beautifulsoup python-dnspython python-lxml python-pyamf python-simplejson"
-DESCRIPTION_enigma2-plugin-extensions-openuitzendinggemist = "Watch NL-IP TV"
 DESCRIPTION_enigma2-plugin-extensions-rcuselect = "Change Remote for Amlogic"
 DESCRIPTION_enigma2-plugin-extensions-rezap = "ReZap Sync Tool for Wetek"
 DESCRIPTION_enigma2-plugin-extensions-streamtv = "iptv player"
