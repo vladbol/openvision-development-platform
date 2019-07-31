@@ -11,7 +11,7 @@ inherit gitpkgv upx_compress
 PV = "63+gitr${SRCPV}"
 PKGV = "63+gitr${GITPKGV}"
 
-SRC_URI = "git://github.com/e2iplayer/exteplayer3.git;branch=master"
+SRC_URI = "git://github.com/OpenVisionE2/exteplayer3.git"
 
 S = "${WORKDIR}/git/"
 
