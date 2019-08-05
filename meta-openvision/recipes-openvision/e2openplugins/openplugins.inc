@@ -26,7 +26,7 @@ FILES_${PN}-src = "\
     "
 
 do_compile_append() {
-	python -O -m compileall ${S}/usr/lib/enigma2/python/
+	python -O -m compileall ${S}/
 }
 
 python populate_packages_prepend() {
