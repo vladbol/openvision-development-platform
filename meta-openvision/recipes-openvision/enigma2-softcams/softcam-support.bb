@@ -1,7 +1,7 @@
 SUMMARY = "Start, stop and select softcams."
 MAINTAINER = "PLi team"
 
-require conf/license/openpli-gplv2.inc
+require conf/license/openvision-gplv2.inc
 
 inherit allarch
 

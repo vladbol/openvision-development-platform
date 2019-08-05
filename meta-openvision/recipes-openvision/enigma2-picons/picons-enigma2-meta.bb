@@ -1,6 +1,6 @@
 # meta package for enigma2 picon sets
 
-require conf/license/openpli-gplv2.inc
+require conf/license/openvision-gplv2.inc
 
 DEPENDS = " \
 		enigma2-plugin-picons-srp-grey-border-9.0-13-19.2-23.5-28.2-satellite-100x60 \

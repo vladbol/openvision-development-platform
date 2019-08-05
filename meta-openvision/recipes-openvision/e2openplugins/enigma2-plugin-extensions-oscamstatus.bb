@@ -10,5 +10,5 @@ FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 SRC_URI += "file://remove-duplicate-server-name.patch"
 
 require conf/license/license-gplv2.inc
-require openplugins-replace-pli.inc
+require openplugins-replace-vision.inc
 require openplugins-distutils.inc

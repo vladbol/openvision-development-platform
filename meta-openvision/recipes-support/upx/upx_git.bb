@@ -3,7 +3,7 @@ HOMEPAGE = "https://upx.github.io/"
 SECTION = "base"
 PRIORITY = "optional"
 
-require conf/license/openpli-gplv2.inc
+require conf/license/openvision-gplv2.inc
 
 DEPENDS = "zlib ucl"
 

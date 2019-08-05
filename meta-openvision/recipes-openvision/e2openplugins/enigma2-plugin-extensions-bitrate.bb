@@ -3,7 +3,7 @@ DESCRIPTION = "Bitrate viewer"
 
 require conf/license/license-gplv2.inc
 
-require openplugins-replace-pli.inc
+require openplugins-replace-vision.inc
 
 require openplugins.inc
 

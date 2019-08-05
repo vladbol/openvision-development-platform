@@ -1,6 +1,6 @@
 DESCRIPTION = "QuadPiP plugin for VU+ UHD receivers"
 
-require conf/license/openpli-gplv2.inc
+require conf/license/openvision-gplv2.inc
 
 inherit gitpkgv
 PV = "git${SRCPV}"

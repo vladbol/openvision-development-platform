@@ -1,6 +1,6 @@
 DESCRIPTION = "Azbox AZplayer app plugin"
 DEPENDS = "python-native"
-require conf/license/openpli-gplv2.inc
+require conf/license/openvision-gplv2.inc
 
 RDEPENDS_${PN} = "curl fuse libupnp djmount libjpeg-turbo libpng"
 

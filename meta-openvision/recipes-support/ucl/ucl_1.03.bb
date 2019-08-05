@@ -3,7 +3,7 @@ HOMEPAGE = "http://www.oberhumer.com/opensource/ucl/"
 SECTION = "libs"
 PRIORITY = "optional"
 
-require conf/license/openpli-gplv2.inc
+require conf/license/openvision-gplv2.inc
 
 inherit autotools-brokensep
 

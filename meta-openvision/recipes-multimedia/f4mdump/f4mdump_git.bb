@@ -4,7 +4,7 @@ MAINTAINER = "samsamsam"
 DEPENDS = "openssl zlib"
 RDEPENDS_${PN} += "wget"
 
-require conf/license/openpli-gplv2.inc
+require conf/license/openvision-gplv2.inc
 inherit gitpkgv
 
 PV = "1.0+git${SRCPV}"

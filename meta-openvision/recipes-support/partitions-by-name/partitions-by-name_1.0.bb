@@ -3,7 +3,7 @@ DESCRIPTION = "for internal emmc flash which give partitons names in /dev/block/
 SECTION = "base"
 LICENSE = "GPLv2"
 
-require conf/license/openpli-gplv2.inc
+require conf/license/openvision-gplv2.inc
 
 SRC_URI = "file://partitions-by-name.sh"
 

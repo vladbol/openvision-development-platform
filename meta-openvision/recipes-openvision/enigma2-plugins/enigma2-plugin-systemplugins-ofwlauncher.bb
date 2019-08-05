@@ -1,6 +1,6 @@
 DESCRIPTION = "OFW Launcher by Ping Flood"
 DEPENDS = "python-native"
-require conf/license/openpli-gplv2.inc
+require conf/license/openvision-gplv2.inc
 
 inherit gitpkgv pkgconfig
 

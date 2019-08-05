@@ -3,7 +3,7 @@ MAINTAINER = "samsamsam"
 
 DEPENDS = "gstreamer1.0 gstreamer1.0-plugins-base"
 
-require conf/license/openpli-gplv2.inc
+require conf/license/openvision-gplv2.inc
 inherit gitpkgv autotools pkgconfig
 
 PV = "1.0+git${SRCPV}"

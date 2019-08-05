@@ -4,7 +4,7 @@ DESCRIPTION = "Autorecover settings and install packages at first boot from /med
 PACKAGES = "${PN}"
 MAINTAINER = "OpenPLi team"
 
-require conf/license/openpli-gplv2.inc
+require conf/license/openvision-gplv2.inc
 
 # Need to tell bitbake that we have extra files installed
 FILES_${PN} = " ${sysconfdir} \

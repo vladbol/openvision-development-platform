@@ -1,6 +1,6 @@
 DESCRIPTION = "RSi Media Center by OpenRSi"
 DEPENDS = "python-native"
-require conf/license/openpli-gplv2.inc
+require conf/license/openvision-gplv2.inc
 
 inherit gitpkgv pkgconfig
 

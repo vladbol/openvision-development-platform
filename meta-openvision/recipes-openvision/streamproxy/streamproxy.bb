@@ -2,7 +2,7 @@ DESCRIPTION = "Streamproxy for live and file streaming and transcoding"
 MAINTAINER = "PLi team"
 DEPENDS = "boost"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
-require conf/license/openpli-gplv2.inc
+require conf/license/openvision-gplv2.inc
 
 inherit gitpkgv
 
