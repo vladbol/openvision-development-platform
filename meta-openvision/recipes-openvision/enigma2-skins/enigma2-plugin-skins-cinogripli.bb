@@ -1,4 +1,4 @@
-DESCRIPTION = "GriPLi FHD skin by Cino for Open Vision and OpenPLI based images."
+DESCRIPTION = "GriPLi FHD skin by Cino for Open Vision"
 MAINTAINER = "dreamosat-forum.com"
 SECTION = "misc"
 PRIORITY = "optional"

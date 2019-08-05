@@ -1,4 +1,4 @@
-DESCRIPTION = "Glamour Aura FHD skin by MCelliot_g for OpenPLI and OpenPLI based images."
+DESCRIPTION = "Glamour Aura FHD skin by MCelliot_g for Open Vision"
 MAINTAINER = "MCelliot_g"
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=84dcc94da3adb52b53ae4fa38fe49e5d"

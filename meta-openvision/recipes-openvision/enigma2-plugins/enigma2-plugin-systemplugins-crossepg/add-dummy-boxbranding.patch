@@ -14,7 +14,7 @@ index 0000000..a7d960c
 --- /dev/null
 +++ b/src/enigma2/python/boxbranding.py
 @@ -0,0 +1,4 @@
-+image_brand = "openpli"
++image_brand = "openvision"
 +
 +def getImageDistro():
 +    return image_brand

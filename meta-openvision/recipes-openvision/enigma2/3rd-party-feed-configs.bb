@@ -5,7 +5,7 @@ PV="1.1"
 require conf/license/openvision-gplv2.inc
 
 # Use the PLi download servers, regardless of where we are. Even for "private" feeds
-DISTRO_FEED_PREXIX = "openpli"
+DISTRO_FEED_PREFIX = "openvision"
 
 # feeds to be generated
 FEEDS = "picons 3rd-party 3rd-party-${TUNE_PKGARCH} 3rd-party-${MACHINE}"
