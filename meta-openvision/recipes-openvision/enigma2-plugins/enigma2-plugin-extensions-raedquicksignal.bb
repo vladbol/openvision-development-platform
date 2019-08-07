@@ -10,8 +10,8 @@ inherit gitpkgv distutils-openplugins gettext
 
 S = "${WORKDIR}/git"
 
-PV = "4.8+git${SRCPV}"
-PKGV = "4.8+git${GITPKGV}"
+PV = "4.9+git${SRCPV}"
+PKGV = "4.9+git${GITPKGV}"
 
 FILES_${PN} = "/usr/"
 
