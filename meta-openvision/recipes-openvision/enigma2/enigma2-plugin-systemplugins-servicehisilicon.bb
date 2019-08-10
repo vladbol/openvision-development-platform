@@ -11,11 +11,11 @@ RPROVIDES_${PN} += "virtual/enigma2-mediaservice"
 DEPENDS = "enigma2"
 RDEPENDS_${PN} = "enigma2"
 
-SRC_URI = "git://github.com/zgemma-star/servicehisilicon.git;branch=master"
+SRC_URI = "git://github.com/OpenVisionE2/servicehisilicon.git;branch=master"
 
 S = "${WORKDIR}/git"
 
-inherit autotools gitpkgv pythonnative pkgconfig
+inherit autotools gitpkgv pythonnative pkgconfig gettext
 
 PV = "git${SRCPV}"
 PKGV = "git${GITPKGV}"
@@ -31,10 +31,10 @@ do_install_append() {
 	rm ${D}${libdir}/enigma2/python/Plugins/SystemPlugins/ServiceHisilicon/*.pyc
 }
 
-FILES_${PN} = "\
+FILES_${PN} += "\
 	${libdir}/enigma2/python/Plugins/SystemPlugins/ServiceHisilicon/*.pyo \
 	${libdir}/enigma2/python/Plugins/SystemPlugins/ServiceHisilicon/servicehisilicon.so"
 
-FILES_${PN}-dev = "\
+FILES_${PN}-dev += "\
 	${libdir}/enigma2/python/Plugins/SystemPlugins/ServiceHisilicon/*.py \
 	${libdir}/enigma2/python/Plugins/SystemPlugins/ServiceHisilicon/servicehisilicon.la"
