@@ -1,6 +1,6 @@
 SUMMARY = "AML remote setup"
 LICENSE = "GPLv2"
-MAINTAINER = "Persian Professionals"
+MAINTAINER = "Open Vision Developers"
 SECTION = "base"
 PRIORITY = "required"
 
@@ -13,7 +13,7 @@ inherit gitpkgv
 PV = "git${SRCPV}"
 PKGV = "git${GITPKGV}"
 
-SRC_URI = "${@bb.utils.contains("IMAGE_FSTYPES", "amlogicsdimg", "git://github.com/OpenVisionE2/amremote.git;protocol=git;branch=arm64", "git://github.com/OpenVisionE2/amremote.git;protocol=git;branch=master", d)}"
+SRC_URI = "git://github.com/OpenVisionE2/amremote.git;protocol=git"
 
 S = "${WORKDIR}/git"
 
