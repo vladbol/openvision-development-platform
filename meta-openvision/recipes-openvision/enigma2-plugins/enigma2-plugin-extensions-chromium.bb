@@ -10,8 +10,6 @@ SRC_URI = "http://code.vuplus.com/download/chromium/e2plugin-chromium-vuplus_${P
 DEPENDS[pkgvarcheck] = "chromium-browser"
 RDEPENDS_${PN} = "chromium-browser"
 
-INSANE_SKIP_${PN} += "file-rdeps"
-
 do_install_append() {
 	install -d ${D}/usr/lib/enigma2/python/Plugins/Extensions/Chromium
 	cp -aRf ${WORKDIR}/e2plugin/* ${D}/usr/lib/enigma2/python/Plugins/Extensions/Chromium/
