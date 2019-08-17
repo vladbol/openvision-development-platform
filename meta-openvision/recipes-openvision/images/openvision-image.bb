@@ -17,6 +17,7 @@ IMAGE_INSTALL = "\
 	e2fsprogs-tune2fs \
 	fakelocale \
 	glibc-binary-localedata-en-gb \
+	hdparm \
 	kernel-params \
 	modutils-loadscript \
 	nfs-utils-client \
