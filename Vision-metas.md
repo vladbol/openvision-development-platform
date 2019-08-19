@@ -128,6 +128,7 @@
 * dinobotu55
 * ferguson4k
 * iziboxecohd
+* iziboxx3
 * jdhdduo
 * mediabox4k
 * protek4kx1
