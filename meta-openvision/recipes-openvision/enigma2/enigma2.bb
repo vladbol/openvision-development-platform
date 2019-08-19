@@ -18,10 +18,6 @@ DEPENDS = " \
 	openvision-extra-rc-models \
 	"
 
-# SoftcamSetup is integrated now
-RREPLACES_${PN} = "enigma2-plugin-pli-softcamsetup"
-RCONFLICTS_${PN} = "enigma2-plugin-pli-softcamsetup"
-
 RDEPENDS_${PN} = " \
 	alsa-conf \
 	enigma2-fonts \
@@ -83,9 +79,7 @@ DESCRIPTION_append_enigma2-plugin-extensions-pictureplayer = "displays photos on
 DESCRIPTION_append_enigma2-plugin-systemplugins-positionersetup = "helps you installing a motorized dish."
 DESCRIPTION_append_enigma2-plugin-systemplugins-satelliteequipmentcontrol = "allows you to fine-tune DiSEqC-settings."
 DESCRIPTION_append_enigma2-plugin-systemplugins-satfinder = "helps you to align your dish."
-DESCRIPTION_append_enigma2-plugin-systemplugins-skinselector = "shows a menu with selectable skins."
 DESCRIPTION_append_enigma2-plugin-systemplugins-videomode = "selects advanced video modes"
-RDEPENDS_enigma2-plugin-systemplugins-nfiflash = "python-twisted-web"
 RDEPENDS_enigma2-plugin-systemplugins-softwaremanager = "python-twisted-web"
 DESCRIPTION_append_enigma2-plugin-systemplugins-wirelesslan = "helps you configuring your wireless lan"
 RDEPENDS_enigma2-plugin-systemplugins-wirelesslan = "wpa-supplicant iw python-wifi"
@@ -108,7 +102,7 @@ RDEPENDS_${PN}-build-dependencies = "\
 	python-twisted-web \
 	"
 
-inherit gitpkgv pythonnative upx_compress
+inherit gitpkgv pythonnative upx_compress autotools pkgconfig
 
 PV = "upcoming+git${SRCPV}"
 PKGV = "upcoming+git${GITPKGV}"
@@ -128,8 +122,6 @@ FILES_${PN} += "${datadir}/keymaps"
 FILES_${PN}-meta = "${datadir}/meta"
 PACKAGES += "${PN}-meta ${PN}-build-dependencies"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
-
-inherit autotools pkgconfig
 
 PACKAGES =+ "enigma2-fonts"
 PKGV_enigma2-fonts = "2018.08.15"
@@ -200,11 +192,16 @@ FILES_${PN}-src = "\
 	${libdir}/enigma2/python/*/*.py \
 	${libdir}/enigma2/python/*/*/*.py \
 	${libdir}/enigma2/python/*/*/*/*.py \
+	${libdir}/enigma2/python/*/*/*/*/*.py \
+	${libdir}/enigma2/python/*/*/*/*/*/*.py \
 	"
 
 do_install_append() {
 	install -d ${D}/usr/share/keymaps
+	# remove unused .pyc files
 	find ${D}${libdir}/enigma2/python/ -name '*.pyc' -exec rm {} \;
+	# make scripts executable
+	find "${D}" -name '*.sh' -exec chmod a+x '{}' ';'
 }
 
 do_configure_prepend() {
