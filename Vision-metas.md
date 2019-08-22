@@ -204,6 +204,7 @@
 * gb800solo
 * gb800ue
 * gb800ueplus
+* gbip4k
 * gbipbox
 * gbquad
 * gbquad4k
