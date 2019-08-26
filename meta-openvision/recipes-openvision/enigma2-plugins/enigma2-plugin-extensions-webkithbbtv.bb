@@ -13,11 +13,11 @@ SRC_URI = "http://archive.vuplus.com/download/build_support/webkit-hbbtv-plugin_
 S = "${WORKDIR}"
 
 do_install_append() {
-    install -d ${D}/usr/bin
-    install -d ${D}/usr/lib/enigma2/python/Plugins/Extensions/WebkitHbbTV
+    install -d ${D}${bindir}
+    install -d ${D}${libdir}/enigma2/python/Plugins/Extensions/WebkitHbbTV
 
-    install -m 0755 ${WORKDIR}/webkit-hbbtv-plugin/run-webkit.sh ${D}/usr/bin
-    cp -aRf ${WORKDIR}/webkit-hbbtv-plugin/WebkitHbbTV/* ${D}/usr/lib/enigma2/python/Plugins/Extensions/WebkitHbbTV/
+    install -m 0755 ${WORKDIR}/webkit-hbbtv-plugin/run-webkit.sh ${D}${bindir}
+    cp -aRf ${WORKDIR}/webkit-hbbtv-plugin/WebkitHbbTV/* ${D}${libdir}/enigma2/python/Plugins/Extensions/WebkitHbbTV/
 }
 
 do_package_qa() {

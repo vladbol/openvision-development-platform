@@ -12,7 +12,7 @@ RRECOMMENDS_${PN} = "enigma2-plugin-extensions-weathermsn"
 
 SRC_URI = "git://github.com/MCelliotG/GlamourAuraFHD-skin.git;protocol=git"
 
-FILES_${PN} = "/usr/share/enigma2/ ${libdir}/enigma2/"
+FILES_${PN} = "${datadir}/enigma2/ ${libdir}/enigma2/"
 
 S = "${WORKDIR}/git"
 
@@ -20,9 +20,9 @@ do_compile() {
 }
 
 do_install() {
-	install -d ${D}/usr/share
-	cp -r --preserve=mode,links ${S}/usr/share/* ${D}/usr/share/
-	chmod -R a+rX ${D}/usr/share/enigma2/
+	install -d ${D}${datadir}
+	cp -r --preserve=mode,links ${S}${datadir}/* ${D}${datadir}/
+	chmod -R a+rX ${D}${datadir}/enigma2/
 
         install -d ${D}${libdir}
         cp -r --preserve=mode,links ${S}${libdir}/* ${D}${libdir}

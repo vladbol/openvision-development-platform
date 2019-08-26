@@ -10,7 +10,7 @@
 
 LICENSE = "CLOSED"
 
-FILES_${PN} = "${bindir} /etc"
+FILES_${PN} = "${bindir} ${sysconfdir}"
 
 # no docs, locales etc.
 PACKAGES = "${PN}"
@@ -69,7 +69,7 @@ do_install_append () {
 
 # If no cam selected yet, install and start this cam (and don't start it on the build host).
 pkg_postinst_${PN}_append () {
-	if [ ! -e "${CAMLINK}" ] || [ "/etc/init.d/softcam.None" = "`readlink -f ${CAMLINK}`" ]
+	if [ ! -e "${CAMLINK}" ] || [ "${sysconfdir}/init.d/softcam.None" = "`readlink -f ${CAMLINK}`" ]
 	then
 		rm -f "${CAMLINK}"
 		ln -s "softcam.${CAMNAME}" "${CAMLINK}"

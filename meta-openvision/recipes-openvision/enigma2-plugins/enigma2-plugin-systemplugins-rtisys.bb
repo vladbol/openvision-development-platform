@@ -27,7 +27,7 @@ python populate_packages_prepend () {
 do_install() {
 	install -d  ${D}${libdir}/enigma2/python/Plugins/SystemPlugins/RtiSYS
 	
-	install -m 0644 ${S}/*.pyo ${D}/usr/lib/enigma2/python/Plugins/SystemPlugins/RtiSYS
+	install -m 0644 ${S}/*.pyo ${D}${libdir}/enigma2/python/Plugins/SystemPlugins/RtiSYS
 }
 
 FILES_${PN} = "${libdir}/enigma2/python/Plugins/SystemPlugins/RtiSYS"

@@ -33,8 +33,8 @@ do_install() {
     then
          echo "Not autoloading!"
     else
-         install -d ${D}/etc/modules-load.d
-         echo "8192cu" > ${D}/etc/modules-load.d/wlan8192cu.conf
+         install -d ${D}${sysconfdir}/modules-load.d
+         echo "8192cu" > ${D}${sysconfdir}/modules-load.d/wlan8192cu.conf
     fi
 }
 

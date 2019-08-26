@@ -27,7 +27,7 @@ PACKAGES = "${PN}-doc ${PN}-src ${PN}"
 FILES_${PN}-src = "${INSTALLDIR}/*/*.py ${INSTALLDIR}/*/*/*.py"
 RDEPENDS_${PN}-src = "python"
 FILES_${PN}-doc = "${INSTALLDIR}/*.txt ${INSTALLDIR}/licenses ${INSTALLDIR}/interfaces/*/licenses"
-FILES_${PN} = "${INSTALLDIR} /etc/init.d/sabnzbd /etc/init.d/init-functions /etc/enigma2/sabnzbd.conf"
+FILES_${PN} = "${INSTALLDIR} ${sysconfdir}/init.d/sabnzbd ${sysconfdir}/init.d/init-functions ${sysconfdir}/enigma2/sabnzbd.conf"
 
 inherit update-rc.d
 INITSCRIPT_NAME = "sabnzbd"
@@ -44,5 +44,5 @@ do_install() {
 	install -m 755 ${WORKDIR}/sabnzbd ${D}${sysconfdir}/init.d/sabnzbd
 	install -m 755 ${WORKDIR}/init-functions ${D}${sysconfdir}/init.d/init-functions
 	install -d ${D}${sysconfdir}/enigma2
-	install -m 644 ${WORKDIR}/sabnzbd.conf ${D}/etc/enigma2/sabnzbd.conf
+	install -m 644 ${WORKDIR}/sabnzbd.conf ${D}${sysconfdir}/enigma2/sabnzbd.conf
 }

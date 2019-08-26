@@ -15,7 +15,7 @@ DEPENDS = "libusb openssl"
 S = "${WORKDIR}/git"
 B = "${S}"
 CAMNAME = "oscam"
-CAMSTART = "/usr/bin/oscam --wait 0 --config-dir /etc/tuxbox/config/oscam --daemon --pidfile /tmp/oscam.pid --restart 2 --utf8"
+CAMSTART = "${bindir}/oscam --wait 0 --config-dir ${sysconfdir}/tuxbox/config/oscam --daemon --pidfile /tmp/oscam.pid --restart 2 --utf8"
 CAMSTOP = "kill \`cat /tmp/oscam.pid\` 2> /dev/null"
 
 SRC_URI += " \

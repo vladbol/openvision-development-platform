@@ -24,14 +24,14 @@ do_compile () {
 FILES_${PN} =  " \
 	${bindir} \
 	${libdir}/${QtStalker} \
-	/usr/share/stalker \
+	${datadir}/stalker \
 "
 
 do_install() {
 	install -d ${D}${libdir}/${QtStalker}
-	install -d ${D}/usr/share/stalker
-	cp -rp ${S}/usr/share/stalker/* ${D}/usr/share/stalker/
-	chmod -R a+rX ${D}/usr/share/stalker/
+	install -d ${D}${datadir}/stalker
+	cp -rp ${S}${datadir}/stalker/* ${D}${datadir}/stalker/
+	chmod -R a+rX ${D}${datadir}/stalker/
 	install -m 0755 ${S}/plugin/__init__.py ${D}${libdir}/${QtStalker}
 	install -m 0755 ${S}/plugin/browser.py ${D}${libdir}/${QtStalker}
 	install -m 0755 ${S}/plugin/datasocket.py ${D}${libdir}/${QtStalker}

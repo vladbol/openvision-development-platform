@@ -52,6 +52,6 @@ do_install_azboxhd() {
 
 FILES_${PN} = "${bindir}/"
 FILES_${PN} += "${libdir}"
-FILES_${PN} += "/etc/init.d/"
+FILES_${PN} += "${sysconfdir}/init.d/"
 FILES_${PN} += "${libdir}/enigma2/python/Plugins/Extensions/AZPlay/"
 FILES_${PN} += "${libdir}/enigma2/python/Plugins/Extensions/AZPlay/img/"

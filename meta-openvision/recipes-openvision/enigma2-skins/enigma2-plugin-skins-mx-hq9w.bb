@@ -27,7 +27,7 @@ do_compile() {
 
 do_install() {
     rm -Rf ${S}/usr/uninstall
-    rm -Rf ${S}/usr/share/fonts
+    rm -Rf ${S}${datadir}/fonts
     cp -r --preserve=mode,links ${S}/usr ${D}/
-    install -m 0644 ${WORKDIR}/pli.png ${D}/usr/share/enigma2/MX_HQ9W/
+    install -m 0644 ${WORKDIR}/pli.png ${D}${datadir}/enigma2/MX_HQ9W/
 }

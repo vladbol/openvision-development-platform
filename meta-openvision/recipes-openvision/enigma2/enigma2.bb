@@ -198,7 +198,7 @@ FILES_${PN}-src = "\
 	"
 
 do_install_append() {
-	install -d ${D}/usr/share/keymaps
+	install -d ${D}${datadir}/keymaps
 	# remove unused .pyc files
 	find ${D}${libdir}/enigma2/python/ -name '*.pyc' -exec rm {} \;
 	# make scripts executable

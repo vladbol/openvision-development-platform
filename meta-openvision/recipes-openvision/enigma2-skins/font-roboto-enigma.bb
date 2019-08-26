@@ -15,6 +15,6 @@ FILES_${PN} = "/usr/*"
 S = "${WORKDIR}"
 
 do_install() {
-    install -d ${D}/usr/share/fonts
-    install -m 0644 ${WORKDIR}/*.ttf ${D}/usr/share/fonts
+    install -d ${D}${datadir}/fonts
+    install -m 0644 ${WORKDIR}/*.ttf ${D}${datadir}/fonts
 }

@@ -22,7 +22,7 @@ TARGET_CFLAGS_append = " ${@bb.utils.contains("MACHINE_FEATURES", "madwifi", "-I
 S = "${WORKDIR}/wpa_supplicant-${PV}"
 
 PACKAGES_prepend = "wpa-supplicant-passphrase "
-FILES_wpa-supplicant-passphrase = "/usr/sbin/wpa_passphrase"
+FILES_wpa-supplicant-passphrase = "${sbindir}/wpa_passphrase"
 RREPLACES_${PN} = "wpa-supplicant-cli"
 RRECOMMENDS_${PN} = "wpa-supplicant-passphrase"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
@@ -66,8 +66,8 @@ do_install () {
     install -m 755 ${WORKDIR}/ifupdown.sh ${D}${sysconfdir}/wpa_supplicant/
     install -m 755 ${WORKDIR}/functions.sh ${D}${sysconfdir}/wpa_supplicant
     
-    ln -s /etc/wpa_supplicant/ifupdown.sh ${D}${sysconfdir}/network/if-pre-up.d/wpasupplicant
-    ln -s /etc/wpa_supplicant/ifupdown.sh ${D}${sysconfdir}/network/if-post-down.d/wpasupplicant
+    ln -s ${sysconfdir}/wpa_supplicant/ifupdown.sh ${D}${sysconfdir}/network/if-pre-up.d/wpasupplicant
+    ln -s ${sysconfdir}/wpa_supplicant/ifupdown.sh ${D}${sysconfdir}/network/if-post-down.d/wpasupplicant
 
     rm -Rf ${D}/var/run
 }

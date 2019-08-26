@@ -35,6 +35,6 @@ do_compile () {
 do_install() {
     install -d ${D}${nonarch_base_libdir}/modules/${KERNEL_VERSION}/kernel/drivers/net/
     install -m 0644 8712u${KERNEL_OBJECT_SUFFIX} ${D}${nonarch_base_libdir}/modules/${KERNEL_VERSION}/kernel/drivers/net/
-    install -d ${D}/etc/modutils
-    echo 8712u > ${D}/etc/modutils/wlan8712u
+    install -d ${D}${sysconfdir}/modutils
+    echo 8712u > ${D}${sysconfdir}/modutils/wlan8712u
 }

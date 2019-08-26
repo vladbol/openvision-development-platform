@@ -21,7 +21,7 @@ CONFFILES_${PN} = "${sysconfdir}/tuxtxt/tuxtxt2.conf"
 
 inherit autotools pkgconfig
 
-EXTRA_OECONF = "--with-boxtype=generic --with-configdir=/etc \
+EXTRA_OECONF = "--with-boxtype=generic --with-configdir=${sysconfdir} \
 	${@bb.utils.contains("MACHINE_FEATURES", "textlcd", "--with-textlcd" , "", d)} \
 	DVB_API_VERSION=5\
 	"

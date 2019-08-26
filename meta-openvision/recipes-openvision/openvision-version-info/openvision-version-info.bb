@@ -19,7 +19,7 @@ SRC_URI = "file://settings \
            file://openvision-timesync.sh \
           "
 
-FILES_${PN} = "/etc /usr"
+FILES_${PN} = "${sysconfdir} /usr"
 
 do_configure[nostamp] = "1"
 
@@ -41,31 +41,31 @@ do_compile() {
 do_install[vardepsexclude] = "DATETIME"
 
 do_install() {
-	install -d ${D}/etc
-	echo "STB=${MACHINE}" > ${D}/etc/image-version
-	echo "Brand=${BOX_BRAND}" > ${D}/etc/image-version
-	echo "box_type=${MACHINE}" >> ${D}/etc/image-version
-	echo "build_type=0" >> ${D}/etc/image-version
-	echo "version=${VISIONVERSION}-${VISIONREVISION}" >> ${D}/etc/image-version
-	echo "build=${VISIONREVISION}" >> ${D}/etc/image-version
-	echo "Python=2.7" >> ${D}/etc/image-version
-	echo "date=${DATETIME}" >> ${D}/etc/image-version
-	echo "comment=Open Vision" >> ${D}/etc/image-version
-	echo "target=9" >> ${D}/etc/image-version
-	echo "creator=Open Vision Developers" >> ${D}/etc/image-version
-	echo "url=https://openvision.tech" >> ${D}/etc/image-version
-	echo "catalog=https://github.com/OpenVisionE2" >> ${D}/etc/image-version
-	echo "distro=${DISTRO_NAME}" >> ${D}/etc/image-version
-	echo "${MACHINE}" > ${D}/etc/model
-	echo "${BOX_BRAND}" > ${D}/etc/brand
-	echo "${VISIONVERSION}" > ${D}/etc/visionversion
-	echo "${VISIONREVISION}" > ${D}/etc/visionrevision
+	install -d ${D}${sysconfdir}
+	echo "STB=${MACHINE}" > ${D}${sysconfdir}/image-version
+	echo "Brand=${BOX_BRAND}" > ${D}${sysconfdir}/image-version
+	echo "box_type=${MACHINE}" >> ${D}${sysconfdir}/image-version
+	echo "build_type=0" >> ${D}${sysconfdir}/image-version
+	echo "version=${VISIONVERSION}-${VISIONREVISION}" >> ${D}${sysconfdir}/image-version
+	echo "build=${VISIONREVISION}" >> ${D}${sysconfdir}/image-version
+	echo "Python=2.7" >> ${D}${sysconfdir}/image-version
+	echo "date=${DATETIME}" >> ${D}${sysconfdir}/image-version
+	echo "comment=Open Vision" >> ${D}${sysconfdir}/image-version
+	echo "target=9" >> ${D}${sysconfdir}/image-version
+	echo "creator=Open Vision Developers" >> ${D}${sysconfdir}/image-version
+	echo "url=https://openvision.tech" >> ${D}${sysconfdir}/image-version
+	echo "catalog=https://github.com/OpenVisionE2" >> ${D}${sysconfdir}/image-version
+	echo "distro=${DISTRO_NAME}" >> ${D}${sysconfdir}/image-version
+	echo "${MACHINE}" > ${D}${sysconfdir}/model
+	echo "${BOX_BRAND}" > ${D}${sysconfdir}/brand
+	echo "${VISIONVERSION}" > ${D}${sysconfdir}/visionversion
+	echo "${VISIONREVISION}" > ${D}${sysconfdir}/visionrevision
 	if [ "${@bb.utils.contains("MACHINE_FEATURES", "smallflash", "1", "0", d)}" = "1" ]; then
-		echo "smallflash" > ${D}/etc/smallflash
+		echo "smallflash" > ${D}${sysconfdir}/smallflash
 	fi
 	install -d ${D}${sysconfdir}/enigma2
 	install -m 0755 ${WORKDIR}/settings ${D}${sysconfdir}/enigma2
-	install -d ${D}/usr/share/enigma2/picon
+	install -d ${D}${datadir}/enigma2/picon
 	install -d ${D}${libdir}/python2.7
 	install -m 0644 ${WORKDIR}/ov.pyo ${D}${libdir}/python2.7
 	install -d ${D}${sysconfdir}/init.d

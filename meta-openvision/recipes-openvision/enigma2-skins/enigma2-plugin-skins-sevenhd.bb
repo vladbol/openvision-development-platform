@@ -26,7 +26,7 @@ do_install() {
 
 do_postrm_append() {
 #!/bin/sh
-rm -rf /usr/share/enigma2/SevenHD
+rm -rf ${datadir}/enigma2/SevenHD
 rm -rf ${libdir}/enigma2/python/Plugins/Extensions/SevenHD
 rm -rf ${libdir}/enigma2/python/Components/Converter/SevenHD*
 rm -rf ${libdir}/enigma2/python/Components/Renderer/SevenHD*

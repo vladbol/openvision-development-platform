@@ -13,6 +13,6 @@ S = "${WORKDIR}"
 FILES_${PN} = "/usr/*"
 
 do_install() {
-    mkdir -p ${D}/usr/share/fonts
-    install -m 0644 ${S}/tiny.ttf ${D}/usr/share/fonts/
+    mkdir -p ${D}${datadir}/fonts
+    install -m 0644 ${S}/tiny.ttf ${D}${datadir}/fonts/
 }
