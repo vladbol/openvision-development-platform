@@ -12,6 +12,7 @@ PV = "3.1+git${SRCPV}"
 PKGV = "3.1+git${GITPKGV}"
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
+
 SRC_URI = "\
 	git://github.com/oe-alliance/AutoBouquetsMaker.git;protocol=git \
 	file://openvision.patch \
