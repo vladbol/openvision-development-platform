@@ -41,9 +41,9 @@ FILES_${PN}-src = "\
     "
 
 CONFFILES_${PN} = " \
-    /usr/share/enigma2/GBUniverseHD/construct/backgrounds/background-infobar.png \
-    /usr/share/enigma2/GBUniverseHD/construct/backgrounds/background-symbol.png \
-    /usr/share/enigma2/GBUniverseHD/construct/backgrounds/background-window.png \
-    /usr/share/enigma2/GBUniverseHD/construct/backgrounds/background-window-details.png \
-    /usr/share/enigma2/GBUniverseHD/construct/backgrounds/background-window-title.png \
+    /usr/share/enigma2/UniverseHD/construct/backgrounds/background-infobar.png \
+    /usr/share/enigma2/UniverseHD/construct/backgrounds/background-symbol.png \
+    /usr/share/enigma2/UniverseHD/construct/backgrounds/background-window.png \
+    /usr/share/enigma2/UniverseHD/construct/backgrounds/background-window-details.png \
+    /usr/share/enigma2/UniverseHD/construct/backgrounds/background-window-title.png \
     "
