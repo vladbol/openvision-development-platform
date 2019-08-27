@@ -8,8 +8,6 @@ require conf/license/openvision-gplv2.inc
 
 inherit autotools-brokensep gitpkgv pythonnative
 
-PACKAGES += " ${PN}-src"
-
 PV = "git${SRCPV}"
 PKGV = "git${GITPKGV}"
 
