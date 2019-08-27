@@ -15,7 +15,6 @@ DEPENDS = " \
 	swig-native \
 	tuxtxt-enigma2 \
 	${@bb.utils.contains("MACHINE_FEATURES", "uianimation", "libvugles2-${MACHINE} libgles-${MACHINE}", "", d)} \
-	openvision-extra-rc-models \
 	"
 
 RDEPENDS_${PN} = " \
@@ -108,12 +107,7 @@ inherit gitpkgv pythonnative upx_compress autotools pkgconfig
 PV = "upcoming+git${SRCPV}"
 PKGV = "upcoming+git${GITPKGV}"
 
-ENIGMA2_BRANCH ?= "upcoming"
-
-SRC_URI = "\
-	git://github.com/OpenVisionE2/enigma2-openvision.git;branch=${ENIGMA2_BRANCH};name=enigma2 \
-	${@bb.utils.contains("TARGET_ARCH", "sh4", "", "git://github.com/OpenVisionE2/extra_rc_models.git;protocol=git;destsuffix=extra_rc_models;name=extrarcmodels", d)} \
-	"
+SRC_URI = "git://github.com/OpenVisionE2/enigma2-openvision.git;branch=upcoming"
 
 LDFLAGS_prepend = " -lxml2 "
 
@@ -162,9 +156,6 @@ EXTRA_OECONF = "\
 	${@bb.utils.contains("MACHINE_FEATURES", "olde2api", "--with-olde2api" , "", d)} \
 	"
 
-SRCREV_extrarcmodels_pn-${PN} = "${AUTOREV}"
-SRCREV_FORMAT = "enigma2"
-
 # pass the enigma branch to automake
 EXTRA_OEMAKE = "\
 	ENIGMA2_BRANCH=${ENIGMA2_BRANCH} \
@@ -203,23 +194,6 @@ do_install_append() {
 	find ${D}${libdir}/enigma2/python/ -name '*.pyc' -exec rm {} \;
 	# make scripts executable
 	find "${D}" -name '*.sh' -exec chmod a+x '{}' ';'
-}
-
-do_configure_prepend() {
-	if [ ! "${TARGET_ARCH}" == "sh4" ]
-	then
-		# Restore the files first in case we run configure twice between checking out the source
-		git --git-dir="${S}/.git" --work-tree="${S}" checkout "${S}/data/rc_models/Makefile.am"
-		git --git-dir="${S}/.git" --work-tree="${S}" checkout "${S}/data/rc_models/rc_models.cfg"
-		git --git-dir="${WORKDIR}/extra_rc_models/.git" --work-tree="${WORKDIR}/extra_rc_models" pull
-		for i in $(find "${WORKDIR}/extra_rc_models" -maxdepth 1 -type f -name "*.xml" -o -name "*.png")
-		do
-			file="$(echo "${i}" | sed 's:.*/::')"
-			sed -i '${s/$/'" $file"'/}' "${S}/data/rc_models/Makefile.am"
-			cp -f "${i}" "${S}/data/rc_models/"
-		done
-		cat "${WORKDIR}/extra_rc_models/rc_models.cfg" >> "${S}/data/rc_models/rc_models.cfg"
-	fi
 }
 
 python populate_packages_prepend() {
