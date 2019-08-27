@@ -74,6 +74,7 @@ ENIGMA2_PLUGINS += "\
 	enigma2-plugin-extensions-dlnaserver \
 	enigma2-plugin-extensions-e2iplayer \
 	enigma2-plugin-extensions-e2iplayer-deps \
+	enigma2-plugin-extensions-epgrefresh \
 	enigma2-plugin-extensions-filecommander \
 	enigma2-plugin-extensions-foreca \
 	enigma2-plugin-extensions-keyadder \
