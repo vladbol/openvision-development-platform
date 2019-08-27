@@ -77,7 +77,7 @@ do_configure_append() {
 	done
 	# remove hardcoded path to ${bindir}/glib-mkenums
 	for makefile in $(find ${B} -name "GNUmakefile") ; do
-		sed -i s:${bindir}/glib-mkenums:glib-mkenums:g $makefile
+		sed -i s:/usr/bin/glib-mkenums:glib-mkenums:g $makefile
 	done
 }
 
