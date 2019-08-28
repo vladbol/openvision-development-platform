@@ -1,10 +1,10 @@
-MODULE = "OpenWebif"
 DESCRIPTION = "Control your receiver with a browser"
+MAINTAINER = "Open Vision Developers"
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://README;firstline=10;lastline=12;md5=9c14f792d0aeb54e15490a28c89087f7"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-DEPENDS = "python-cheetah-native openvision-extra-rc-models"
+DEPENDS = "python-cheetah-native"
 
 RDEPENDS_${PN} = "\
 	aio-grab \
@@ -24,34 +24,11 @@ inherit gitpkgv distutils-openplugins gettext
 PV = "git${SRCPV}"
 PKGV = "git${GITPKGV}"
 
-SRCREV_FORMAT = "${MODULE}"
-SRCREV_extrarcmodels_pn-${PN} = "${AUTOREV}"
-
-SRC_URI = "\
-	git://github.com/E2OpenPlugins/e2openplugin-${MODULE}.git;protocol=git;name=${MODULE} \
-	git://github.com/OpenVisionE2/extra_rc_models.git;protocol=git;destsuffix=extra_rc_models;name=extrarcmodels \
-	"
+SRC_URI = "git://github.com/OpenVisionE2/OpenWebif.git;protocol=git"
 
 SRC_URI_append_sh4 += " file://revert_grab_for_sh4.patch "
 
 S="${WORKDIR}/git"
-
-do_configure_prepend() {
-	git --git-dir="${WORKDIR}/extra_rc_models/.git" --work-tree="${WORKDIR}/extra_rc_models" pull
-	for i in $(find "${WORKDIR}/extra_rc_models/webif" -maxdepth 1 -type f -name "*.png")
-	do
-		cp -f "${i}" "${S}/plugin/public/images/boxes/"
-	done
-	for i in $(find "${WORKDIR}/extra_rc_models/webif" -maxdepth 1 -type f -name "*.html")
-	do
-		cp -f "${i}" "${S}/plugin/public/static/remotes/"
-	done
-	for i in $(find "${WORKDIR}/extra_rc_models" -maxdepth 1 -type f -name "*.png")
-	do
-		cp -f "${i}" "${S}/plugin/public/images/remotes/"
-	done
-	cp -f "${WORKDIR}/extra_rc_models/webif/owibranding.py" "${S}/plugin/controllers/models/"
-}
 		
 # Just a quick hack to "compile" it
 do_compile() {
@@ -59,7 +36,7 @@ do_compile() {
 	python -O -m compileall ${S}
 }
 
-PLUGINPATH = "${libdir}/enigma2/python/Plugins/Extensions/${MODULE}"
+PLUGINPATH = "${libdir}/enigma2/python/Plugins/Extensions/OpenWebif"
 do_install_append() {
 	install -d ${D}${PLUGINPATH}
 	cp -r ${S}/plugin/* ${D}${PLUGINPATH}
