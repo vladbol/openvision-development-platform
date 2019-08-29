@@ -85,6 +85,7 @@ ENIGMA2_PLUGINS += "\
 	enigma2-plugin-skins-octetfhd \
 	enigma2-plugin-softcams-oscam \
 	enigma2-plugin-softcams-oscam-emu \
+	enigma2-plugin-systemplugins-mountmanager \
 	enigma2-plugin-systemplugins-serviceapp \
 	enigma2-plugin-systemplugins-setpasswd \
 	enigma2-plugin-systemplugins-systemtime \
