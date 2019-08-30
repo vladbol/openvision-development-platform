@@ -2,6 +2,12 @@ Open Vision 9.1 (Developer) enigma2 images [![Build Status](https://travis-ci.or
 ==========================
 ![alt tag](https://raw.github.com/OpenVisionE2/openvision-development-platform/upcoming/meta-openvision/recipes-openvision/bootlogo/openvision-bootlogo/bootlogo.jpg)
 
+# Donation
+
+Do you want to help us grow? Do you want us to extend our projects and make things faster?
+
+You have the chance to participate in Open Vision and make everything better for everyone: https://forum.openvision.tech/app.php/donate
+
 # Contribution
 
 Do you want to contribute to Open Vision and you don’t know where to start? https://forum.openvision.tech/viewtopic.php?f=2&t=306 is for you.
