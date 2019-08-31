@@ -60,6 +60,7 @@ PROVIDES = "\
 DEPENDS = "\
     ${@bb.utils.contains("MACHINE_FEATURES", "blindscan-dvbc", "virtual/blindscan-dvbc" , "", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "blindscan-dvbs", "virtual/blindscan-dvbs" , "", d)} \
+    ${@bb.utils.contains("MACHINE_FEATURES", "blindscan-tbs", "blindscan-s2" , "", d)} \
     bluez-alsa \
     bluez-conf \
     bluez-hidd \
