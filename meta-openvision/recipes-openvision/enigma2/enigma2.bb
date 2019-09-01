@@ -104,10 +104,10 @@ RDEPENDS_${PN}-build-dependencies = "\
 
 inherit gitpkgv pythonnative upx_compress autotools pkgconfig
 
-PV = "upcoming+git${SRCPV}"
-PKGV = "upcoming+git${GITPKGV}"
+PV = "develop+git${SRCPV}"
+PKGV = "develop+git${GITPKGV}"
 
-SRC_URI = "git://github.com/OpenVisionE2/enigma2-openvision.git;branch=upcoming"
+SRC_URI = "git://github.com/OpenVisionE2/enigma2-openvision.git;branch=develop"
 
 LDFLAGS_prepend = " -lxml2 "
 
