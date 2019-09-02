@@ -93,6 +93,7 @@ ENIGMA2_PLUGINS += "\
 	"
 
 DEPENDS += "\
+	${@bb.utils.contains("MACHINE_FEATURES", "blindscan-tbs", "blindscan-s2" , "", d)} \
 	enigma2 \
 	enigma2-2boom-plugins \
 	enigma2-alliance-plugins \
