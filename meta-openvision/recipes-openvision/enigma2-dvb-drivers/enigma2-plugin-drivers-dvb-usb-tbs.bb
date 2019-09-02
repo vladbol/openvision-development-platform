@@ -13,7 +13,6 @@ RRECOMMENDS_${PN} = " \
 	kernel-module-stb6000 \
 	firmware-dvb-usb-tbs5925 \
 	firmware-dvb-usb-tbs5980 \
-	${@bb.utils.contains("MACHINE_FEATURES", "blindscan-tbs", "enigma2-plugin-systemplugins-blindscan blindscan-s2" , "", d)} \
 	"
 
 PV = "1.1"
