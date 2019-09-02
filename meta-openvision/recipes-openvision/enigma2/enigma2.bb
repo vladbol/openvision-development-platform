@@ -26,6 +26,7 @@ RDEPENDS_${PN} = " \
 	enigma2-plugin-extensions-pespeedup \
 	${@bb.utils.contains("MACHINE_FEATURES", "smallflash", "", "glibc-gconv-cp1250", d)} \
 	${@bb.utils.contains("MACHINE_FEATURES", "uianimation", "libvugles2-${MACHINE} libgles-${MACHINE}", "", d)} \
+	ntpdate \
 	openvision-branding \
 	"
 
