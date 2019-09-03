@@ -37,6 +37,8 @@ do_install() {
 	echo "Brand=${BOX_BRAND}" > ${D}${sysconfdir}/image-version
 	echo "box_type=${MACHINE}" >> ${D}${sysconfdir}/image-version
 	echo "build_type=0" >> ${D}${sysconfdir}/image-version
+	echo "machine_brand=${BOX_BRAND}" >> ${D}/etc/image-version
+	echo "machine_name=${MACHINE}" >> ${D}/etc/image-version
 	echo "version=${VISIONVERSION}-${VISIONREVISION}" >> ${D}${sysconfdir}/image-version
 	echo "build=${VISIONREVISION}" >> ${D}${sysconfdir}/image-version
 	echo "Python=2.7" >> ${D}${sysconfdir}/image-version
