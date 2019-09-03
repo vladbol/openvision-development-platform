@@ -1,18 +1,28 @@
 SUMMARY = "tuxbox libtuxtxt"
 LICENSE = "LGPLv2.1"
+MAINTAINER = "Open Vision Developers"
 LIC_FILES_CHKSUM = "file://COPYING;md5=393a5ca445f6965873eca0259a17f833"
+
+PACKAGE_ARCH = "${MACHINE_ARCH}"
+
 DEPENDS = "libpng freetype zlib"
 
-inherit gitpkgv
+inherit gitpkgv autotools pkgconfig
 
-GITHUB_URI ?= "git://github.com"
-SRC_URI = "${GITHUB_URI}/OpenPLi/tuxtxt.git"
+SRC_URI = "\
+	git://github.com/OpenVisionE2/tuxtxt.git;protocol=git \
+	${@bb.utils.contains_any("MACHINE", "spycat spycatmini spycatminiplus osmini osminiplus", "file://tuxtxt_clear_screen.patch", "", d)} \
+	"
+
+SRC_URI_append_sh4 += "file://tuxtxtlib_sh4_fix.patch;patch=1"
 
 S = "${WORKDIR}/git/libtuxtxt"
 
-PV = "2.0+git${SRCPV}"
-PKGV = "2.0+git${GITPKGV}"
+PV = "2.0.1+git${SRCPV}"
+PKGV = "2.0.1+git${GITPKGV}"
 
-EXTRA_OECONF = "--with-boxtype=generic DVB_API_VERSION=5"
+EXTRA_OECONF = "--with-boxtype=generic"
 
-inherit autotools pkgconfig
+FILES_${PN} = "${libdir}/libtuxtxt.so.*"
+FILES_${PN}-dev += "${libdir}/libtuxtxt.la ${libdir}/pkgconfig/tuxbox-tuxtxt.pc"
+
