@@ -28,5 +28,5 @@ do_install_append() {
 
 EXTRA_OECONF = " \
     --with-boxtype=${MACHINE} \
-    --with-boxbrand="${BOX_BRAND}" \
+    --with-boxbrand=${BOX_BRAND} \
     "
