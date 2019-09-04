@@ -7,7 +7,7 @@ PV = "1.0+git${SRCPV}"
 PKGV = "1.0+git${GITPKGV}"
 
 SRC_URI = " \
-    git://github.com/oe-alliance/satip-client.git;protocol=git;branch=mis \
+    git://github.com/OpenVisionE2/satip-client.git;protocol=git \
     file://satipclient.sh \
     ${@bb.utils.contains("MACHINE_FEATURES", "oldkernel", "file://satipclient_oldkernel.patch", "", d)} \
 "
@@ -28,5 +28,5 @@ do_install_append() {
 
 EXTRA_OECONF = " \
     --with-boxtype=${MACHINE} \
-    --with-machinebuild="${MACHINE}" \
+    --with-boxbrand="${BOX_BRAND}" \
     "
