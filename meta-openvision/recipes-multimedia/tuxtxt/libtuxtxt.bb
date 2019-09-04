@@ -14,7 +14,7 @@ SRC_URI = "\
 	${@bb.utils.contains_any("MACHINE", "spycat spycatmini spycatminiplus osmini osminiplus", "file://tuxtxt_clear_screen.patch", "", d)} \
 	"
 
-SRC_URI_append_sh4 += "file://tuxtxtlib_sh4_fix.patch;patch=1"
+SRC_URI_append_sh4 += "file://tuxtxtlib_sh4.patch;patch=1"
 
 S = "${WORKDIR}/git/libtuxtxt"
 
