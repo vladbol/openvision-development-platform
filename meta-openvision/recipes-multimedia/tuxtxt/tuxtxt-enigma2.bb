@@ -12,6 +12,8 @@ inherit gitpkgv autotools pkgconfig
 
 SRC_URI = "git://github.com/OpenVisionE2/tuxtxt.git;protocol=git"
 
+SRC_URI_append_sh4 += "file://tuxtxt-sh4.patch;patch=1"
+
 S = "${WORKDIR}/git/tuxtxt"
 
 PV = "2.0.1+git${SRCPV}"

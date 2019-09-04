@@ -1,0 +1,46 @@
+--- a/tuxtxt.c	2019-09-04 14:08:53.000000000 +0300
++++ b/tuxtxt.c	2019-09-04 14:10:17.256138401 +0300
+@@ -204,11 +204,22 @@
+ 	tuxtxt_cache.vtxtpid = pid;
+ 
+ 	/* open Framebuffer */
++#if defined(__sh__)
++	if ((renderinfo.fb=open(FB_DEV, O_RDWR)) == -1)
++	{
++		if ((renderinfo.fb=open("/dev/fb0", O_RDWR)) == -1)
++		{
++			printf("TuxTxt <open %s>: %m", FB_DEV);
++			return 0;
++		}
++	}
++#else
+ 	if ((renderinfo.fb=open(FB_DEV, O_RDWR)) == -1)
+ 	{
+ 		printf("TuxTxt <open %s>: %m", FB_DEV);
+ 		return 0;
+ 	}
++#endif
+ 	rc[0] = rc[1] =-1;
+ 	while(rc_num < 2)
+ 	{
+@@ -227,6 +238,8 @@
+ 			perror("EVIOCGNAME failed");
+ #ifdef HAVE_NOGAMMA
+ 		if (!strstr(tmp, "remote control") && !strstr(tmp, "key") && !strstr(tmp, "HBGIC"))
++#elif defined(__sh__) 
++		if (!strstr(tmp, "TDT RC event driver"))
+ #else
+ 		if (!strstr(tmp, "remote control") && !strstr(tmp, "key"))
+ #endif
+@@ -235,7 +248,11 @@
+ 			rc[rc_num] = -1;
+ 		}
+ 		else
++#if defined(__sh__)
++			break;
++#else
+ 			++rc_num;
++#endif
+ 		++cnt;
+ 	}
+ 
