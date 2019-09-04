@@ -8,17 +8,11 @@ inherit gitpkgv allarch
 PV = "1.0+git${SRCPV}"
 PKGV = "1.0+git${GITPKGV}"
 
-SRC_URI = "git://github.com/Taapat/skin-SimpleGrayHD.git"
+SRC_URI = "git://github.com/Taapat/skin-SimpleGrayHD.git;protocol=git"
 
 FILES_${PN} = "/usr/"
 
 S = "${WORKDIR}/git"
 
-do_compile() {
-	python -O -m compileall ${S}${libdir}/enigma2/python/Components/
-}
-
-do_install() {
-	install -d ${D}/usr
-	cp -r ${S}/usr/* ${D}/usr/
-}
+require skin-data.inc
+require skin-python.inc

@@ -14,8 +14,8 @@ DEPENDS += "gettext-native"
 PV = "2.2+git${SRCPV}"
 PKGV = "2.2+git${GITPKGV}"
 
-PACKAGES =+ "enigma2-plugin-skins-metrix-vision-fhd-icons enigma2-plugin-skins-metrix-vision-uhd-icons"
-PROVIDES =+ "enigma2-plugin-skins-metrix-vision-fhd-icons enigma2-plugin-skins-metrix-vision-uhd-icons"
+PACKAGES += "enigma2-plugin-skins-metrix-vision-fhd-icons enigma2-plugin-skins-metrix-vision-uhd-icons"
+PROVIDES += "enigma2-plugin-skins-metrix-vision-fhd-icons enigma2-plugin-skins-metrix-vision-uhd-icons"
 RPROVIDES_enigma2-plugin-skins-metrix-vision-fhd-icons += "enigma2-plugin-skins-metrix-vision-fhd-icons"
 RPROVIDES_enigma2-plugin-skins-metrix-vision-uhd-icons += "enigma2-plugin-skins-metrix-vision-uhd-icons"
 
