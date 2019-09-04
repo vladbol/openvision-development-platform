@@ -1,149 +1,99 @@
-DESCRIPTION = "Additional plugins for Enigma2"
-MAINTAINER = "OpenPLi team <info@openpli.org>"
+SUMMARY = "Original plugins for Enigma2"
+MAINTAINER = "Open Vision Developers"
+LICENSE = "GPLv3"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=1ebbd3e34237af26da5dc08a4e440464"
 
-LICENSE = "Proprietary"
-LIC_FILES_CHKSUM = "file://COPYING;md5=8e37f34d0e40d32ea2bc90ee812c9131"
+PROVIDES = "${PN} \
+    enigma2-plugin-extensions-fancontrol2 \
+    "
 
-PACKAGES_DYNAMIC = "enigma2-plugin-(?!pli-).*"
+inherit autotools-brokensep gitpkgv pythonnative pkgconfig gettext
 
-# This prevents QA warnings because bitbake cannot see the dependencies
-# after parsing the recipe due to the PACKAGES_DYNAMIC stuff. It tells
-# the system what to build when installing these into an image.
-PACKAGES += "\
-	enigma2-plugin-extensions-mosaic \
-	enigma2-plugin-extensions-fancontrol2 \
-	enigma2-plugin-extensions-bonjour \
-	enigma2-plugin-extensions-transmission \
-	enigma2-plugin-systemplugins-systemtime \
-	"
-RDEPENDS_enigma2-plugin-extensions-mosaic = "aio-grab"
-RDEPENDS_enigma2-plugin-extensions-fancontrol2 = "smartmontools hdparm"
-RDEPENDS_enigma2-plugin-extensions-bonjour = "avahi-daemon"
+PV = "git${SRCPV}"
+PKGV = "git${GITPKGV}"
 
-RRECOMMENDS_enigma2-plugin-systemplugins-blindscan = "virtual/blindscan-dvbs"
-RRECOMMENDS_enigma2-plugin-systemplugins-systemtime = "ntpdate"
-RRECOMMENDS_enigma2-plugin-extensions-transmission = "transmission transmission-client"
-
-PROVIDES += "\
-	${@bb.utils.contains("MACHINE_FEATURES", "transcoding","enigma2-plugin-systemplugins-transcodingsetup","",d)} \
-"
-
-inherit gitpkgv pythonnative pkgconfig gettext
-
-PV = "y-git${SRCPV}"
-PKGV = "y-git${GITPKGV}"
-
-FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
-
-SRC_URI = "\
-	git://github.com/OpenPLi/enigma2-plugins.git \
-	file://openvision.patch \
-	"
-
-EXTRA_OECONF = " \
-	BUILD_SYS=${BUILD_SYS} \
-	HOST_SYS=${HOST_SYS} \
-	STAGING_INCDIR=${STAGING_INCDIR} \
-	STAGING_LIBDIR=${STAGING_LIBDIR} \
-	--without-debug \
-"
-
-# Main package should be empty
-FILES_${PN} = ""
-# But something makes the packages think they depend on it, so just
-# deliver an empty hulk for them.
-ALLOW_EMPTY_${PN} = "1"
-
-FILES_enigma2-plugin-extensions-movietagger += "${sysconfdir}/enigma2/movietags"
-CONFFILES_enigma2-plugin-extensions-movietagger += "${sysconfdir}/enigma2/movietags"
-
-FILES_enigma2-plugin-extensions-babelzapper += "${sysconfdir}/babelzapper"
-
-FILES_enigma2-plugin-extensions-netcaster += "${sysconfdir}/NETcaster.conf"
-CONFFILES_enigma2-plugin-extensions-netcaster += "${sysconfdir}/NETcaster.conf"
-
-FILES_${PN}-meta = "${datadir}/meta"
-PACKAGES += "${PN}-meta ${PN}-build-dependencies"
-
-inherit autotools-brokensep
+SRC_URI = "git://github.com/OpenVisionE2/enigma2-plugins.git;protocol=http"
 
 S = "${WORKDIR}/git"
 
-DEPENDS = " \
-	python-pyopenssl \
-	streamripper \
-	python-mutagen \
-	python-twisted \
-	python-daap \
-	libcddb \
-	dvdbackup \
-	"
+DEPENDS = "\
+    enigma2 \
+    python-pyopenssl \
+    python-gdata \
+    streamripper \
+    python-mutagen \
+    python-twisted \
+    python-daap \
+    python-google-api-client \
+    python-httplib2 \
+    python-youtube-dl \
+    dvdbackup \
+    libav \
+    libshowiframe \
+    libcddb \
+    libtirpc \
+    nmap \
+    "
+
+RDEPENDS_${PN} = "python-ctypes"
+
+EXTRA_OECONF = "\
+    BUILD_SYS=${BUILD_SYS} \
+    HOST_SYS=${HOST_SYS} \
+    STAGING_INCDIR=${STAGING_INCDIR} \
+    STAGING_LIBDIR=${STAGING_LIBDIR} \
+    --without-debug \
+    --with-po \
+    --with-boxtype=${MACHINE} \
+    --with-boxbrand=${BOX_BRAND} \
+    --with-gstversion=${GST_VERSION} \
+    "
 
 CFLAGS += "-I${STAGING_INCDIR}/tirpc"
+LDFLAGS += "-ltirpc"
+CXXFLAGS = " -std=c++11"
 
-python populate_packages_prepend () {
-    enigma2_plugindir = bb.data.expand('${libdir}/enigma2/python/Plugins', d)
+RREPLACES_enigma2-plugin-skincomponents-eventlist = "enigma2-plugin-components-eventlist"
+RCONFLICTS_enigma2-plugin-skincomponents-eventlist = "enigma2-plugin-components-eventlist"
 
-    do_split_packages(d, enigma2_plugindir, '(.*?/.*?)/.*', 'enigma2-plugin-%s', 'Enigma2 Plugin: %s', recursive=True, match_path=True, prepend=True, extra_depends='')
+CONFFILES_${PN} += "${sysconfdir}/enigma2/movietags"
+FILES_${PN} += " ${datadir}/enigma2 ${datadir}/fonts "
+FILES_${PN}-meta = "${datadir}/meta"
+FILES_enigma2-plugin-extensions-bmediacenter += " ${libdir}/enigma2/python/Components/Renderer/LizWatches.pyo ${libdir}/enigma2/python/Components/Converter/LizExtraNumText.pyo"
+FILES_enigma2-plugin-extensions-bmediacenter-src += " ${libdir}/enigma2/python/Components/Renderer/LizWatches.py ${libdir}/enigma2/python/Components/Converter/LizExtraNumText.py"
+FILES_enigma2-plugin-skincomponents-channelselectionshorttitle += " ${libdir}/enigma2/python/Components/Converter/ChannelSelectionShortTitle.pyo"
+FILES_enigma2-plugin-skincomponents-channelselectionshorttitle-src += " ${libdir}/enigma2/python/Components/Converter/ChannelSelectionShortTitle.py"
+FILES_enigma2-plugin-skincomponents-eventlist += " ${libdir}/enigma2/python/Components/Renderer/EventListDisplay.pyo ${libdir}/enigma2/python/Components/Converter/EventList.pyo"
+FILES_enigma2-plugin-skincomponents-eventlist-src += " ${libdir}/enigma2/python/Components/Renderer/EventListDisplay.py ${libdir}/enigma2/python/Components/Converter/EventList.py"
+FILES_enigma2-plugin-skincomponents-eventposition += " ${libdir}/enigma2/python/Components/Converter/EventPosition.pyo"
+FILES_enigma2-plugin-skincomponents-eventposition-src += " ${libdir}/enigma2/python/Components/Converter/EventPosition.py"
+FILES_enigma2-plugin-skincomponents-weathercomponent += " ${libdir}/enigma2/python/Components/WeatherMSN.pyo ${libdir}/enigma2/python/Components/Converter/MSNWeather.pyo ${libdir}/enigma2/python/Components/Sources/MSNWeather.pyo ${libdir}/enigma2/python/Components/Renderer/MSNWeatherPixmap.pyo"
+FILES_enigma2-plugin-skincomponents-weathercomponent-src += " ${libdir}/enigma2/python/Components/WeatherMSN.py ${libdir}/enigma2/python/Components/Converter/MSNWeather.py ${libdir}/enigma2/python/Components/Sources/MSNWeather.py ${libdir}/enigma2/python/Components/Renderer/MSNWeatherPixmap.py"
+FILES_enigma2-plugin-skincomponents-reftopiconname += " ${libdir}/enigma2/python/Components/Converter/RefToPiconName.pyo"
+FILES_enigma2-plugin-skincomponents-reftopiconname-src += " ${libdir}/enigma2/python/Components/Converter/RefToPiconName.py"
 
-    def getControlLines(mydir, d, package):
-        import os
-        try:
-            src = open(mydir + package + "/CONTROL/control")
-        except:
-            bb.note("Failed to get control lines for package '%s'" % (package))
-            return
-        for line in src:
-            full_package = "enigma2-plugin-extensions-" + package
-            if line.startswith('Package: '):
-                full_package = line[9:]
-            elif line.startswith('Depends: '):
-                # some plugins still reference twisted-* dependencies, these packages are now called python-twisted-*
-                rdepends = []
-                for depend in line[9:].split(','):
-                    depend = depend.strip()
-                    if depend.startswith('twisted-'):
-                        rdepends.append(depend.replace('twisted-', 'python-twisted-'))
-                    elif depend.startswith('enigma2') and not depend.startswith('enigma2-'):
-                        pass # Ignore silly depends on enigma2 with all kinds of misspellings
-                    else:
-                        rdepends.append(depend)
-                rdepends = ' '.join(rdepends)
-                d.setVar('RDEPENDS_' + full_package, rdepends)
-            elif line.startswith('Recommends: '):
-                d.setVar('RRECOMMENDS_' + full_package, line[12:])
-            elif line.startswith('Description: '):
-                d.setVar('DESCRIPTION_' + full_package, line[13:])
-            elif line.startswith('Replaces: '):
-                d.setVar('RREPLACES_' + full_package, ' '.join(line[10:].split(', ')))
-            elif line.startswith('Conflicts: '):
-                d.setVar('RCONFLICTS_' + full_package, ' '.join(line[11:].split(', ')))
-            elif line.startswith('Maintainer: '):
-                d.setVar('MAINTAINER_' + full_package, line[12:])
+PACKAGES += "${PN}-meta ${PN}-build-dependencies enigma2-plugin-skincomponents-channelselectionshorttitle-src enigma2-plugin-skincomponents-eventlist-src enigma2-plugin-skincomponents-eventposition-src enigma2-plugin-skincomponents-weathercomponent-src enigma2-plugin-skincomponents-reftopiconname enigma2-plugin-skincomponents-reftopiconname-src"
 
-    mydir = d.getVar('D', True) + "/../git/"
-    for package in d.getVar('PACKAGES', True).split():
-        getControlLines(mydir, d, package.split('-')[-1])
+do_compile_append() {
+    python -O -m compileall ${S}
 }
 
 do_install_append() {
-	# remove unused .pyc files
-	find ${D}${libdir}/enigma2/python/ -name '*.pyc' -exec rm {} \;
-	# remove leftover webinterface garbage
-	rm -rf ${D}${libdir}/enigma2/python/Plugins/Extensions/WebInterface
+    # remove unused .pyc files
+    find ${D}${libdir}/enigma2/python/ -name '*.pyc' -exec rm {} \;
+    # make scripts executable
+    find "${D}" -name '*.sh' -exec chmod a+x '{}' ';'
+}
+
+do_package_qa() {
 }
 
 python populate_packages_prepend() {
     enigma2_plugindir = bb.data.expand('${libdir}/enigma2/python/Plugins', d)
+    do_split_packages(d, enigma2_plugindir, '^(\w+/\w+)/[a-zA-Z0-9_]+.*$', 'enigma2-plugin-%s', '%s', recursive=True, match_path=True, prepend=True)
+    do_split_packages(d, enigma2_plugindir, '^(\w+/\w+)/.*\.py$', 'enigma2-plugin-%s-src', '%s (source files)', recursive=True, match_path=True, prepend=True)
     do_split_packages(d, enigma2_plugindir, '^(\w+/\w+)/.*\.la$', 'enigma2-plugin-%s-dev', '%s (development)', recursive=True, match_path=True, prepend=True)
     do_split_packages(d, enigma2_plugindir, '^(\w+/\w+)/.*\.a$', 'enigma2-plugin-%s-staticdev', '%s (static development)', recursive=True, match_path=True, prepend=True)
     do_split_packages(d, enigma2_plugindir, '^(\w+/\w+)/(.*/)?\.debug/.*$', 'enigma2-plugin-%s-dbg', '%s (debug)', recursive=True, match_path=True, prepend=True)
-}
-
-# Nothing of this recipe should end up in sysroot, so blank it away.
-sysroot_stage_all() {
-    :
-}
-
-do_package_qa() {
+    do_split_packages(d, enigma2_plugindir, '^(\w+/\w+)/.*\/.*\.po$', 'enigma2-plugin-%s-po', '%s (translations)', recursive=True, match_path=True, prepend=True)
 }
