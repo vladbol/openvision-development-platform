@@ -16,6 +16,7 @@ SRC_URI = "http://downloads.pli-images.org/misc/rtl8188C_8192C_8192D_usb_linux_v
     file://additional_productids.patch \
     file://fix_linking.patch \
     file://add-3.8-support.patch \
+    file://rtl8192cu-gcc5.patch \
     "
 
 S = "${WORKDIR}/rtl8188C_8192C_8192D_usb_linux_v3.3.0_2971.20111128"
