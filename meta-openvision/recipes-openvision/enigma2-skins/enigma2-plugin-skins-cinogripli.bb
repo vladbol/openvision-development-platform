@@ -1,4 +1,4 @@
-DESCRIPTION = "GriPLi FHD skin by Cino for Open Vision"
+DESCRIPTION = "GriPLi FHD skin by Cino for Open Vision and OpenPLI based images."
 MAINTAINER = "dreamosat-forum.com"
 SECTION = "misc"
 PRIORITY = "optional"
@@ -14,20 +14,9 @@ RRECOMMENDS_${PN} = "enigma2-plugin-extensions-weatherplugin2"
 
 SRC_URI = "git://github.com/audi06/CinoGriPLi.git;protocol=git"
 
-FILES_${PN} = "${datadir}/enigma2/ ${libdir}/enigma2/"
+FILES_${PN} = "/usr"
 
 S = "${WORKDIR}/git"
 
-do_compile() {
-}
-
-do_install() {
-	install -d ${D}${datadir}
-	cp -r --preserve=mode,links ${S}${datadir}/* ${D}${datadir}/
-	chmod -R a+rX ${D}${datadir}/enigma2/
-
-        install -d ${D}${libdir}
-        cp -r --preserve=mode,links ${S}${libdir}/* ${D}${libdir}
-        chmod -R a+rX ${D}${libdir}/enigma2/
-}
-
+require skin-data.inc
+require skin-python.inc

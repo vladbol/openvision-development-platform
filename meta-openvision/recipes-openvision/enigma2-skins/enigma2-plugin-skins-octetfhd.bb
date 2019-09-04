@@ -21,6 +21,4 @@ FILES_${PN} = "/usr"
 
 do_package_qa[noexec] = "1"
 
-do_install() {
-    cp -r  --preserve=mode,links ${S}/usr ${D}/
-}
+require skin-data.inc

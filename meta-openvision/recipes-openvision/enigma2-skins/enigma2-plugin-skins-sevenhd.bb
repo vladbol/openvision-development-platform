@@ -11,14 +11,13 @@ inherit gitpkgv allarch
 PV = "1.0+git${SRCPV}"
 PKGV = "1.0+git${GITPKGV}"
 
-SRC_URI= "git://github.com/KravenHD/SevenHD.git"
+SRC_URI= "git://github.com/KravenHD/SevenHD.git;protocol=git"
 
 S = "${WORKDIR}/git"
 
 FILES_${PN} = "/usr/*"
 
-do_compile() {
-}
+require skin-python.inc
 
 do_install() {
     cp -r --preserve=mode,links ${S}/data/usr ${D}/

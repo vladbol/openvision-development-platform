@@ -1,4 +1,4 @@
-DESCRIPTION = "Glamour Aura FHD skin by MCelliot_g for Open Vision"
+DESCRIPTION = "Glamour Aura FHD skin by MCelliot_g for OpenPLI and OpenPLI based images."
 MAINTAINER = "MCelliot_g"
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=84dcc94da3adb52b53ae4fa38fe49e5d"
@@ -12,19 +12,9 @@ RRECOMMENDS_${PN} = "enigma2-plugin-extensions-weathermsn"
 
 SRC_URI = "git://github.com/MCelliotG/GlamourAuraFHD-skin.git;protocol=git"
 
-FILES_${PN} = "${datadir}/enigma2/ ${libdir}/enigma2/"
+FILES_${PN} = "/usr"
 
 S = "${WORKDIR}/git"
 
-do_compile() {
-}
-
-do_install() {
-	install -d ${D}${datadir}
-	cp -r --preserve=mode,links ${S}${datadir}/* ${D}${datadir}/
-	chmod -R a+rX ${D}${datadir}/enigma2/
-
-        install -d ${D}${libdir}
-        cp -r --preserve=mode,links ${S}${libdir}/* ${D}${libdir}
-        chmod -R a+rX ${D}${libdir}/enigma2/
-}
+require skin-data.inc
+require skin-python.inc

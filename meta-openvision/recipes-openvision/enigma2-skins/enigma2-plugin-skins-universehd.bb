@@ -19,26 +19,8 @@ FILES_${PN} = "/usr"
 
 do_package_qa[noexec] = "1"
 
-do_install() {
-    cp -r  --preserve=mode,links ${S}/usr ${D}/
-}
-
-do_install_append() {
-    # remove unused .pyc files
-    find ${D}${libdir}/enigma2/python/ -name '*.pyc' -exec rm {} \;
-}
-
-do_compile_append() {
-    python -O -m compileall ${S}
-}
-
-FILES_${PN}-src = "\
-    ${libdir}/enigma2/python/*/*.py \
-    ${libdir}/enigma2/python/*/*/*.py \
-    ${libdir}/enigma2/python/*/*/*/*.py \
-    ${libdir}/enigma2/python/*/*/*/*/*.py \
-    ${libdir}/enigma2/python/*/*/*/*/*/*.py \
-    "
+require skin-data.inc
+require skin-python.inc
 
 CONFFILES_${PN} = " \
     ${datadir}/enigma2/UniverseHD/construct/backgrounds/background-infobar.png \
