@@ -20,8 +20,6 @@ PROVIDES = "\
     enigma2-plugin-extensions-ardmediathek \
     enigma2-plugin-extensions-audiorestart \
     enigma2-plugin-extensions-audiosync \
-    enigma2-plugin-extensions-autotimer \
-    enigma2-plugin-extensions-autotimer \
     enigma2-plugin-extensions-babelzapper \
     enigma2-plugin-extensions-birthdayreminder \
     enigma2-plugin-extensions-bitrateviewer \
@@ -43,8 +41,6 @@ PROVIDES = "\
     enigma2-plugin-extensions-eparted \
     enigma2-plugin-extensions-epgbackup \
     enigma2-plugin-extensions-epgrefresh \
-    enigma2-plugin-extensions-epgsearch \
-    enigma2-plugin-extensions-epgsearch \
     enigma2-plugin-extensions-esame \
     enigma2-plugin-extensions-fancontrol2 \
     enigma2-plugin-extensions-filebrowser \
@@ -129,14 +125,10 @@ PROVIDES = "\
     enigma2-plugin-systemplugins-3dsettings \
     enigma2-plugin-systemplugins-advhdmi \
     enigma2-plugin-systemplugins-aspectratioswitch \
-    enigma2-plugin-systemplugins-automaticcleanup \
-    enigma2-plugin-systemplugins-automaticcleanup \
     enigma2-plugin-systemplugins-automatictimerlistcleanup \
     enigma2-plugin-systemplugins-automaticvolumeadjustment \
     enigma2-plugin-systemplugins-autoresolution \
     enigma2-plugin-systemplugins-mphelp \
-    enigma2-plugin-systemplugins-networkbrowser \
-    enigma2-plugin-systemplugins-networkbrowser \
     enigma2-plugin-systemplugins-pipservicerelation \
     enigma2-plugin-systemplugins-setpasswd \
     enigma2-plugin-systemplugins-startupservice \
