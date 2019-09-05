@@ -12,8 +12,6 @@ SRC_URI = "git://github.com/OpenVisionE2/enigma2-plugins.git;protocol=http"
 
 S = "${WORKDIR}/git"
 
-PACKAGES_DYNAMIC = "enigma2-plugin-(?!vision-).*"
-
 PROVIDES = "\
     enigma2-plugin-extensions-advancedmovieselection \
     enigma2-plugin-extensions-aihdcontroler \
@@ -147,6 +145,7 @@ PROVIDES = "\
 
 DEPENDS = "\
     dvdbackup \
+    enigma2 \
     libshowiframe \
     nmap \
     python-gdata \
