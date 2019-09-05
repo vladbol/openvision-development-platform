@@ -80,6 +80,7 @@ EXTRA_OECONF = "\
     STAGING_INCDIR=${STAGING_INCDIR} \
     STAGING_LIBDIR=${STAGING_LIBDIR} \
     --with-boxtype=${MACHINE} \
+    --with-boxbrand=${BOX_BRAND} \
     --with-arch=${TARGET_ARCH} \
     "
 

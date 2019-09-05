@@ -12,6 +12,8 @@ SRC_URI = "git://github.com/OpenVisionE2/alliance-plugins.git;protocol=http"
 
 S = "${WORKDIR}/git"
 
+PACKAGES_DYNAMIC = "enigma2-plugin-(?!alliance-).*"
+
 PACKAGES += "\
     enigma2-plugin-extensions-lcd4linux \
 "

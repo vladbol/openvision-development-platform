@@ -12,8 +12,9 @@ SRC_URI = "git://github.com/OpenVisionE2/enigma2-plugins.git;protocol=http"
 
 S = "${WORKDIR}/git"
 
+PACKAGES_DYNAMIC = "enigma2-plugin-(?!vision-).*"
+
 PROVIDES = "\
-    ${PN} \
     enigma2-plugin-extensions-advancedmovieselection \
     enigma2-plugin-extensions-aihdcontroler \
     enigma2-plugin-extensions-antiscrollbar \
@@ -88,6 +89,7 @@ PROVIDES = "\
     enigma2-plugin-extensions-pluginhider \
     enigma2-plugin-extensions-pluginsort \
     enigma2-plugin-extensions-podcast \
+    enigma2-plugin-extensions-primetimemanager \
     enigma2-plugin-extensions-pushservice \
     enigma2-plugin-extensions-quickbutton \
     enigma2-plugin-extensions-reconstructapsc \
@@ -108,6 +110,7 @@ PROVIDES = "\
     enigma2-plugin-extensions-tageditor \
     enigma2-plugin-extensions-teletext \
     enigma2-plugin-extensions-trafficinfo \
+    enigma2-plugin-extensions-transmission \
     enigma2-plugin-extensions-tvcharts \
     enigma2-plugin-extensions-unwetterinfo \
     enigma2-plugin-extensions-valixdcontrol \
@@ -134,15 +137,16 @@ PROVIDES = "\
     enigma2-plugin-systemplugins-mphelp \
     enigma2-plugin-systemplugins-networkbrowser \
     enigma2-plugin-systemplugins-pipservicerelation \
+    enigma2-plugin-systemplugins-recordinfobar \
     enigma2-plugin-systemplugins-setpasswd \
     enigma2-plugin-systemplugins-startupservice \
+    enigma2-plugin-systemplugins-systemtime \
     enigma2-plugin-systemplugins-videocolorspace \
     enigma2-plugin-systemplugins-vps \
     "
 
 DEPENDS = "\
     dvdbackup \
-    enigma2 \
     libshowiframe \
     nmap \
     python-ctypes \
@@ -159,6 +163,8 @@ DEPENDS = "\
 CFLAGS += "-I${STAGING_INCDIR}/tirpc"
 LDFLAGS += "-ltirpc"
 CXXFLAGS = " -std=c++11"
+
+RRECOMMENDS_enigma2-plugin-extensions-transmission = "transmission transmission-client"
 
 RREPLACES_enigma2-plugin-skincomponents-eventlist = "enigma2-plugin-components-eventlist"
 RCONFLICTS_enigma2-plugin-skincomponents-eventlist = "enigma2-plugin-components-eventlist"
