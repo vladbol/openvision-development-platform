@@ -1,5 +1,5 @@
 diff --git a/os_dep/linux/rtw_android.c b/os_dep/linux/rtw_android.c
-index dec82d9..b42e11a 100644
+index dec82d978244..b42e11a4e0cd 100644
 --- a/os_dep/linux/rtw_android.c
 +++ b/os_dep/linux/rtw_android.c
 @@ -612,7 +612,11 @@ int rtw_android_priv_cmd(struct net_device *net, struct ifreq *ifr, int cmd)

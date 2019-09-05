@@ -1,5 +1,5 @@
 diff --git a/os_dep/osdep_service.c b/os_dep/osdep_service.c
-index dcd26b6..422bde5 100644
+index dcd26b6a15b4..c44b5f593135 100644
 --- a/os_dep/osdep_service.c
 +++ b/os_dep/osdep_service.c
 @@ -2076,7 +2076,13 @@ static int isFileReadable(const char *path, u32 *sz)
@@ -24,11 +24,11 @@ index dcd26b6..422bde5 100644
 -			set_fs(get_ds());
 +			set_fs(
 +#if (LINUX_VERSION_CODE >= KERNEL_VERSION(5,1,0))
-+			KERNEL_DS
++				KERNEL_DS
 +#else
-+			get_ds()
++				get_ds()
 +#endif
-+			);
++				);
  			ret = readFile(fp, buf, sz);
  			set_fs(oldfs);
  			closeFile(fp);
@@ -39,11 +39,11 @@ index dcd26b6..422bde5 100644
 -			set_fs(get_ds());
 +			set_fs(
 +#if (LINUX_VERSION_CODE >= KERNEL_VERSION(5,1,0))
-+			KERNEL_DS
++				KERNEL_DS
 +#else
-+			get_ds()
++				get_ds()
 +#endif
-+			);
++				);
  			ret = writeFile(fp, buf, sz);
  			set_fs(oldfs);
  			closeFile(fp);

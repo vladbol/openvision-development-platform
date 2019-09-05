@@ -1,3 +1,9 @@
+From bf7e47809c1f05c2799515589d5ed7d956fb0cd6 Mon Sep 17 00:00:00 2001
+From: Nicker <nickersk@gmail.com>
+Date: Tue, 24 Jul 2018 16:40:13 +0200
+Subject: [PATCH] fix compile with 4-7-x kernel
+
+
 diff --git a/os_dep/linux/ioctl_cfg80211.c b/os_dep/linux/ioctl_cfg80211.c
 index 4069d54..4393bbe 100644
 --- a/os_dep/linux/ioctl_cfg80211.c
@@ -38,3 +44,6 @@ index 4069d54..4393bbe 100644
  		cfg80211_scan_done(request, &info);
  #else
  		cfg80211_scan_done(request, 0);
+-- 
+2.17.1
+

@@ -6,22 +6,22 @@ LIC_FILES_CHKSUM = "file://README.md;md5=c416860023e780aa96e0616b1cda6a49"
 
 inherit module
 
-SRC_URI = " \
-          https://github.com/anthonywong/rtl8723bs/archive/v4.4.1.tar.gz \
-          file://rt8723bs-makefile.patch \
-          file://rt8723bs-remove-debug.patch \
-          file://rt8723bs-gcc5.patch \
-          file://rt8723bs-add-4.8-support.patch \
-          file://rt8723bs-add-4.11-support.patch \
-          file://rt8723bs-add-4.12-support.patch \
-          file://0001-add-kernel-4.15-support.patch \
-          file://compat.patch \
-          file://rt8723bs-add-4.19-support.patch \
-          file://rt8723bs-add-4.20-support.patch \
-          file://rt8723bs-add-5.0-support.patch \
-          file://rt8723bs-add-5.1-support.patch \
-          file://rt8723bs-add-5.2-support.patch \
-          "
+SRC_URI = "https://github.com/anthonywong/rtl8723bs/archive/v4.4.1.tar.gz \
+    file://0001-makefile-disable-POWER_SAVING.patch \
+    file://rt8723bs-makefile.patch \
+    file://rt8723bs-remove-debug.patch \
+    file://rt8723bs-gcc5.patch \
+    file://rt8723bs-add-4.8-support.patch \
+    file://rt8723bs-add-4.11-support.patch \
+    file://rt8723bs-add-4.12-support.patch \
+    file://0001-add-kernel-4.15-support.patch \
+    file://compat.patch \
+    file://rt8723bs-add-4.19-support.patch \
+    file://rt8723bs-add-4.20-support.patch \
+    file://rt8723bs-add-5.0-support.patch \
+    file://rt8723bs-add-5.1-support.patch \
+    file://rt8723bs-add-5.2-support.patch \
+    "
 
 SRC_URI_append_sh4 += "file://rt8723bs_sh4.patch"
 

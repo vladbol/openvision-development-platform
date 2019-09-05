@@ -1,5 +1,5 @@
 diff --git a/include/rtw_wifi_regd.h b/include/rtw_wifi_regd.h
-index aea6365..0a67614 100644
+index aea6365290f8..0a676140b07e 100644
 --- a/include/rtw_wifi_regd.h
 +++ b/include/rtw_wifi_regd.h
 @@ -7,6 +7,13 @@
@@ -17,7 +17,7 @@ index aea6365..0a67614 100644
  	u16 countrycode;
  	const char *iso_name;
 diff --git a/os_dep/linux/ioctl_cfg80211.c b/os_dep/linux/ioctl_cfg80211.c
-index 5b180b6..66b0870 100644
+index 5b180b6055db..66b0870bec77 100644
 --- a/os_dep/linux/ioctl_cfg80211.c
 +++ b/os_dep/linux/ioctl_cfg80211.c
 @@ -2036,6 +2036,11 @@ exit:
@@ -45,10 +45,10 @@ index 5b180b6..66b0870 100644
  
  		pwdev_priv->scan_request = NULL;
 diff --git a/os_dep/linux/ioctl_linux.c b/os_dep/linux/ioctl_linux.c
-index 22bb5c2..1cbd5a5 100644
+index 22bb5c2439b8..46323aedf4a2 100644
 --- a/os_dep/linux/ioctl_linux.c
 +++ b/os_dep/linux/ioctl_linux.c
-@@ -13855,7 +13855,11 @@ static int rtw_ioctl_standard_wext_private(struct net_device *dev, struct ifreq
+@@ -13855,7 +13855,11 @@
  static int rtw_ioctl_wext_private(struct net_device *dev, struct ifreq *rq)
  {
  #ifdef CONFIG_COMPAT
@@ -61,10 +61,10 @@ index 22bb5c2..1cbd5a5 100644
  	else
  #endif // CONFIG_COMPAT
 diff --git a/os_dep/linux/rtw_android.c b/os_dep/linux/rtw_android.c
-index 8de7ff7..6edf10e 100644
+index 8de7ff72ff36..64fd137a8273 100644
 --- a/os_dep/linux/rtw_android.c
 +++ b/os_dep/linux/rtw_android.c
-@@ -592,7 +592,11 @@ int rtw_android_priv_cmd(struct net_device *net, struct ifreq *ifr, int cmd)
+@@ -592,7 +592,11 @@
  			goto exit;
  	}
  #ifdef CONFIG_COMPAT
