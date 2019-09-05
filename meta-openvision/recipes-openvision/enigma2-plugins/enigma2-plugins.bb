@@ -149,7 +149,6 @@ DEPENDS = "\
     dvdbackup \
     libshowiframe \
     nmap \
-    python-ctypes \
     python-gdata \
     python-httplib2 \
     python-google-api-client \
@@ -159,6 +158,8 @@ DEPENDS = "\
     python-youtube-dl \
     streamripper \
     "
+
+RDEPENDS_${PN} = "python-ctypes"
 
 CFLAGS += "-I${STAGING_INCDIR}/tirpc"
 LDFLAGS += "-ltirpc"
@@ -199,7 +200,6 @@ EXTRA_OECONF = "\
     STAGING_INCDIR=${STAGING_INCDIR} \
     STAGING_LIBDIR=${STAGING_LIBDIR} \
     --without-debug \
-    --with-po \
     --with-boxtype=${MACHINE} \
     --with-boxbrand=${BOX_BRAND} \
     --with-gstversion=${GST_VERSION} \
