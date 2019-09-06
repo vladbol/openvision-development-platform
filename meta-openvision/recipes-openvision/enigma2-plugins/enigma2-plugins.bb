@@ -222,4 +222,36 @@ python populate_packages_prepend() {
     do_split_packages(d, enigma2_plugindir, '^(\w+/\w+)/.*\.a$', 'enigma2-plugin-%s-staticdev', '%s (static development)', recursive=True, match_path=True, prepend=True)
     do_split_packages(d, enigma2_plugindir, '^(\w+/\w+)/(.*/)?\.debug/.*$', 'enigma2-plugin-%s-dbg', '%s (debug)', recursive=True, match_path=True, prepend=True)
     do_split_packages(d, enigma2_plugindir, '^(\w+/\w+)/.*\/.*\.po$', 'enigma2-plugin-%s-po', '%s (translations)', recursive=True, match_path=True, prepend=True)
+    def getControlLines(mydir, d, package):
+        packagename = package[-1]
+        import os
+        for line in src.split("\n"):
+            full_package = package[0] + '-' + package[1] + '-' + package[2] + '-' + package[3]
+            if line.startswith('Depends: '):
+                # some plugins still reference twisted-* dependencies, these packages are now called python-twisted-*
+                rdepends = []
+                for depend in line[9:].split(','):
+                    depend = depend.strip()
+                    if depend.startswith('twisted-'):
+                        rdepends.append(depend.replace('twisted-', 'python-twisted-'))
+                    elif depend.startswith('enigma2') and not depend.startswith('enigma2-'):
+                        pass # Ignore silly depends on enigma2 with all kinds of misspellings
+                    else:
+                        rdepends.append(depend)
+                rdepends = ' '.join(rdepends)
+                d.setVar('RDEPENDS_' + full_package, rdepends)
+            elif line.startswith('Recommends: '):
+                d.setVar('RRECOMMENDS_' + full_package, line[12:])
+            elif line.startswith('Description: '):
+                d.setVar('DESCRIPTION_' + full_package, line[13:])
+            elif line.startswith('Replaces: '):
+                d.setVar('RREPLACES_' + full_package, ' '.join(line[10:].split(', ')))
+            elif line.startswith('Conflicts: '):
+                d.setVar('RCONFLICTS_' + full_package, ' '.join(line[11:].split(', ')))
+            elif line.startswith('Maintainer: '):
+                d.setVar('MAINTAINER_' + full_package, line[12:])
+
+    mydir = d.getVar('D', True) + "/../git/"
+    for package in d.getVar('PACKAGES', d, 1).split():
+        getControlLines(mydir, d, package.split('-'))
 }
