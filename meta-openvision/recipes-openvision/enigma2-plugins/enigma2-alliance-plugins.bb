@@ -49,6 +49,7 @@ PROVIDES = "\
     enigma2-plugin-systemplugins-sf8vfdcontrol \
     enigma2-plugin-systemplugins-simplefancontrol \
     enigma2-plugin-systemplugins-terrestrialscan \
+    enigma2-plugin-systemplugins-transcodingsetup \
     enigma2-plugin-systemplugins-ventonfancontrol \
     enigma2-plugin-systemplugins-vpledcontrol \
     enigma2-plugin-systemplugins-vuduofancontrol \
@@ -73,6 +74,7 @@ DEPENDS = "\
     neon \
     python-beautifulsoup4 python-dnspython python-gdata python-icalendar python-lxml python-pexpect python-pyamf python-pyusb python-simplejson \
     ${@bb.utils.contains("MACHINE", "dm800", "", "satipclient", d)} \
+    ${@bb.utils.contains("MACHINE_FEATURES", "transcoding", "virtual/transtreamproxy" , "", d)} \
     "
 
 DESCRIPTION_enigma2-plugin-extensions-btdevicesmanager = "BT devices manger to pair e.x keyboard or mouse"
@@ -116,6 +118,8 @@ DESCRIPTION_enigma2-plugin-systemplugins-satipclient = "Satip Client setup"
 REPLACES_enigma2-plugin-systemplugins-satipclient = "enigma2-plugin-extensions-satipclient"
 RDEPENDS_enigma2-plugin-systemplugins-satipclient = "satipclient"
 DESCRIPTION_enigma2-plugin-systemplugins-terrestrialscan = "Selects the strongest transponders where there are duplicates and allows filtering by network id."
+DESCRIPTION_enigma2-plugin-systemplugins-transcodingsetup = "Setup transcoding"
+RDEPENDS_enigma2-plugin-systemplugins-transcodingsetup = "virtual/transtreamproxy"
 DESCRIPTION_enigma2-plugin-systemplugins-wirelessaccesspoint = "Using a Wireless module as AP."
 RDEPENDS_enigma2-plugin-systemplugins-wirelessaccesspoint = "bridge-utils hostapd"
 
