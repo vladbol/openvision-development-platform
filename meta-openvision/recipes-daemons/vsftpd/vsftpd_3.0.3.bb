@@ -6,6 +6,8 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=a6067ad950b28336613aed9dd47b1271"
 
 DEPENDS = "libcap openssl"
 
+inherit upx_compress
+
 SRC_URI = " https://security.appspot.com/downloads/vsftpd-${PV}.tar.gz \
 			file://makefile-destdir.patch \
 			file://makefile-libs.patch \
