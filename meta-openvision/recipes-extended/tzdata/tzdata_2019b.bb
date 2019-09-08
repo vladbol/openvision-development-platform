@@ -21,7 +21,7 @@ RCONFLICTS_${PN} = "timezones timezone-africa timezone-america timezone-antarcti
 
 S = "${WORKDIR}"
 
-DEFAULT_TIMEZONE ?= "Universal"
+DEFAULT_TIMEZONE ?= "GMT"
 #DEFAULT_TIMEZONE ?= "Iran"
 INSTALL_TIMEZONE_FILE ?= "1"
 
