@@ -19,8 +19,8 @@ RDEPENDS_${PN} = "\
 
 S = "${WORKDIR}/git"
 
-PV = "26+git${SRCPV}"
-PKGV = "26+git${GITPKGV}"
+PV = "1.0+git${SRCPV}"
+PKGV = "1.0+git${GITPKGV}"
 
 do_install_append() {
 	find "${D}" -name '*.sh' -exec chmod a+x '{}' ';'
