@@ -13,8 +13,7 @@ PKGV = "1.0+git${GITPKGV}"
 PROVIDES += "virtual/transtreamproxy"
 RPROVIDES_${PN} += "virtual/transtreamproxy"
 
-DEPENDS = "boost virtual/inetd"
-RDEPENDS_${PN} += "virtual/inetd"
+DEPENDS = "boost"
 
 SRC_URI = "git://github.com/OpenVuPlus/filestreamproxy.git;protocol=http;branch=transtreamproxy \
     file://gcc6.patch \
