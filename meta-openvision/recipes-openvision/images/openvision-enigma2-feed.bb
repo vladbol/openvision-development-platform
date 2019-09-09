@@ -126,7 +126,7 @@ EXTRA_WIFI_DRIVERS += "\
 	firmware-rtl8192cufw \
 	firmware-rtl8192eu \
 	mt7601u \
-	mt7603u \
+	${@bb.utils.contains_any("MACHINE", "xpeedlx3 sezammarvel mbultra beyonwizt4 atemionemesis", "", "mt7603u", d)} \
 	rt3070 \
 	rt8188fu \
 	${@bb.utils.contains_any("MACHINE", "cube dm800 su980", "", "rt8723a", d)} \
