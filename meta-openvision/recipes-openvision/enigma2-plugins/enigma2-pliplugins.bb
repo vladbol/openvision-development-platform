@@ -4,6 +4,8 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=751419260aa954499f7abaabaa882bbe"
 PACKAGES = "enigma2-plugin-extensions-openuitzendinggemist"
 RDEPENDS_enigma2-plugin-extensions-openuitzendinggemist = "python-argparse"
 
+PACKAGE_ARCH = "${MACHINE_ARCH}"
+
 inherit allarch pythonnative gitpkgv autotools-brokensep
 
 PV = "2+git${SRCPV}"
