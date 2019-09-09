@@ -58,6 +58,8 @@ PROVIDES = "\
     enigma2-plugin-systemplugins-xtrendremote \
     "
 
+TRANSCODING_CHECK = "${@bb.utils.contains("MACHINE_FEATURES", "vuplus gigablue dags", "transtreamproxy", "streamproxy", d)}"
+
 DEPENDS = "\
     ${@bb.utils.contains("MACHINE_FEATURES", "blindscan-dvbc", "virtual/blindscan-dvbc" , "", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "blindscan-dvbs", "virtual/blindscan-dvbs" , "", d)} \
@@ -74,7 +76,7 @@ DEPENDS = "\
     neon \
     python-beautifulsoup4 python-dnspython python-gdata python-icalendar python-lxml python-pexpect python-pyamf python-pyusb python-simplejson \
     ${@bb.utils.contains("MACHINE", "dm800", "", "satipclient", d)} \
-    ${@bb.utils.contains("MACHINE_FEATURES", "transcoding", "transtreamproxy" , "", d)} \
+    ${@bb.utils.contains_any("MACHINE_FEATURES", "streamproxy transcoding multitranscoding", "${TRANSCODING_CHECK}", "", d)} \
     "
 
 DESCRIPTION_enigma2-plugin-extensions-btdevicesmanager = "BT devices manger to pair e.x keyboard or mouse"
@@ -119,7 +121,6 @@ REPLACES_enigma2-plugin-systemplugins-satipclient = "enigma2-plugin-extensions-s
 RDEPENDS_enigma2-plugin-systemplugins-satipclient = "satipclient"
 DESCRIPTION_enigma2-plugin-systemplugins-terrestrialscan = "Selects the strongest transponders where there are duplicates and allows filtering by network id."
 DESCRIPTION_enigma2-plugin-systemplugins-transcodingsetup = "Setup transcoding"
-RDEPENDS_enigma2-plugin-systemplugins-transcodingsetup = "transtreamproxy"
 DESCRIPTION_enigma2-plugin-systemplugins-wirelessaccesspoint = "Using a Wireless module as AP."
 RDEPENDS_enigma2-plugin-systemplugins-wirelessaccesspoint = "bridge-utils hostapd"
 
