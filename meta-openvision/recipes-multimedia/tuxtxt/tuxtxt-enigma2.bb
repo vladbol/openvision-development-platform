@@ -17,7 +17,7 @@ S = "${WORKDIR}/git/tuxtxt"
 PV = "2.0.1+git${SRCPV}"
 PKGV = "2.0.1+git${GITPKGV}"
 
-EXTRA_OECONF = "--with-boxtype=generic --with-configdir=${sysconfdir} \
+EXTRA_OECONF = "--with-configdir=${sysconfdir} \
 	${@bb.utils.contains("MACHINE_FEATURES", "textlcd", "--with-textlcd" , "", d)} \
 	${@bb.utils.contains("MACHINE_FEATURES", "nogamma", "--with-nogamma" , "", d)} \
 	"
