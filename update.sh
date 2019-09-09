@@ -16,22 +16,22 @@ echo "https://github.com/orgs/OpenVisionE2/people"
 echo ""
 echo "Each time you run this script all git repositories will get updated to their latest versions!"
 echo ""
-echo -e "${RED}Is there a merge conflict with repos?"
+echo -e "${BLUE}Is there a merge conflict with repos?"
 echo -e "Answers are in ${GREEN}green:${NC}"
 echo -e ""
 echo -e "${GREEN}No ${NC}- ${GREEN}Yes"
 echo -e ""
-echo -e "${RED}Enter conflict mode:${NC}"
+echo -e "${BLUE}Enter conflict mode:${NC}"
 echo -e "${GREEN}"
 read CONFLICTMODE
 echo -e "${NC}"
 if [ $CONFLICTMODE != "Yes" -a $CONFLICTMODE != "No" ]
 then
-	echo -e "${RED}Not a valid answer!${NC}"
+	echo -e "${BLUE}Not a valid answer!${NC}"
 	echo -e ""
 	exit 0
 fi
-echo -e "${RED}Updating from git, please wait ...${NC}"
+echo -e "${BLUE}Updating from git, please wait ...${NC}"
 echo ""
 SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
 cd "${SCRIPTPATH}"
@@ -39,7 +39,7 @@ git pull
 git submodule sync
 git submodule update --init
 echo ""
-echo -e "${RED}Done!${NC}"
+echo -e "${BLUE}Done!${NC}"
 echo ""
 METAS="$( ls | grep meta- | tr '\n' ' ' | sed 's/ $//g' )"
 if [ $CONFLICTMODE = "No" ]

@@ -3,8 +3,23 @@ echo -e ""
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 GREEN='\033[0;32m'
-echo -e "${RED}Welcome to Open Vision's image compile script!"
-echo -e "Check ${NC}Vision-metas.md ${RED}and enter a meta or a specific machine to compile."
+BLUE='\033[0;34m'
+YELLOW='\033[0;33m'
+VISIONVERSION=`cat meta-openvision/conf/distro/openvision-common.conf | grep -oP '(?<=VISIONVERSION = ")[0-9].[0-9]*'`
+VISIONREVISION=`cat meta-openvision/conf/distro/openvision-common.conf | grep -oP '(?<=VISIONREVISION = "r)[0-9][0-9]'`
+echo -e "${BLUE}Welcome to Open Vision ${GREEN}${VISIONVERSION}-r${VISIONREVISION} ${BLUE}image compile script!"
+echo -e ""
+echo -e "First we need to check your Ubuntu 18.04.x"
+echo -e ""
+if [ -f user.ovstep ]; then
+	echo -e "Seems you run ltsubuntu.sh before but keep in mind it's better to run it each month to get latest updates."
+	echo -e ""
+else
+	echo -e "Oh, we need to setup your Ubuntu so you need internet connection and a cup of coffee."
+	/bin/sh ltsubuntu.sh
+	echo "once" > user.ovstep
+fi
+echo -e "Check ${NC}Vision-metas.md ${BLUE}and enter a meta or a specific machine to compile."
 echo -e "Answers are in ${GREEN}green:${NC}"
 echo -e ""
 echo -e "${GREEN}Amiko ${NC}- ${GREEN}AX ${NC}- ${GREEN}AZBox  ${NC}- ${GREEN}Beyonwiz ${NC}- ${GREEN}BlackBox ${NC}- ${GREEN}BroadMedia ${NC}- ${GREEN}Ceryon"
@@ -15,41 +30,41 @@ echo -e "Protek ${NC}- ${GREEN}RaspberryPi ${NC}- ${GREEN}SH4 ${NC}- ${GREEN}Tiv
 echo -e "Uclan ${NC}- ${GREEN}UltraMini ${NC}- ${GREEN}VuPlus ${NC}- ${GREEN}WeTek ${NC}- ${GREEN}XCore ${NC}- ${GREEN}XP"
 echo -e "Xtrend ${NC}- ${GREEN}Zgemma ${NC}- ${GREEN}ALL ${NC}- ${GREEN}Specific"
 echo -e ""
-echo -e "${GREEN}ALL${RED}: Compiles all brands/models, As it requires huge free space it's not recommended!"
+echo -e "${GREEN}ALL${BLUE}: Compiles all brands/models, As it requires huge free space it's not recommended!"
 echo -e ""
-echo -e "${GREEN}Specific${RED}: You have a specific machine in mind, Check ${NC}Vision-metas.md"
+echo -e "${GREEN}Specific${BLUE}: You have a specific machine in mind, Check ${NC}Vision-metas.md"
 echo -e ""
-echo -e "${RED}Enter the meta name:${NC}"
+echo -e "${BLUE}Enter the meta name:${NC}"
 echo -e "${GREEN}"
 read META
 echo -e "${NC}"
 if [ $META != "Amiko" -a $META != "AX" -a $META != "AZBox" -a $META != "Beyonwiz" -a $META != "BlackBox" -a $META != "BroadMedia" -a $META != "Ceryon" -a $META != "Clap" -a $META != "Cube" -a $META != "DAGS" -a $META != "Dinobot" -a $META != "Dreambox" -a $META != "EBox" -a $META != "Edision" -a $META != "Entwopia" -a $META != "Formuler" -a $META != "GFutures" -a $META != "GigaBlue" -a $META != "HyperCube" -a $META != "INI" -a $META != "IXUSS" -a $META != "Linkdroid" -a $META != "MaxyTec" -a $META != "MINIX" -a $META != "Octagon" -a $META != "Odin" -a $META != "Odroid" -a $META != "Protek" -a $META != "RaspberryPi" -a $META != "SH4" -a $META != "Tiviar" -a $META != "Tripledot" -a $META != "Uclan" -a $META != "UltraMini" -a $META != "VuPlus" -a $META != "WeTek" -a $META != "XCore" -a $META != "XP" -a $META != "Xtrend" -a $META != "Zgemma" -a $META != "ALL" -a $META != "Specific" ]
 then
-	echo -e "${RED}Not a valid answer!${NC}"
+	echo -e "${BLUE}Not a valid answer!${NC}"
 	echo -e ""
 	exit 0
 fi
-echo -e "${RED}Now choose whether you want to compile Open Vision or the online feeds."
+echo -e "${BLUE}Now choose whether you want to compile Open Vision or the online feeds."
 echo -e "Answers are in ${GREEN}green:${NC}"
 echo -e ""
 echo -e "${GREEN}Vision ${NC}- ${GREEN}Feed${NC}"
 echo -e ""
-echo -e "${RED}Enter image type:${NC}"
+echo -e "${BLUE}Enter image type:${NC}"
 echo -e "${GREEN}"
 read IMAGETYPE
 echo -e "${NC}"
 if [ $IMAGETYPE != "Vision" -a $IMAGETYPE != "Feed" ]
 then
-	echo -e "${RED}Not a valid answer!${NC}"
+	echo -e "${BLUE}Not a valid answer!${NC}"
 	echo -e ""
 	exit 0
 fi
-echo -e "${RED}First update everything, please wait ...${NC}"
+echo -e "${BLUE}First update everything, please wait ...${NC}"
 /bin/sh update.sh
 echo -e ""
-echo -e "${RED}Updated.${NC}"
+echo -e "${BLUE}Updated.${NC}"
 echo -e ""
-echo -e "${RED}Compiling${GREEN} $META ${RED}images, please wait ...${NC}"
+echo -e "${BLUE}Compiling${GREEN} $META ${BLUE}images, please wait ...${NC}"
 echo -e ""
 if [ $IMAGETYPE = "Vision" ]
 then
@@ -61,11 +76,11 @@ then
 fi
 if [ $META = "Specific" ]
 then
-	echo -e "${RED}Enter your specific machine name exactly like what you see in ${NC}Vision-metas.md"
+	echo -e "${BLUE}Enter your specific machine name exactly like what you see in ${NC}Vision-metas.md"
 	echo -e "${GREEN}"
 	read MACHINESPECIFIC
 	echo -e "${NC}"
-	echo -e "${RED}Compiling${GREEN} $MACHINESPECIFIC ${RED}image, please wait ...${NC}"
+	echo -e "${BLUE}Compiling${GREEN} $MACHINESPECIFIC ${BLUE}image, please wait ...${NC}"
 	echo -e ""
 	MACHINE=$MACHINESPECIFIC $IMAGECMD
 fi
@@ -887,5 +902,5 @@ then
 	MACHINE=sh1 $IMAGECMD
 fi
 echo -e ""
-echo -e "${RED}Done, the compiled image is in ${NC}build/tmp/deploy/images/${GREEN}$MACHINE$MACHINESPECIFIC ${RED}folder!"
-echo -e "It's a zipped file like ${NC}openvision-enigma2-upcoming-9.2-rx-${GREEN}$MACHINE$MACHINESPECIFIC${NC}.zip"
+echo -e "${BLUE}Done, the compiled image is in ${NC}build/tmp/deploy/images/${GREEN}$MACHINE$MACHINESPECIFIC ${BLUE}folder!"
+echo -e "It's a zipped file like ${NC}openvision-enigma2-upcoming-${GREEN}${VISIONVERSION}-r${VISIONVERSION}${NC}-${RED}$MACHINE$MACHINESPECIFIC${NC}.zip"
