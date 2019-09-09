@@ -6,6 +6,7 @@
 sudo apt-get update
 sudo apt-get install --install-recommends linux-generic-hwe-18.04 xserver-xorg-hwe-18.04
 ```
+* Or just run our "ltsubuntu.sh" again!
 # How to use Xfce 4 desktop on Ubuntu
 (as GNOME 3 wastes so many resources)
 
