@@ -9,12 +9,11 @@ DEPENDS = "libpng freetype zlib"
 
 inherit gitpkgv autotools pkgconfig
 
-SRC_URI = "\
-	git://github.com/OpenVisionE2/tuxtxt.git;protocol=git \
-	${@bb.utils.contains_any("MACHINE", "spycat spycatmini spycatminiplus osmini osminiplus", "file://tuxtxt_clear_screen.patch", "", d)} \
-	"
+SRC_URI = "git://github.com/OpenVisionE2/tuxtxt.git;protocol=git"
 
 S = "${WORKDIR}/git/libtuxtxt"
+
+EXTRA_OECONF = "${@bb.utils.contains("MACHINE_FEATURES", "tuxtxtclearscreen", "--with-tuxtxtclearscreen" , "", d)}"
 
 PV = "2.0.1+git${SRCPV}"
 PKGV = "2.0.1+git${GITPKGV}"
