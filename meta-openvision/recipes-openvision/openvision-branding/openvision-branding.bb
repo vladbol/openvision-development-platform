@@ -50,6 +50,10 @@ EXTRA_OECONF = " \
     --with-mkubifs="${MKUBIFS_ARGS}" \
     --with-ubinize="${UBINIZE_ARGS}" \
     --with-arch="${DEFAULTTUNE}" \
+    --with-display-type="${DISPLAY_TYPE}" \
+    --with-flash-type="${HAVE_SMALLFLASH}" \
+    --with-transcoding="${TRANSCODING}" \
+    --with-multitranscoding="${MULTITRANSCODING}" \
     "
 
 FILES_${PN} = "${libdir}/enigma2/python/*.so"

@@ -49,6 +49,10 @@ do_install() {
 	echo "url=https://openvision.tech" >> ${D}${sysconfdir}/image-version
 	echo "catalog=https://github.com/OpenVisionE2" >> ${D}${sysconfdir}/image-version
 	echo "distro=${DISTRO_NAME}" >> ${D}${sysconfdir}/image-version
+	echo "transcoding=${TRANSCODING}" >> ${D}${sysconfdir}/image-version
+	echo "multitranscoding=${MULTITRANSCODING}" >> ${D}${sysconfdir}/image-version
+	echo "display-type=${DISPLAY_TYPE}" >> ${D}${sysconfdir}/image-version
+	echo "flash-type=${HAVE_SMALLFLASH}" >> ${D}/etc/image-version
 	echo "${MACHINE}" > ${D}${sysconfdir}/model
 	echo "${BOX_BRAND}" > ${D}${sysconfdir}/brand
 	echo "${VISIONVERSION}" > ${D}${sysconfdir}/visionversion
@@ -58,7 +62,6 @@ do_install() {
 	fi
 	install -d ${D}${sysconfdir}/enigma2
 	install -m 0755 ${WORKDIR}/settings ${D}${sysconfdir}/enigma2
-	install -d ${D}${datadir}/enigma2/picon
 	install -d ${D}${libdir}/python2.7
 	install -m 0644 ${WORKDIR}/ov.pyo ${D}${libdir}/python2.7
 }
