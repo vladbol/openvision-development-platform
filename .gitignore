@@ -1,6 +1,5 @@
 /build/
-/meta-openembedded/
-/openembedded-core/
 /sources/
 site.conf
 *~
+*.ovstep
