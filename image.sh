@@ -73,6 +73,44 @@ fi
 if [ $IMAGETYPE = "Feed" ]
 then
 	IMAGECMD='make feed'
+	if grep -Fqi "feed" user.ovstep
+	then
+	    echo -e "${BLUE}No need to set custom feed.${NC}"
+	    echo -e ""
+	else
+	    echo -e "${BLUE}Do you want to set your own feed?"
+	    echo -e ""
+	    echo -e "Answers are in ${GREEN}green:${NC}"
+	    echo -e ""
+	    echo -e "${GREEN}Yes ${NC}- ${GREEN}No"
+	    echo -e ""
+	    echo -e "${BLUE}Enter custom feed mode:${NC}"
+	    echo -e "${GREEN}"
+	    read OWNFEED
+	    echo -e "${NC}"
+	    if [ $OWNFEED != "Yes" -a $OWNFEED != "No" ]
+	    then
+		echo -e "${BLUE}Not a valid answer!${NC}"
+		echo -e ""
+		exit 0
+	    fi
+	    if [ $OWNFEED = "No" ]
+	    then
+		echo "feed-is-not-set" >> user.ovstep
+	    fi
+	    if [ $OWNFEED = "Yes" ]
+	    then
+		echo -e "${BLUE}Enter your desired IP or URL without http or anything extra:"
+		echo -e "${GREEN}"
+		read USERURL
+		echo -e "${NC}"
+		sed -i '1 s/#//g' meta-openvision/conf/distro/openvision-testers.conf
+		sed -i "s|openvisiontesters|$USERURL|g" meta-openvision/conf/distro/openvision-testers.conf
+		echo "feed-is-set-to=${USERURL}" >> user.ovstep
+		echo -e "${BLUE}Done!${GREEN} $USERURL ${BLUE}is now set as your custom feed.${NC}"
+		echo -e ""
+	    fi
+	fi
 fi
 if [ $META = "Specific" ]
 then
