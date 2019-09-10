@@ -206,7 +206,6 @@ ENIGMA2_OPTIONAL += "\
 	enigma2-plugin-extensions-xmodem \
 	enigma2-plugin-extensions-yahooweather \
 	enigma2-plugin-extensions-youtube \
-	enigma2-plugin-extensions-youtube-dl \
 	enigma2-plugin-security-firewall \
 	enigma2-plugin-skins-blacktransfhd-raed \
 	enigma2-plugin-skins-bundesligafhd-raed \

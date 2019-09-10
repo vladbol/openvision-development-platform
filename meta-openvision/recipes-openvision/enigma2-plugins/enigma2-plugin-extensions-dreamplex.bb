@@ -19,8 +19,6 @@ SRC_URI = " \
 
 SRC_URI_append_sh4 = " file://sparkfix.patch;patch=1 "
 
-SRCREV = "${AUTOREV}"
-
 EXTRA_OECONF = " \
     BUILD_SYS=${BUILD_SYS} \
     HOST_SYS=${HOST_SYS} \
