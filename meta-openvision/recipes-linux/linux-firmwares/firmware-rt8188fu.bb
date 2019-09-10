@@ -1,4 +1,5 @@
-require linux-firmware.inc
+LICENSE = "CLOSED"
+require conf/license/license-close.inc
 
 SRC_URI = "https://raw.githubusercontent.com/OpenVisionE2/linux-firmwares/master/rtl8188fufw.zip"
 
