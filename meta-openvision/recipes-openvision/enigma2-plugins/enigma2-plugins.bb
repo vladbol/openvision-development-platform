@@ -143,6 +143,7 @@ PROVIDES = "\
     enigma2-plugin-systemplugins-setpasswd \
     enigma2-plugin-systemplugins-startupservice \
     enigma2-plugin-systemplugins-systemtime \
+    enigma2-plugin-systemplugins-vfdcontrol \
     enigma2-plugin-systemplugins-videocolorspace \
     enigma2-plugin-systemplugins-vps \
     "
