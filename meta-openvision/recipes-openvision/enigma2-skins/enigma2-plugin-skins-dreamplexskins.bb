@@ -28,5 +28,4 @@ do_install() {
     chmod -R a+rX ${D}${libdir}/enigma2/python/Plugins/Extensions/DreamPlex/skins/
 }
 
-do_populate_sysroot[noexec] = "1"
 do_package_qa[noexec] = "1"
