@@ -34,7 +34,7 @@ BACKUPSUITE_CHECK = "${@bb.utils.contains("MACHINE_FEATURES", "smallflash", "", 
 
 BLINDSCAN_CHECK = "${@bb.utils.contains("MACHINE_FEATURES", "dreambox", "enigma2-plugin-systemplugins-dmblindscan", "enigma2-plugin-systemplugins-blindscan", d)}"
 
-TRANSCODING_CHECK = "${@bb.utils.contains("MACHINE_FEATURES", "vuplus gigablue dags", "transtreamproxy", "streamproxy", d)}"
+TRANSCODING_CHECK = "${@bb.utils.contains_any("MACHINE_FEATURES", "vuplus gigablue dags", "transtreamproxy", "streamproxy", d)}"
 
 ENIGMA2_PLUGINS += "\
 	enigma2-plugin-extensions-audiosync \
@@ -53,7 +53,7 @@ ENIGMA2_PLUGINS += "\
 	enigma2-plugin-skins-pli-hd \
 	${@bb.utils.contains("MACHINE_FEATURES", "dvb-c", "enigma2-plugin-systemplugins-cablescan" , "", d)} \
 	${@bb.utils.contains("MACHINE_FEATURES", "ci", "enigma2-plugin-systemplugins-commoninterfaceassignment", "", d)} \
-	${@bb.utils.contains("MACHINE_FEATURES", "blindscan-dvbs", "${BLINDSCAN_CHECK} enigma2-plugin-systemplugins-satscan" , "", d)} \
+	${@bb.utils.contains("MACHINE_FEATURES", "blindscan-dvbs", "${BLINDSCAN_CHECK}" , "", d)} \
 	enigma2-plugin-systemplugins-fastscan \
 	${@bb.utils.contains_any("MACHINE", "dm900 dm920", "enigma2-plugin-systemplugins-fsblupdater", "", d)} \
 	enigma2-plugin-systemplugins-hdmicec \
