@@ -108,7 +108,7 @@ inherit gitpkgv pythonnative upx_compress autotools pkgconfig
 PV = "develop+git${SRCPV}"
 PKGV = "develop+git${GITPKGV}"
 
-SRC_URI = "git://github.com/OpenVisionE2/enigma2-openvision.git"
+SRC_URI = "git://github.com/OpenVisionE2/enigma2-openvision.git;branch=develop"
 
 LDFLAGS_prepend = " -lxml2 "
 
