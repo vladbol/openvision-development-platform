@@ -153,6 +153,7 @@ DEPENDS = "\
     dvdbackup \
     enigma2 \
     libshowiframe \
+    libtirpc \
     nmap \
     python-gdata \
     python-httplib2 \
@@ -167,6 +168,7 @@ DEPENDS = "\
 RDEPENDS_${PN} = "python-ctypes"
 
 CFLAGS += "-I${STAGING_INCDIR}/tirpc"
+LDFLAGS += "-ltirpc"
 
 RRECOMMENDS_enigma2-plugin-extensions-transmission = "transmission transmission-client"
 
