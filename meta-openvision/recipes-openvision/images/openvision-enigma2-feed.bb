@@ -168,7 +168,7 @@ ENIGMA2_OPTIONAL += "\
 	cdtextinfo \
 	channelsettings-enigma2-meta \
 	dvb-usb-drivers-meta \
-	${@bb.utils.contains_any("MACHINE_FEATURES", "textlcd colorlcd colorlcd220 colorlcd390 colorlcd400 colorlcd480 colorlcd720 colorlcd800 bwlcd96 bwlcd128 bwlcd140 bwlcd255", "enigma2-display-skins", "", d)} \
+	${@bb.utils.contains_any("MACHINE_FEATURES", "bwlcd96 bwlcd128 bwlcd140 bwlcd255 colorlcd220 colorlcd390 colorlcd400 colorlcd480 colorlcd720 colorlcd800", "enigma2-display-skins", "", d)} \
 	enigma2-pliplugins \
 	${@bb.utils.contains("EXTRA_IMAGEDEPENDS", "vuplus-tuner-turbo", "enigma2-plugin-drivers-dvb-usb-turbo", "", d)} \
 	enigma2-plugin-drivers-usbserial \
