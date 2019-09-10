@@ -3,3 +3,4 @@
 site.conf
 *~
 *.ovstep
+/meta-openvision/conf/distro/openvision-testers.conf
