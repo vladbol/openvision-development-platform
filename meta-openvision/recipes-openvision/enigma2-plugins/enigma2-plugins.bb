@@ -165,6 +165,8 @@ DEPENDS = "\
 
 RDEPENDS_${PN} = "python-ctypes"
 
+CFLAGS += "-I${STAGING_INCDIR}/tirpc"
+
 RRECOMMENDS_enigma2-plugin-extensions-transmission = "transmission transmission-client"
 
 RDEPENDS_enigma2-plugin-extensions-bitrateviewer = "bitratecalc"
