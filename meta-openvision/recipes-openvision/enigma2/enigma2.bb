@@ -167,10 +167,11 @@ EXTRA_OEMAKE = "\
 # some plugins contain so's, their stripped symbols should not end up in the enigma2 package
 FILES_${PN}-dbg += "\
 	${libdir}/enigma2/python/*/.debug \
-	${libdir}/enigma2/python/*/*/*.debug \
+	${libdir}/enigma2/python/*/*.debug \
 	${libdir}/enigma2/python/*/*/*/.debug \
 	${libdir}/enigma2/python/*/*/*/*/.debug \
-	${libdir}/enigma2/python/Plugins/*/*/.debug \
+	${libdir}/enigma2/python/*/*/*/*/*/.debug \
+	${libdir}/enigma2/python/*/*/*/*/*/*/.debug \
 	"
 
 # Swig generated 200k enigma.py file has no purpose for end users
