@@ -105,10 +105,11 @@ RDEPENDS_${PN}-build-dependencies = "\
 
 inherit gitpkgv pythonnative upx_compress autotools pkgconfig
 
+ENIGMA2_BRANCH ?= "develop"
 PV = "develop+git${SRCPV}"
 PKGV = "develop+git${GITPKGV}"
 
-SRC_URI = "git://github.com/OpenVisionE2/enigma2-openvision.git;branch=develop"
+SRC_URI = "git://github.com/OpenVisionE2/enigma2-openvision.git;branch=${ENIGMA2_BRANCH}"
 
 LDFLAGS_prepend = " -lxml2 "
 
@@ -165,6 +166,10 @@ EXTRA_OEMAKE = "\
 
 # some plugins contain so's, their stripped symbols should not end up in the enigma2 package
 FILES_${PN}-dbg += "\
+	${libdir}/enigma2/python/*/.debug \
+	${libdir}/enigma2/python/*/*/*.debug \
+	${libdir}/enigma2/python/*/*/*/.debug \
+	${libdir}/enigma2/python/*/*/*/*/.debug \
 	${libdir}/enigma2/python/Plugins/*/*/.debug \
 	"
 
