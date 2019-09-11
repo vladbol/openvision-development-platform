@@ -128,7 +128,7 @@ EXTRA_WIFI_DRIVERS += "\
 	mt7601u \
 	${@bb.utils.contains_any("MACHINE", "cube su980 dm800 dm500hd dm500hdv2 dm800se dm800sev2 dm7020hd dm7020hdv2 dm8000 xpeedlx3 sezammarvel mbultra beyonwizt4 atemionemesis vuuno4kse vuzero4k", "", "mt7603u", d)} \
 	rt3070 \
-	${@bb.utils.contains_any("MACHINE", "cube su980 dm800 dm500hd dm500hdv2 dm800se dm800sev2 dm7020hd dm7020hdv2 dm8000", "", "rt8188fu", d)} \
+	${@bb.utils.contains_any("MACHINE", "cube su980 dm800", "", "rt8188fu", d)} \
 	${@bb.utils.contains_any("MACHINE", "cube su980 dm800", "", "rt8723a", d)} \
 	rt8723bs \
 	${@bb.utils.contains_any("MACHINE", "cube su980 dm800 dm500hd dm500hdv2 dm800se dm800sev2 dm7020hd dm7020hdv2 dm8000 ixusszero ixussone dm820 dm7080 dm520", "", "rt8812au", d)} \
