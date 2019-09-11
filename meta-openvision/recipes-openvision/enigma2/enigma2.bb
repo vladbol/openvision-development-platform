@@ -183,6 +183,7 @@ FILES_${PN}-src = "\
 	${libdir}/enigma2/python/keymapparser.py \
 	${libdir}/enigma2/python/skin.py \
 	${libdir}/enigma2/python/timer.py \
+	${libdir}/enigma2/python/BoxBrandingTest.py \
 	${libdir}/enigma2/python/*/*.py \
 	${libdir}/enigma2/python/*/*/*.py \
 	${libdir}/enigma2/python/*/*/*/*.py \
