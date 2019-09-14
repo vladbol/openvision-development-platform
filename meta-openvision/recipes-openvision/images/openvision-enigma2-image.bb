@@ -102,6 +102,7 @@ DEPENDS += "\
 	enigma2-persianempire-plugins \
 	enigma2-pliplugins \
 	enigma2-plugins \
+	v4l-utils \
 	"
 
 # These machine feature related plugins should not be enabled for smallflash STBs as there isn't enough space for them!
