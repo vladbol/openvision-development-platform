@@ -9,8 +9,8 @@ DEPENDS = "tzcode-native"
 SRC_URI = "http://www.iana.org/time-zones/repository/releases/tzdata${PV}.tar.gz;name=tzdata"
 UPSTREAM_CHECK_URI = "http://www.iana.org/time-zones"
 
-SRC_URI[tzdata.md5sum] = "b26b5d7d844cb96c73ed2fb6d588daaf"
-SRC_URI[tzdata.sha256sum] = "05d9092c90dcf9ec4f3ccfdea80c7dcea5e882b3b105c3422da172aaa9a50c64"
+SRC_URI[tzdata.md5sum] = "f6987e6dfdb2eb83a1b5076a50b80894"
+SRC_URI[tzdata.sha256sum] = "79c7806dab09072308da0e3d22c37d3b245015a591891ea147d3b133b60ffc7c"
 
 inherit allarch
 
@@ -21,8 +21,7 @@ RCONFLICTS_${PN} = "timezones timezone-africa timezone-america timezone-antarcti
 
 S = "${WORKDIR}"
 
-DEFAULT_TIMEZONE ?= "GMT"
-#DEFAULT_TIMEZONE ?= "Iran"
+DEFAULT_TIMEZONE ?= "Europe/London"
 INSTALL_TIMEZONE_FILE ?= "1"
 
 TZONES= "africa antarctica asia australasia europe northamerica southamerica  \
