@@ -126,7 +126,7 @@ EXTRA_WIFI_DRIVERS += "\
 	firmware-rtl8192cufw \
 	firmware-rtl8192eu \
 	mt7601u \
-	${@bb.utils.contains_any("MACHINE", "cube su980 dm800 dm500hd dm500hdv2 dm800se dm800sev2 dm7020hd dm7020hdv2 dm8000 xpeedlx3 sezammarvel mbultra beyonwizt4 atemionemesis vuuno4kse vuzero4k vuduo2 vusolo2 vusolose vuzero", "", "mt7603u", d)} \
+	${@bb.utils.contains_any("MACHINE", "cube su980 dm800 dm500hd dm500hdv2 dm800se dm800sev2 dm7020hd dm7020hdv2 dm8000 dm900 dm920 xpeedlx3 sezammarvel mbultra beyonwizt4 atemionemesis vuuno4kse vuzero4k vuduo2 vusolo2 vusolose vuzero", "", "mt7603u", d)} \
 	rt3070 \
 	${@bb.utils.contains_any("MACHINE", "cube su980 dm800", "", "rt8188fu", d)} \
 	${@bb.utils.contains_any("MACHINE", "cube su980 dm800", "", "rt8723a", d)} \
