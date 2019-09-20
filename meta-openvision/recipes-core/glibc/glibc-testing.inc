@@ -36,9 +36,6 @@ do_compile_append () {
 	# point to real sysroot not the toolchain bootstrap sysroot
 	sed -i -e "s/\-tcbootstrap//g" ${B}/${HOST_PREFIX}testeglibc
 
-	# use the final cross-gcc to test since some tests need libstdc++
-	sed -i -e "s/^PATH=.*\.gcc-cross-initial\:/PATH=/g" ${B}/${HOST_PREFIX}testeglibc
-
 	# append execution part script
 cat >> ${B}/${HOST_PREFIX}testeglibc << STOP
 target="\$1"
