@@ -28,7 +28,7 @@
  	int tb;
 --- busybox-1.24.1/networking/libiproute/iprule.c.orig	2017-10-26 13:59:37.776498653 +0200
 +++ busybox-1.24.1/networking/libiproute/iprule.c	2017-10-26 14:00:09.591630433 +0200
-@@ -21,6 +21,10 @@
+@@ -24,6 +24,10 @@
  #include "rt_names.h"
  #include "utils.h"
  
@@ -36,6 +36,6 @@
 +#define RTA_TABLE  15
 +#endif
 +
- /*
- static void usage(void) __attribute__((noreturn));
- 
+ #include <linux/version.h>
+ /* RTA_TABLE is not a define, can't test with ifdef. */
+ /* As a proxy, test which kernels toolchain expects: */
