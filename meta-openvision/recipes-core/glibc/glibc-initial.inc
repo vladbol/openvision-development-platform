@@ -1,4 +1,4 @@
-DEPENDS = "linux-libc-headers libgcc-initial"
+DEPENDS = "linux-libc-headers virtual/${TARGET_PREFIX}gcc libgcc-initial"
 PROVIDES = "virtual/${TARGET_PREFIX}libc-initial"
 
 PACKAGES = ""
