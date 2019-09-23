@@ -41,7 +41,7 @@ S = "${WORKDIR}/git"
 SRC_URI = "git://${GO_IMPORT}.git;protocol=https;destsuffix=git/src/${GO_IMPORT} \
     file://rclonefs"
 
-INSANE_SKIP_${PN} = "ldflags"
+INSANE_SKIP_${PN} = "ldflags file-rdeps"
 
 do_install_append() {
     rm ${D}${bindir}/test*
