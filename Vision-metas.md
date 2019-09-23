@@ -142,7 +142,6 @@
 * dm7020hd
 * dm7020hdv2
 * dm7080
-* dm800
 * dm8000
 * dm800se
 * dm800sev2
