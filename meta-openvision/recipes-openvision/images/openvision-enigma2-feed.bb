@@ -87,6 +87,7 @@ OPTIONAL_PACKAGES += "\
 	python-requests \
 	python-singledispatch \
 	python-websocket \
+	${@bb.utils.contains("TARGET_FPU", "soft", "", "rclone", d)} \
 	rsync \
 	rtorrent \
 	sabnzbd \
