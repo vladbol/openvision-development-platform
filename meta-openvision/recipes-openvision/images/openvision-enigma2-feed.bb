@@ -112,7 +112,6 @@ OPTIONAL_PACKAGES += "\
 	wscan \
 	yafc \
 	zeroconf \
-	zerotier \
 	zip \
 	zsh \
 	${OPTIONAL_BSP_PACKAGES} \
